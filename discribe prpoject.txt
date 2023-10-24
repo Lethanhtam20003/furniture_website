@@ -1,0 +1,4 @@
+project là một trang web bán hàng 
+về nội thất.
+người dùng có thể mua online qua mạng,
+mỗi người dùng có một tài khoản để mua hàng khi họ đăng ký và họ cũng có thể mua hàng ko cần tạo tài khoản chỉ cần thông tin người dùng.
