@@ -33,10 +33,10 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto mb-2 mb-lg-0  chuLon">
 					<li class="nav-item mx-3"><a class="nav-link active"
-						aria-current="page" href="#">Trang chủ</a></li>
+						aria-current="page" href="index.jsp">Trang chủ</a></li>
 
 					<li><a class="nav-link mx-3" aria-current="page"
-						href="introduction.html">Giới thiệu</a></li>
+						href="introduction.jsp">Giới thiệu</a></li>
 					<li class="nav-item mx-3"><a class="nav-link" href="">Sản
 							phẩm</a></li>
 					<!-- drop menu -->
@@ -53,9 +53,9 @@
 									here</a></li>
 						</ul></li>
 					<!-- end drop menu -->
-					<li class="nav-item"><a class="nav-link mx-3" href="news.html">Tin
+					<li class="nav-item"><a class="nav-link mx-3" href="news.jsp">Tin
 							tức</a></li>
-					<li class="nav-item"><a class="nav-link mx-3" href="#">Liên
+					<li class="nav-item"><a class="nav-link mx-3" href="contact.jsp">Liên
 							hệ </a></li>
 					<!-- end menu items -->
 
@@ -176,18 +176,18 @@
 				<div class="col-5 col-md-2 mb-3">
 					<h5>Chính sách</h5>
 					<ul class="nav flex-column">
-						<li class="nav-item mb-2"><a href="#"
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/ChinhSach/thanhVien.html"
 							class="nav-link p-0 text-body-secondary">Chính sách thành
 								viên</a></li>
-						<li class="nav-item mb-2"><a href="#"
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/ChinhSach/thanhToan.html"
 							class="nav-link p-0 text-body-secondary">Chính sách thanh
 								toán</a></li>
-						<li class="nav-item mb-2"><a href="#"
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/ChinhSach/doiSanPham.html"
 							class="nav-link p-0 text-body-secondary">Chính sách đổi sản
 								phẩm</a></li>
-						<li class="nav-item mb-2"><a href="#"
+						<li class="nav-item mb-2"><a href=" huongDan_chinhSach/ChinhSach/baoMat.html"
 							class="nav-link p-0 text-body-secondary">Chính sách bảo mật</a></li>
-						<li class="nav-item mb-2"><a href="#"
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/ChinhSach/congTacVien.html"
 							class="nav-link p-0 text-body-secondary">Chính sách cộng tác
 								viên</a></li>
 					</ul>
@@ -197,17 +197,15 @@
 				<div class="col-5 col-md-2 mb-3">
 					<h5>HƯỚNG DẪN</h5>
 					<ul class="nav flex-column">
-						<li class="nav-item mb-2"><a href="#"
-							class="nav-link p-0 text-body-secondary">Chính sách thành
-								viên</a></li>
-						<li class="nav-item mb-2"><a href="#"
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/muaHang.html"
+							class="nav-link p-0 text-body-secondary">Hướng dẫn mua hàng</a></li>
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/DoiTra.html"
 							class="nav-link p-0 text-body-secondary">Hướng dẫn đổi trả</a></li>
-						<li class="nav-item mb-2"><a href="#"
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/thanhToan.html"
 							class="nav-link p-0 text-body-secondary">Hướng dẫn thanh toán</a></li>
-						<li class="nav-item mb-2"><a href="#"
-							class="nav-link p-0 text-body-secondary">Chương trình công
-								tác</a></li>
-						<li class="nav-item mb-2"><a href="#"
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/congTacVien.html"
+							class="nav-link p-0 text-body-secondary">Chương trình công tác viên</a></li>
+						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/GiaiDapThacMac.html"
 							class="nav-link p-0 text-body-secondary">Giải đáp thắc mắc</a></li>
 					</ul>
 				</div>
