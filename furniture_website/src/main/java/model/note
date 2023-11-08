@@ -6,28 +6,28 @@ User(
 	password String
 	email String
 	createAt Date
-	access
+	access String //dể quản lý quyền của các tài khoản, thay vì tạo nhiều tài khoản quản trị riêng biệt
 	birthday Date
-	gender 
+	gender Gender
 	phoneNumber String
-	address String
-	deliveryAddress String
-	profilePicture String
+	address String  // địa chỉ người dùng
+	deliveryAddress String // địa chỉ giao hàng
+	profilePicture String  // đương dãn ảnh 
 )
 
 Products(
 	id  String
 	name String
-	group
-	categoriesID
-	amount
-	price
+	group Group // nhóm các sản phẩm
+	categories Category // thể loại
+	amount double
+	price double
 )
 
 Orders(
 	id  String
 	orderDate  Date
-	shippingCost
+	shippingCost double
 	orderStatus String
 	coupon Coupon
 	listProduct arraylist<OrderDetails>
@@ -35,29 +35,34 @@ Orders(
 
 OrderDetails(
 	product Product
-	quality
-	totalAmount
+	quality int
+	totalAmount double
 )
 
 Cart(
 	id
 	user User
+	shippingCost double 
+	totalPrice double 
+	
+)
+
+CartDetails(
 	product Product
-	price
-	shippingCost
-	totalPrice
-	isGift
-	isAvalable
+	price double
+	quality int
+	isGift boolean
+	isAvalable boolean
 )
 
-ProductCategory(
-	id
-	name
-	describe
-	pictureurlPath
+Category(
+	id String
+	name String
+	describe String
+	pictureurlPath String
 )
-
-ProductReview(
+/////////////
+ProductReview( 
 	id String
 	name String
 	rating
@@ -120,5 +125,11 @@ Coupons(
 	updateAt
 	description
 	userLimit	
+)
+
+Group(
+	id String
+	name String
+	description String
 )
 
