@@ -1,0 +1,124 @@
+User(
+	id String
+	firstName String
+	lastName String
+	userName String
+	password String
+	email String
+	createAt Date
+	access
+	birthday Date
+	gender 
+	phoneNumber String
+	address String
+	deliveryAddress String
+	profilePicture String
+)
+
+Products(
+	id  String
+	name String
+	group
+	categoriesID
+	amount
+	price
+)
+
+Orders(
+	id  String
+	orderDate  Date
+	shippingCost
+	orderStatus String
+	coupon Coupon
+	listProduct arraylist<OrderDetails>
+)
+
+OrderDetails(
+	product Product
+	quality
+	totalAmount
+)
+
+Cart(
+	id
+	user User
+	product Product
+	price
+	shippingCost
+	totalPrice
+	isGift
+	isAvalable
+)
+
+ProductCategory(
+	id
+	name
+	describe
+	pictureurlPath
+)
+
+ProductReview(
+	id String
+	name String
+	rating
+	title String
+	content String
+	createAt
+	updateAt
+	likes
+	dislikes
+	picture
+	reportID
+	replyID
+)
+
+Comment(
+	id String
+	content String
+	picture
+	userID
+	comment String
+	reviewID
+	blogID
+)
+
+NewsBlog(
+	id String
+	title String
+	content String
+	publication
+	author
+	views
+	createAt
+	relatedArtiles
+)
+
+Analytics(
+	id String
+	views
+	clicks
+	purchases
+	revenue
+	addedToCart
+	rating
+	review
+	stocleLever
+	CreateAt
+	updateAt
+)
+
+Coupons(
+	id String
+	code String
+	discountAmount
+	discountType String
+	expirationDate
+	usageCount
+	minimumPurchaseAmount
+	isActive
+	createAt
+	updateAt
+	description
+	userLimit	
+)
+
