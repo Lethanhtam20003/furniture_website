@@ -132,4 +132,10 @@ Group(
 	name String
 	description String
 )
+Report(
+	id String
+	content String
+	user User
+)
+
 
