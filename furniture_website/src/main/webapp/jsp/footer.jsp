@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html >
-<html lang="en">
-
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--bootstrap css -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -13,116 +11,10 @@
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/main_css.css">
-<title>Trang chủ</title>
+<title>Insert title here</title>
 </head>
-
 <body>
-	<!-- menu -->
-	<nav class="navbar navbar-expand-lg bg-body-tertiary ">
-		<div class="container-xl">
-			<!-- logo -->
-			<nav class="navbar bg-body-tertiary">
-				<div class="container">
-					<a class="navbar-brand" href="#"> <img
-						src="img/img_larg/th.jpeg" alt="Bootstrap" height="50">
-					</a>
-				</div>
-			</nav>
-			<!-- end logo -->
-			<!-- menu item -->
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mx-auto mb-2 mb-lg-0  chuLon">
-					<li class="nav-item mx-3"><a class="nav-link active"
-						aria-current="page" href="index.jsp">Trang chủ</a></li>
-
-					<li><a class="nav-link mx-3" aria-current="page"
-						href="introduction.jsp">Giới thiệu</a></li>
-					<li class="nav-item mx-3"><a class="nav-link" href="">Sản
-							phẩm</a></li>
-					<!-- drop menu -->
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" role="button"
-						data-bs-toggle="dropdown" aria-expanded="false"> </a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">Something else
-									here</a></li>
-						</ul></li>
-					<!-- end drop menu -->
-					<li class="nav-item"><a class="nav-link mx-3" href="news.jsp">Tin
-							tức</a></li>
-					<li class="nav-item"><a class="nav-link mx-3" href="contact.jsp">Liên
-							hệ </a></li>
-					<!-- end menu items -->
-
-				</ul>
-				<!-- icon -->
-				<div clsss="chuLon">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<nav class="navbar bg-body-tertiary">
-								<div class="container">
-									<a class="navbar-brand" href="#"> <img
-										src="img/icon/icons8-search-32.png" alt="Bootstrap" width="20">
-									</a>
-								</div>
-							</nav>
-						</li>
-						<li class="nav-item">
-							<nav class="navbar bg-body-tertiary">
-								<div class="container">
-									<a class="navbar-brand" href="#"> <img
-										src="img/icon/icons8-person-32.png" alt="Bootstrap" width="20">
-									</a>
-								</div>
-							</nav>
-						</li>
-						<li class="nav-item">
-							<nav class="navbar bg-body-tertiary">
-								<div class="container">
-									<a class="navbar-brand" href="#"> <img
-										src="img/icon/icons8-heart-32.png" alt="Bootstrap" width="20">
-									</a>
-								</div>
-							</nav>
-						</li>
-						<li class="nav-item">
-							<nav class="navbar bg-body-tertiary">
-								<div class="container">
-									<a class="navbar-brand" href="#"> <img
-										src="img/icon/icons8-bag-32.png" alt="Bootstrap" width="20">
-									</a>
-								</div>
-							</nav>
-						</li>
-					</ul>
-				</div>
-				<!-- end icon -->
-			</div>
-			<!--end  menu item -->
-		</div>
-	</nav>
-	<!--end menu-->
-
-	<!-- container main -->
-
-	<div class="container-fluid">
-		<div id="slogan"></div>
-		<div id="slogan"></div>
-		<div id="slogan"></div>
-		<div id="slogan"></div>
-		<div id="slogan"></div>
-
-	</div>
-
-	<!--end container main -->
-
-	<!-- footer -->
-	<div class="container-xl  " data-bs-theme="light">
+<div class="container-xl  " data-bs-theme="light">
 		<footer class="py-5  ">
 			<div class="row">
 				<!-- thong tin shop -->
@@ -176,16 +68,16 @@
 				<div class="col-5 col-md-2 mb-3">
 					<h5>Chính sách</h5>
 					<ul class="nav flex-column">
-						<li class="nav-item mb-2"><a href="huongDan_chinhSach/ChinhSach/thanhVien.html"
+						<li class="nav-item mb-2"><a href="../huongDan_chinhSach/ChinhSach/thanhVien.html"
 							class="nav-link p-0 text-body-secondary">Chính sách thành
 								viên</a></li>
-						<li class="nav-item mb-2"><a href="huongDan_chinhSach/ChinhSach/thanhToan.html"
+						<li class="nav-item mb-2"><a href="../huongDan_chinhSach/ChinhSach/thanhToan.html"
 							class="nav-link p-0 text-body-secondary">Chính sách thanh
 								toán</a></li>
-						<li class="nav-item mb-2"><a href="huongDan_chinhSach/ChinhSach/doiSanPham.html"
+						<li class="nav-item mb-2"><a href="../huongDan_chinhSach/ChinhSach/doiSanPham.html"
 							class="nav-link p-0 text-body-secondary">Chính sách đổi sản
 								phẩm</a></li>
-						<li class="nav-item mb-2"><a href=" huongDan_chinhSach/ChinhSach/baoMat.html"
+						<li class="nav-item mb-2"><a href=" ../huongDan_chinhSach/ChinhSach/baoMat.html"
 							class="nav-link p-0 text-body-secondary">Chính sách bảo mật</a></li>
 						<li class="nav-item mb-2"><a href="huongDan_chinhSach/ChinhSach/congTacVien.html"
 							class="nav-link p-0 text-body-secondary">Chính sách cộng tác
@@ -197,15 +89,15 @@
 				<div class="col-5 col-md-2 mb-3">
 					<h5>HƯỚNG DẪN</h5>
 					<ul class="nav flex-column">
-						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/muaHang.html"
+						<li class="nav-item mb-2"><a href="../huongDan_chinhSach/HuongDan/muaHang.html"
 							class="nav-link p-0 text-body-secondary">Hướng dẫn mua hàng</a></li>
-						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/DoiTra.html"
+						<li class="nav-item mb-2"><a href="../huongDan_chinhSach/HuongDan/DoiTra.html"
 							class="nav-link p-0 text-body-secondary">Hướng dẫn đổi trả</a></li>
-						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/thanhToan.html"
+						<li class="nav-item mb-2"><a href="../huongDan_chinhSach/HuongDan/thanhToan.html"
 							class="nav-link p-0 text-body-secondary">Hướng dẫn thanh toán</a></li>
-						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/congTacVien.html"
+						<li class="nav-item mb-2"><a href="../huongDan_chinhSach/HuongDan/congTacVien.html"
 							class="nav-link p-0 text-body-secondary">Chương trình công tác viên</a></li>
-						<li class="nav-item mb-2"><a href="huongDan_chinhSach/HuongDan/GiaiDapThacMac.html"
+						<li class="nav-item mb-2"><a href="../huongDan_chinhSach/HuongDan/GiaiDapThacMac.html"
 							class="nav-link p-0 text-body-secondary">Giải đáp thắc mắc</a></li>
 					</ul>
 				</div>
@@ -227,16 +119,16 @@
 								class="d-flex flex-column flex-sm-row justify-content-between py-4  container-x ">
 								<ul class="list-unstyled d-flex">
 									<li class="ms-1"><a class="link-body-emphasis" href="#"><img
-											class="w-auto   " alt="" src="img/img_larg/payment_1.webp"></a></li>
+											class="w-auto   " alt="" src="../img/img_larg/payment_1.webp"></a></li>
 
 									<li class="ms-1"><a class="link-body-emphasis" href="#"><img
-											class="w-auto  " alt="" src="img/img_larg/payment_2.webp"></a></li>
+											class="w-auto  " alt="" src="../img/img_larg/payment_2.webp"></a></li>
 
 									<li class="ms-1"><a class="link-body-emphasis" href="#"><img
-											class="w-auto  " alt="" src="img/img_larg/payment_3.webp"></a></li>
+											class="w-auto  " alt="" src="../img/img_larg/payment_3.webp"></a></li>
 
 									<li class="ms-1"><a class="link-body-emphasis" href="#"><img
-											class="w-auto " alt="" src="img/img_larg/payment_4.webp"></a></li>
+											class="w-auto " alt="" src="../img/img_larg/payment_4.webp"></a></li>
 
 								</ul>
 							</div>
@@ -247,12 +139,5 @@
 
 		</footer>
 	</div>
-	<!-- end footer -->
-	<!--bootstrap js-->
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-		crossorigin="anonymous"></script>
 </body>
-
 </html>
