@@ -1,4 +1,4 @@
-package model;
+package model1;
 
 public class report {
 	private String id;
