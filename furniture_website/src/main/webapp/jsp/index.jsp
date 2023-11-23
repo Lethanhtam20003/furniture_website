@@ -24,14 +24,6 @@
 
 	<!-- container main -->
 
-	<div class="container-fluid">
-		<div id="slogan"></div>
-		<div id="slogan"></div>
-		<div id="slogan"></div>
-		<div id="slogan"></div>
-		<div id="slogan"></div>
-
-	</div>
 
 	<!--end container main -->
 
