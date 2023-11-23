@@ -29,7 +29,7 @@ public class JDBCUtil {
 
 			// cac thong so
 			String url = "jdbc:sqlserver://LAPTOPFK:1433;";
-			String database = "database=thuchanh2;";
+			String database = "database=MyWebSite;";
 			String name = "user=sa;";
 			String password = "password=123456789;";
 			String encrypt = "encrypt=false;";

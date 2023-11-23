@@ -21,7 +21,6 @@ public class Storage {
 		listGroups = new HashMap<>();
 		daoProduct = new DaoProduct();
 		daoProduct.getDataListProduct(listProduct);
-
 	}
 
 	public static Map<String, Product> getListProduct() {
@@ -54,6 +53,10 @@ public class Storage {
 
 	public static Group getGroupByID(String group) {
 		return getListGroups().get(group);
+	}
+	public static void main(String[] args) {
+		Storage s = new Storage();
+		System.out.println(s.getListProduct().toString());
 	}
 
 }

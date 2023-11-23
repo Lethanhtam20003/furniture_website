@@ -9,8 +9,7 @@ public class ProductFactory {
 
 		Product p = null;
 		if (type.equalsIgnoreCase("decoration")) {
-			p = new ProDecoration(id, productName, categoryID, groupID, wattage, producer, amountThen, decription,
-					quallityInStorageThen, status, status, color, thickness);
+			
 		} else if (type.equalsIgnoreCase("decorativeLights")) {
 			
 		} else if (type.equalsIgnoreCase("handMade")) {
