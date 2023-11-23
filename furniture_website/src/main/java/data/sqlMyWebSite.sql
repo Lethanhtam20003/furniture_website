@@ -23,7 +23,20 @@ create table Account(
 	constraint chk_account_gender check (gender like 'nam' or gender like 'nu')
 )
 go
-create table product(
+create table GroupPro(
+	groupID varchar(100) primary key,
+	name varchar(100) not null,
+	content varchar(1000)
+)
+go
+create table Category(
+	categoryID varchar(100) primary key,
+	name varchar(100) not null,
+	content varchar(1000)
+)
+
+go
+create table Product(
 	productID varchar(100) primary key,
 	productName varchar(100) not null,
 	categoryID  varchar(100),
@@ -42,7 +55,11 @@ create table product(
 	timeToUse varchar(1000),
 	price float,
 	decription varchar(1000),
-	status varchar(1000) 
+	status varchar(1000) ,
+	qualityInStorage int, -- so luong con lai trong kho
+	foreign key (categoryID) references Category(categoryID),
+	foreign key (groupID) references GroupPro(groupID)
+
 )
 go
 create table Cart(
@@ -152,8 +169,10 @@ create table Report(
 )
 go
 
-
-
-
-
-
+-- insert data
+insert into Account(accountID,accountName,password,firstName,lastName,
+email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)
+values ('ac001','user001','user001','le','tan','user001@gmail.com','04/04/2000','nam',
+			'123454782','hcm','hcm',GETDATE(),GETDATE()),
+		('ac002','user002','user002','nguyen','tri','user002@gmail.com','05/05/2000','nam',
+			'123454782','hn','hn',GETDATE(),GETDATE());

@@ -1,6 +1,6 @@
 package model;
 
-public class ProSanitaryEquiment {
+public class ProSanitaryEquiment extends Product {
 	private String meterial;
 	private String space;
 

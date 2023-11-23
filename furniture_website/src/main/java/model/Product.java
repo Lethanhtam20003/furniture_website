@@ -1,5 +1,7 @@
 package model;
 
+import data.Storage;
+
 public class Product {
 	private String id;
 	private String name;
@@ -15,6 +17,34 @@ public class Product {
 	public Product() {
 		// TODO Auto-generated constructor stub
 	}
+	
+
+	/**
+	 * @param id
+	 * @param name
+	 * @param category
+	 * @param group
+	 * @param wattage
+	 * @param producer
+	 * @param price
+	 * @param decription
+	 * @param qualityStorage
+	 * @param status
+	 */
+	public Product(String id, String name, String category, String group, String wattage, String producer,
+			double price, String decription, int qualityStorage, String status) {
+		this.id = id;
+		this.name = name;
+		if(!category.equals("")) this.setCategory(category);
+		if(!group.equals(""))this.setGroup(group);
+		this.wattage = wattage;
+		this.producer = producer;
+		this.price = price;
+		this.decription = decription;
+		this.qualityStorage = qualityStorage;
+		this.status = status;
+	}
+
 
 	public String getId() {
 		return id;
@@ -36,16 +66,16 @@ public class Product {
 		return category;
 	}
 
-	public void setCategory(Category category) {
-		this.category = category;
+	public void setCategory(String category) {
+		this.category = Storage.getCategoryById(category);
 	}
 
 	public Group getGroup() {
 		return group;
 	}
 
-	public void setGroup(Group group) {
-		this.group = group;
+	public void setGroup(String group) {
+		this.group = Storage.getGroupByID(group);
 	}
 
 	public String getWattage() {

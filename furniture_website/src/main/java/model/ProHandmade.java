@@ -1,6 +1,6 @@
 package model;
 
-public class ProHandmade {
+public class ProHandmade extends Product{
 	private String color;
 	private String size;
 	private String design;
