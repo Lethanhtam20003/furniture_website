@@ -4,31 +4,27 @@ public class ProDecorativeLights extends Product {
 	private String packaged;
 	private String brandOrigin;
 	private String meterial;
-	private String type;
 	private String size;
 
 	public ProDecorativeLights() {
 		// TODO Auto-generated constructor stub
 	}
 
-	
-
 	/**
 	 * @param packaged
 	 * @param brandOrigin
 	 * @param meterial
-	 * @param type
 	 * @param size
 	 */
-	public ProDecorativeLights(String packaged, String brandOrigin, String meterial, String type, String size) {
+	public ProDecorativeLights(String id, String name, Category category, Group group, String wattage, String producer,
+			double price, String decription, int qualityStorage, String status, String type, String packaged,
+			String brandOrigin, String meterial, String size) {
+		super(id, name, category, group, wattage, producer, price, decription, qualityStorage, status, type);
 		this.packaged = packaged;
 		this.brandOrigin = brandOrigin;
 		this.meterial = meterial;
-		this.type = type;
 		this.size = size;
 	}
-
-
 
 	public String getBrandOrigin() {
 		return brandOrigin;
@@ -52,14 +48,6 @@ public class ProDecorativeLights extends Product {
 
 	public void setMeterial(String meterial) {
 		this.meterial = meterial;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public String getSize() {

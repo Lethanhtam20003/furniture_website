@@ -66,7 +66,7 @@ public class DaoProduct implements IDao<Product> {
 				res.add(p);
 
 			}
-			// : ngat ket noi
+			// 5: ngat ket noi
 			JDBCUtil.closeConnection(con);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -140,9 +140,39 @@ public class DaoProduct implements IDao<Product> {
 			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
-			String sql = "";
+			String sql = "insert into Product(productID,productName,"
+					+ "categoryID,groupID,wattage,producer,amount,"
+					+ "packeged,brandOrigin,meterial,type,color,"
+					+ "thickness,space,design,timeToUse,price,decription,"
+					+ "status,qualityInStorage)"
+					+ "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			
 			PreparedStatement st = con.prepareStatement(sql);
-			st.setString(0, "");
+			st.setString(0, t.getId());
+			st.setString(1, t.getName());
+			st.setString(2, t.getCategory().getCategoryID());
+			st.setString(3, t.getGroup().getGroupID());
+			st.setString(4, t.getWattage());
+			st.setString(5, t.getProducer());
+			st.setString(6, t.getPrice()+"");
+			st.setString(7, t.getDecription());
+			st.setString(8, t.getQualityStorage()+"");
+			st.setString(9, t.getStatus());
+			st.setString(10, t.getType());
+			
+			if(t.getType().equalsIgnoreCase("")) {
+				
+			}else if(t.getType().equalsIgnoreCase("")) {
+				
+			}else if(t.getType().equalsIgnoreCase("")) {
+				
+			}else if(t.getType().equalsIgnoreCase("")) {
+				
+			}
+			
+			
+			
+			
 			// 3; thuc thi cau lenh sql
 			check =st.executeUpdate(sql);
 			// 4: xu ly ket qua tra ve
@@ -160,9 +190,9 @@ public class DaoProduct implements IDao<Product> {
 
 	@Override
 	public boolean insertAll(ArrayList<Product> arr) {
+		
+		
 		return false;
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override

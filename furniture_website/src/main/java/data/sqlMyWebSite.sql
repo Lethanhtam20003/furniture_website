@@ -41,22 +41,22 @@ create table Product(
 	productName varchar(100) not null,
 	categoryID  varchar(100),
 	groupID varchar(100),
-	wattage varchar(1000),
 	producer varchar(1000),
-	amount int,
-	packeged  varchar(1000),
-	brandOrigin  varchar(1000),
-	meterial varchar(1000),
-	type  varchar(1000),
-	color varchar(1000),
-	thickness varchar(1000),
-	space varchar(1000),
-	design varchar(1000),
-	timeToUse varchar(1000),
 	price float,
+	type  varchar(1000),
 	decription varchar(1000),
-	status varchar(1000) ,
 	qualityInStorage int, -- so luong con lai trong kho
+	status varchar(1000) ,
+	packeged  varchar(1000), -- cach dong goi
+	brandOrigin  varchar(1000), -- xuat xu
+	meterial varchar(1000), -- chat lieu
+	size varchar(1000), -- kich thuoc
+	wattage varchar(1000), -- cong xuat
+	color varchar(1000), -- mua sac
+	thicknessWood varchar(1000), -- do day cua go
+	space varchar(1000), -- vi tri de
+	design varchar(1000), -- thiet ke
+	timeToUse varchar(1000), -- thoi han su dung
 	foreign key (categoryID) references Category(categoryID),
 	foreign key (groupID) references GroupPro(groupID)
 

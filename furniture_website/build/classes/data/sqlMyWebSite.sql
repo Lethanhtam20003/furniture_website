@@ -23,27 +23,43 @@ create table Account(
 	constraint chk_account_gender check (gender like 'nam' or gender like 'nu')
 )
 go
-create table product(
+create table GroupPro(
+	groupID varchar(100) primary key,
+	name varchar(100) not null,
+	content varchar(1000)
+)
+go
+create table Category(
+	categoryID varchar(100) primary key,
+	name varchar(100) not null,
+	content varchar(1000)
+)
+
+go
+create table Product(
 	productID varchar(100) primary key,
 	productName varchar(100) not null,
 	categoryID  varchar(100),
 	groupID varchar(100),
-	wattage varchar(1000),
 	producer varchar(1000),
-	amount int,
-	packeged  varchar(1000),
-	brandOrigin  varchar(1000),
-	meterial varchar(1000),
-	type  varchar(1000),
-	color varchar(1000),
-	thickness varchar(1000),
-	space varchar(1000),
-	design varchar(1000),
-	timeToUse varchar(1000),
 	price float,
+	type  varchar(1000),
 	decription varchar(1000),
+	qualityInStorage int, -- so luong con lai trong kho
 	status varchar(1000) ,
-	qualityInStorage int -- so luong con lai trong kho
+	packeged  varchar(1000), -- cach dong goi
+	brandOrigin  varchar(1000), -- xuat xu
+	meterial varchar(1000), -- chat lieu
+	size varchar(1000), -- kich thuoc
+	wattage varchar(1000), -- cong xuat
+	color varchar(1000), -- mua sac
+	thicknessWood varchar(1000), -- do day cua go
+	space varchar(1000), -- vi tri de
+	design varchar(1000), -- thiet ke
+	timeToUse varchar(1000), -- thoi han su dung
+	foreign key (categoryID) references Category(categoryID),
+	foreign key (groupID) references GroupPro(groupID)
+
 )
 go
 create table Cart(
@@ -153,8 +169,10 @@ create table Report(
 )
 go
 
-
-
-
-
-
+-- insert data
+insert into Account(accountID,accountName,password,firstName,lastName,
+email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)
+values ('ac001','user001','user001','le','tan','user001@gmail.com','04/04/2000','nam',
+			'123454782','hcm','hcm',GETDATE(),GETDATE()),
+		('ac002','user002','user002','nguyen','tri','user002@gmail.com','05/05/2000','nam',
+			'123454782','hn','hn',GETDATE(),GETDATE());
