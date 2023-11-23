@@ -9,19 +9,24 @@ public class ProDecoration extends Product {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	
+
 	/**
 	 * @param size
 	 * @param color
 	 * @param thicknessWood
 	 */
-	public ProDecoration(String id, String name, String category, String group, String wattage, String producer,
-			double price, String decription, int qualityStorage, String status, String size, String color,
-			String thicknessWood) {
-		super(id, name, category, group, wattage, producer, price, decription, qualityStorage, status);
+	public ProDecoration(String id, String name, Category category, Group group, String wattage, String producer,
+			double price, String decription, int qualityStorage, String status, String type,String size, String color, String thicknessWood) {
+		super(id, name, category, group, wattage, producer, price, decription, qualityStorage, status, type);
 		this.size = size;
 		this.color = color;
 		this.thicknessWood = thicknessWood;
 	}
+
+
+
 
 	public String getSize() {
 		return size;

@@ -1,6 +1,6 @@
 package model;
 
-public class ProHandmade extends Product{
+public class ProHandmade extends Product {
 	private String color;
 	private String size;
 	private String design;
@@ -8,6 +8,21 @@ public class ProHandmade extends Product{
 
 	public ProHandmade() {
 		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param color
+	 * @param size
+	 * @param design
+	 * @param timeToUse
+	 */
+	public ProHandmade(String id, String name, Category category, Group group, String wattage, String producer,
+			double price, String decription, int qualityStorage, String status, String type,String color, String size, String design, String timeToUse) {
+		super(id, name, category, group, wattage, producer, price, decription, qualityStorage, status, type);
+		this.color = color;
+		this.size = size;
+		this.design = design;
+		this.timeToUse = timeToUse;
 	}
 
 	public String getColor() {
