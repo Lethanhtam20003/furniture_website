@@ -14,4 +14,61 @@ public class Order {
 	public Order() {
 		// TODO Auto-generated constructor stub
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getCreateAt() {
+		return createAt;
+	}
+
+	public void setCreateAt(String createAt) {
+		this.createAt = createAt;
+	}
+
+	public String getShippingCost() {
+		return ShippingCost;
+	}
+
+	public void setShippingCost(String shippingCost) {
+		ShippingCost = shippingCost;
+	}
+
+	public String getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(String totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	public List<OrderItem> getListOrderItem() {
+		return listOrderItem;
+	}
+
+	public void setListOrderItem(List<OrderItem> listOrderItem) {
+		this.listOrderItem = listOrderItem;
+	}
+
+	public Payment getPayment() {
+		return payment;
+	}
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 }

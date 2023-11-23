@@ -42,7 +42,8 @@ create table product(
 	timeToUse varchar(1000),
 	price float,
 	decription varchar(1000),
-	status varchar(1000) 
+	status varchar(1000) ,
+	qualityInStorage int -- so luong con lai trong kho
 )
 go
 create table Cart(

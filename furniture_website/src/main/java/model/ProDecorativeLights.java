@@ -11,6 +11,8 @@ public class ProDecorativeLights extends Product {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+
 	/**
 	 * @param packaged
 	 * @param brandOrigin
@@ -25,6 +27,8 @@ public class ProDecorativeLights extends Product {
 		this.type = type;
 		this.size = size;
 	}
+
+
 
 	public String getBrandOrigin() {
 		return brandOrigin;
