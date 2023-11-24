@@ -31,12 +31,12 @@ public class Product {
 	 * @param status
 	 * @param type
 	 */
-	public Product(String id, String name, Category category, Group group, String producer, double price,
+	public Product(String id, String name, String category, String group, String producer, double price,
 			String decription, int qualityStorage, String status, String type) {
 		this.id = id;
 		this.name = name;
-		this.category = category;
-		this.group = group;
+		this.category = Storage.getCategoryById(category);
+		this.group = Storage.getGroupByID(group);
 		this.producer = producer;
 		this.price = price;
 		this.decription = decription;
@@ -132,5 +132,13 @@ public class Product {
 	public void setGroup(Group group) {
 		this.group = group;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", category=" + category + ", group=" + group + ", producer="
+				+ producer + ", price=" + price + ", type=" + type + ", decription=" + decription + ", qualityStorage="
+				+ qualityStorage + ", status=" + status + "]";
+	}
+	
 
 }

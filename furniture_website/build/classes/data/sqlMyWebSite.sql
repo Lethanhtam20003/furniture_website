@@ -36,7 +36,6 @@ create table Category(
 );
 
 go
-drop table product;
 create table Product(
 	productID varchar(100) primary key,
 	productName varchar(100) not null,
@@ -226,8 +225,8 @@ insert into Category(categoryID,name,content) values
 ('c016','Den cay-Den ban','');
 
 ----Product table
-insert into product(productID,productName,categoryID,groupID,wattage,producer,amount,
-packeged,brandOrigin,meterial,type,color,thickness,space,design,timeToUse,price,decription,status,qualityInStorage) values
-	('p001','Den chum','c013','gr004','Cam ung khong cham,tang giam do cao','Bean Violight',50,'1 den','Trung Quoc',
-	'Kim loai son tinh dien + Mika','Den Trang Tri','Vang','','','','','',1750000.0,
+insert into product(productID,productName,categoryID,groupID,wattage,producer,
+packeged,brandOrigin,meterial,type,color,thicknessWood,space,design,timeToUse,price,decription,status,qualityInStorage) values
+	('p001','Den chum','c013','gr004','Cam ung khong cham,tang giam do cao','Bean Violight','1 den','Trung Quoc',
+	'Kim loai son tinh dien + Mika','decoration','Vang','','','','',1750000.0,
 	'thiet ke don gian,hien dai, tien nghi, cung do ben cao','',30);

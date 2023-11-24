@@ -10,7 +10,6 @@ public class ProHandmade extends Product {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	/**
 	 * @param id
 	 * @param name
@@ -27,7 +26,7 @@ public class ProHandmade extends Product {
 	 * @param design
 	 * @param timeToUse
 	 */
-	public ProHandmade(String id, String name, Category category, Group group, String producer, double price,
+	public ProHandmade(String id, String name, String category, String group, String producer, double price,
 			String decription, int qualityStorage, String status, String type, String color, String size, String design,
 			String timeToUse) {
 		super(id, name, category, group, producer, price, decription, qualityStorage, status, type);
@@ -36,7 +35,6 @@ public class ProHandmade extends Product {
 		this.design = design;
 		this.timeToUse = timeToUse;
 	}
-
 
 	public String getColor() {
 		return color;

@@ -8,6 +8,7 @@ public class ProSanitaryEquiment extends Product {
 		// TODO Auto-generated constructor stub
 	}
 
+	
 	/**
 	 * @param id
 	 * @param name
@@ -22,12 +23,13 @@ public class ProSanitaryEquiment extends Product {
 	 * @param meterial
 	 * @param space
 	 */
-	public ProSanitaryEquiment(String id, String name, Category category, Group group, String producer, double price,
+	public ProSanitaryEquiment(String id, String name, String category, String group, String producer, double price,
 			String decription, int qualityStorage, String status, String type, String meterial, String space) {
 		super(id, name, category, group, producer, price, decription, qualityStorage, status, type);
 		this.meterial = meterial;
 		this.space = space;
 	}
+
 
 	public String getMeterial() {
 		return meterial;

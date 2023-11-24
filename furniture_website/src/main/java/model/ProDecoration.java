@@ -9,12 +9,6 @@ public class ProDecoration extends Product {
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	
-
-
-
-
 	/**
 	 * @param id
 	 * @param name
@@ -30,7 +24,7 @@ public class ProDecoration extends Product {
 	 * @param color
 	 * @param thicknessWood
 	 */
-	public ProDecoration(String id, String name, Category category, Group group, String producer, double price,
+	public ProDecoration(String id, String name, String category, String group, String producer, double price,
 			String decription, int qualityStorage, String status, String type, String size, String color,
 			String thicknessWood) {
 		super(id, name, category, group, producer, price, decription, qualityStorage, status, type);
@@ -38,12 +32,6 @@ public class ProDecoration extends Product {
 		this.color = color;
 		this.thicknessWood = thicknessWood;
 	}
-
-
-
-
-
-
 
 	public String getSize() {
 		return size;

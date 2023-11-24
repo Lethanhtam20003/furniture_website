@@ -1,8 +1,11 @@
 package data;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import dao.DaoCategory;
+import dao.DaoGroup;
 import dao.DaoProduct;
 import model.Category;
 import model.Group;
@@ -13,17 +16,48 @@ public class Storage {
 	private static Map<String, Category> listCategorys;
 	private static Map<String, Group> listGroups;
 	private DaoProduct daoProduct;
+	private DaoGroup daoGroup;
+	private DaoCategory daoCategory;
 
 	public Storage() {
 		// TODO Auto-generated constructor stub
 		listProduct = new HashMap<>();
 		listCategorys = new HashMap<>();
 		listGroups = new HashMap<>();
+		//
 		daoProduct = new DaoProduct();
-		daoProduct.getDataListProduct(listProduct);
+		daoGroup = new DaoGroup();
+		daoCategory = new DaoCategory();
+		//
+		setDataListProduct(daoProduct.selectAll());
+		setDataListGroup(daoGroup.selectAll());
+		setDataListCategory(daoCategory.selectAll());
+
 	}
 
-	public static Map<String, Product> getListProduct() {
+	private void setDataListCategory(List<Category> list) {
+		// TODO Auto-generated method stub
+		for (Category category : list) {
+			listCategorys.put(category.getCategoryID(), category);
+		}
+	}
+
+	private void setDataListGroup(List<Group> list) {
+		// TODO Auto-generated method stub
+		for (Group group : list) {
+			listGroups.put(group.getGroupID(), group);
+		}
+	}
+
+	private void setDataListProduct(List<Product> list) {
+		// TODO Auto-generated method stub
+		for (Product product : list) {
+			listProduct.put(product.getId(), product);
+		}
+
+	}
+
+	public Map<String, Product> getListProduct() {
 		return listProduct;
 	}
 
@@ -54,9 +88,18 @@ public class Storage {
 	public static Group getGroupByID(String group) {
 		return getListGroups().get(group);
 	}
-	public static void main(String[] args) {
-		Storage s = new Storage();
-		System.out.println(s.getListProduct().toString());
+
+	public DaoProduct getDaoProduct() {
+		return daoProduct;
+	}
+
+	public void setDaoProduct(DaoProduct daoProduct) {
+		this.daoProduct = daoProduct;
+	}
+
+	public Product getpProductByID(String string) {
+		// TODO Auto-generated method stub
+		return daoProduct.selectByID(string);
 	}
 
 }

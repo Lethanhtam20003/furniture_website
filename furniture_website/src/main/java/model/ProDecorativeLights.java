@@ -40,7 +40,7 @@ public class ProDecorativeLights extends Product {
 	 * @param size
 	 * @param wattage
 	 */
-	public ProDecorativeLights(String id, String name, Category category, Group group, String producer, double price,
+	public ProDecorativeLights(String id, String name, String category, String group, String producer, double price,
 			String decription, int qualityStorage, String status, String type, String packaged, String brandOrigin,
 			String meterial, String size, String wattage) {
 		super(id, name, category, group, producer, price, decription, qualityStorage, status, type);
