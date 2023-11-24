@@ -7,19 +7,17 @@ public class Product {
 	private String name;
 	private Category category;
 	private Group group;
-	private String wattage;
 	private String producer;
 	private double price;
+	private String type;
 	private String decription;
 	private int qualityStorage;
 	private String status;
-	private String type;
 
 	public Product() {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	/**
 	 * @param id
 	 * @param name
@@ -33,13 +31,12 @@ public class Product {
 	 * @param status
 	 * @param type
 	 */
-	public Product(String id, String name, Category category, Group group, String wattage, String producer,
-			double price, String decription, int qualityStorage, String status, String type) {
+	public Product(String id, String name, Category category, Group group, String producer, double price,
+			String decription, int qualityStorage, String status, String type) {
 		this.id = id;
 		this.name = name;
 		this.category = category;
 		this.group = group;
-		this.wattage = wattage;
 		this.producer = producer;
 		this.price = price;
 		this.decription = decription;
@@ -47,7 +44,6 @@ public class Product {
 		this.status = status;
 		this.type = type;
 	}
-
 
 	public String getId() {
 		return id;
@@ -79,14 +75,6 @@ public class Product {
 
 	public void setGroup(String group) {
 		this.group = Storage.getGroupByID(group);
-	}
-
-	public String getWattage() {
-		return wattage;
-	}
-
-	public void setWattage(String wattage) {
-		this.wattage = wattage;
 	}
 
 	public String getProducer() {

@@ -152,13 +152,12 @@ public class DaoProduct implements IDao<Product> {
 			st.setString(1, t.getName());
 			st.setString(2, t.getCategory().getCategoryID());
 			st.setString(3, t.getGroup().getGroupID());
-			st.setString(4, t.getWattage());
 			st.setString(5, t.getProducer());
 			st.setString(6, t.getPrice()+"");
+			st.setString(6, t.getType()+"");
 			st.setString(7, t.getDecription());
 			st.setString(8, t.getQualityStorage()+"");
 			st.setString(9, t.getStatus());
-			st.setString(10, t.getType());
 			
 			if(t.getType().equalsIgnoreCase("")) {
 				
