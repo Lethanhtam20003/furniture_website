@@ -45,6 +45,18 @@ public class Product {
 		this.type = type;
 	}
 
+	public Product(String id, String name, String producer, double price, String decription, int qualityStorage,
+			String status, String type) {
+		this.id = id;
+		this.name = name;
+		this.producer = producer;
+		this.price = price;
+		this.decription = decription;
+		this.qualityStorage = qualityStorage;
+		this.status = status;
+		this.type = type;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -139,6 +151,5 @@ public class Product {
 				+ producer + ", price=" + price + ", type=" + type + ", decription=" + decription + ", qualityStorage="
 				+ qualityStorage + ", status=" + status + "]";
 	}
-	
 
 }

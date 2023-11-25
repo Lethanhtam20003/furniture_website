@@ -71,7 +71,7 @@ create table Cart(
 go
 create table CartDetails(
 	cartID  varchar(100) primary key,
-	productID  varchar(100) not null  ,
+	productID  varchar(100),
 	qualityProduct int default 1,
 	price float,
 	isGift bit default 0,

@@ -1,23 +1,21 @@
 package test_dao;
 
-import dao.DaoProduct;
-import data.Storage;
+import dao.DaoCategory;
 import junit.framework.TestCase;
-import model.ProHandmade;
 
-public class TDaoProduct extends TestCase implements ITestDao {
-	DaoProduct p = new DaoProduct();
+public class TDaoGroup extends TestCase implements ITestDao {
 
 	@Override
 	public void testSelectAll() {
 		// TODO Auto-generated method stub
-		System.out.println(p.selectAll());
+		
+
 	}
 
 	@Override
 	public void testSelectById() {
 		// TODO Auto-generated method stub
-		System.out.println(p.selectByID("p001"));
+
 	}
 
 	@Override
@@ -29,9 +27,7 @@ public class TDaoProduct extends TestCase implements ITestDao {
 	@Override
 	public void testinsert() {
 		// TODO Auto-generated method stub
-		ProHandmade pro = new ProHandmade("p010", "ghe xoay", "nha og ba", 200000,
-				"nha toi ba doi lam bac si", 50, "do", "type", "50*50", "ghe xoay chan 6 ", "2-3 nam", "");
-		p.insert(pro);
+
 	}
 
 	@Override

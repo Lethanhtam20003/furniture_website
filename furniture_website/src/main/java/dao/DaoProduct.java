@@ -20,7 +20,6 @@ public class DaoProduct implements IDao<Product> {
 	List<Product> list = new ArrayList<Product>();
 
 	public DaoProduct() {
-		list = selectAll();
 	}
 
 	@Override
