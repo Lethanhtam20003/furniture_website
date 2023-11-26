@@ -9,6 +9,17 @@ public class Category {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * @param categoryID
+	 * @param name
+	 * @param content
+	 */
+	public Category(String categoryID, String name, String content) {
+		this.categoryID = categoryID;
+		this.name = name;
+		this.content = content;
+	}
+
 	public String getCategoryID() {
 		return categoryID;
 	}
@@ -31,6 +42,11 @@ public class Category {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	@Override
+	public String toString() {
+		return "\n Category [categoryID=" + categoryID + ", name=" + name + ", content=" + content + "] ";
 	}
 
 }

@@ -8,6 +8,19 @@ public class Group {
 	public Group() {
 		// TODO Auto-generated constructor stub
 	}
+	
+
+	/**
+	 * @param groupID
+	 * @param name
+	 * @param content
+	 */
+	public Group(String groupID, String name, String content) {
+		this.groupID = groupID;
+		this.name = name;
+		this.content = content;
+	}
+
 
 	public String getGroupID() {
 		return groupID;
@@ -31,6 +44,12 @@ public class Group {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+
+	@Override
+	public String toString() {
+		return "\n groupID=" + groupID + ", name=" + name + ", content=" + content + "";
 	}
 
 }

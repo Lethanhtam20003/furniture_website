@@ -251,6 +251,7 @@ packeged,brandOrigin,meterial,size,type,color,thicknessWood,space,design,timeToU
 	'Thep boc PVC/PU','Kich thuoc:460x610x980mmH','Do Noi That','Den,Nau','','','','',750000.0,
 	'Thiet ke theo kieu dang co ban, co gam mau phu hop voi khong gian noi that','',20);
 
+
 ----Cart table
 insert into Cart(cartID,shppingCost,totalPriceSelected) values
 ('ca001',30000.0,0.0),
@@ -282,4 +283,5 @@ insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
 ('or003','p002',10,5000000.0),
 ('or004','p002',10,5000000.0),
 ('or004','p003',10,5000000.0);
+
 
