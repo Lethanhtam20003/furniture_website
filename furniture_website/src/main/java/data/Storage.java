@@ -10,6 +10,9 @@ import dao.DaoProduct;
 import model.Category;
 import model.Group;
 import model.ProDecoration;
+import model.ProDecorativeLights;
+import model.ProHandmade;
+import model.ProSanitaryEquiment;
 import model.Product;
 
 public class Storage {
@@ -55,7 +58,14 @@ public class Storage {
 		for (Product product : list) {
 			if (product.getType().equalsIgnoreCase("decoration")) {
 				listProduct.put(product.getId(), (ProDecoration) product);
+			}else if (product.getType().equalsIgnoreCase("decorativeLights")) {
+				listProduct.put(product.getId(), (ProDecorativeLights) product);
+			}else if (product.getType().equalsIgnoreCase("handMade")) {
+				listProduct.put(product.getId(), (ProHandmade) product);
+			}else if (product.getType().equalsIgnoreCase("sanitaryEquiment")) {
+				listProduct.put(product.getId(), (ProSanitaryEquiment) product);
 			}
+			
 		}
 
 	}
@@ -108,7 +118,9 @@ public class Storage {
 	public static void main(String[] args) {
 		Storage s = new Storage();
 		DaoProduct p = s.getDaoProduct();
-		System.out.println(p.selectAll());
+		System.out.println(s.getListProduct());
+		System.out.println(s.getListProduct().size());
+		
 	}
 
 }

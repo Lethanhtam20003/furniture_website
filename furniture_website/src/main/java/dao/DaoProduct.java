@@ -59,6 +59,7 @@ public class DaoProduct implements IDao<Product> {
 				String design = rs.getString("design");
 				String timeToUse = rs.getString("timeToUse");
 
+
 				// ep kieu
 				double priceThen = Double.parseDouble(price);
 				int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);

@@ -16,11 +16,12 @@ public class Factory {
 			p = new ProDecorativeLights(id, productName, categoryID, groupID, producer, price, decription,
 					quallityInStorageThen, status, type, space, brandOrigin, meterial, status, wattage);
 		} else if (type.equalsIgnoreCase("handMade")) {
-
+			p = new ProHandmade(id, productName, categoryID, groupID, producer, price, decription,
+					quallityInStorageThen, status, type, color, size, design, timeToUse);
 		} else if (type.equalsIgnoreCase("sanitaryEquiment")) {
-
+			p = new ProSanitaryEquiment(id, productName, categoryID, groupID, producer, price, decription,
+					quallityInStorageThen, status, type, meterial, space);
 		}
-
 		return p;
 	}
 
