@@ -9,6 +9,7 @@ import dao.DaoGroup;
 import dao.DaoProduct;
 import model.Category;
 import model.Group;
+import model.ProDecoration;
 import model.Product;
 
 public class Storage {
@@ -28,7 +29,7 @@ public class Storage {
 		daoProduct = new DaoProduct();
 		daoGroup = new DaoGroup();
 		daoCategory = new DaoCategory();
-		//
+
 		setDataListProduct(daoProduct.selectAll());
 		setDataListGroup(daoGroup.selectAll());
 		setDataListCategory(daoCategory.selectAll());
@@ -52,7 +53,9 @@ public class Storage {
 	private void setDataListProduct(List<Product> list) {
 		// TODO Auto-generated method stub
 		for (Product product : list) {
-			listProduct.put(product.getId(), product);
+			if (product.getType().equalsIgnoreCase("decoration")) {
+				listProduct.put(product.getId(), (ProDecoration) product);
+			}
 		}
 
 	}
@@ -100,6 +103,12 @@ public class Storage {
 	public Product getpProductByID(String string) {
 		// TODO Auto-generated method stub
 		return daoProduct.selectByID(string);
+	}
+
+	public static void main(String[] args) {
+		Storage s = new Storage();
+		DaoProduct p = s.getDaoProduct();
+		System.out.println(p.selectAll());
 	}
 
 }

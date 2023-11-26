@@ -66,8 +66,8 @@ public class DaoProduct implements IDao<Product> {
 				Product p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type,
 						decription, QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage,
 						color, thickness, space, design, timeToUse);
-
-				res.add(p);
+				if (p != null)
+					res.add(p);
 
 			}
 			// 5: ngat ket noi
@@ -144,15 +144,22 @@ public class DaoProduct implements IDao<Product> {
 			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
-			String sql = "insert into Product(productID,productName," + "categoryID,groupID,wattage,producer,amount,"
-					+ "packeged,brandOrigin,meterial,type,color," + "thickness,space,design,timeToUse,price,decription,"
-					+ "status,qualityInStorage)" + "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into Product(productID,productName,categoryID,groupID,producer,price,"
+					+ "type,decription,qualityInStorage,status,packeged,brandOrigin,meterial,size,wattage,"
+					+ "color,thicknessWood,space,design,timeToUse)"
+					+ "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, t.getId());
 			st.setString(2, t.getName());
-			st.setString(3, t.getCategory().getCategoryID());
-			st.setString(4, t.getGroup().getGroupID());
+			if (!(t.getCategory() == null)) {
+				st.setString(3, t.getCategory().getCategoryID());
+			} else
+				st.setString(3, "");
+			if (!(t.getGroup() == null)) {
+				st.setString(4, t.getGroup().getGroupID());
+			} else
+				st.setString(4, "");
 			st.setString(5, t.getProducer());
 			st.setString(6, t.getPrice() + "");
 			st.setString(7, t.getType() + "");
@@ -161,6 +168,7 @@ public class DaoProduct implements IDao<Product> {
 			st.setString(10, t.getStatus());
 			if (t.getType().equalsIgnoreCase("decorativeLights")) {
 				ProDecorativeLights p = (ProDecorativeLights) t;
+
 				st.setString(11, p.getPackaged());
 				st.setString(12, p.getBrandOrigin());
 				st.setString(13, p.getMeterial());
@@ -214,7 +222,8 @@ public class DaoProduct implements IDao<Product> {
 			}
 
 			// 3; thuc thi cau lenh sql
-			check = st.executeUpdate(sql);
+			st.execute();
+			// check = st.executeUpdate(sql);
 			// 4: xu ly ket qua tra ve
 
 			// 5: ngat ket noi

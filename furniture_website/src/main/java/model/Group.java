@@ -46,4 +46,10 @@ public class Group {
 		this.content = content;
 	}
 
+
+	@Override
+	public String toString() {
+		return "\n groupID=" + groupID + ", name=" + name + ", content=" + content + "";
+	}
+
 }

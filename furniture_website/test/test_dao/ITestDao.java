@@ -5,14 +5,14 @@ public interface ITestDao {
 
 	public void testSelectById();
 
-	public void testinsertAll();
+	public void testInsertAll();
 
-	public void testinsert();
+	public void testInsert();
 
-	public void testdeleteAll();
+	public void testDeleteAll();
 
-	public void testdelete();
+	public void testDelete();
 
-	public void testupdate();
+	public void testUpdate();
 
 }

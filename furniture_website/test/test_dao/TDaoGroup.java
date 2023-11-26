@@ -1,6 +1,6 @@
 package test_dao;
 
-import dao.DaoCategory;
+import dao.DaoGroup;
 import junit.framework.TestCase;
 
 public class TDaoGroup extends TestCase implements ITestDao {
@@ -8,7 +8,8 @@ public class TDaoGroup extends TestCase implements ITestDao {
 	@Override
 	public void testSelectAll() {
 		// TODO Auto-generated method stub
-		
+		DaoGroup c = new DaoGroup();
+		System.out.println(c.selectAll().toString());
 
 	}
 
@@ -19,31 +20,31 @@ public class TDaoGroup extends TestCase implements ITestDao {
 	}
 
 	@Override
-	public void testinsertAll() {
+	public void testInsertAll() {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void testinsert() {
+	public void testInsert() {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void testdeleteAll() {
+	public void testDeleteAll() {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void testdelete() {
+	public void testDelete() {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void testupdate() {
+	public void testUpdate() {
 		// TODO Auto-generated method stub
 
 	}

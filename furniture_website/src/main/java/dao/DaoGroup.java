@@ -10,6 +10,10 @@ import java.util.List;
 import model.Group;
 
 public class DaoGroup implements IDao<Group> {
+	String tablleName = "GroupPro";
+	String c1groupID = "groupID";
+	String c2Name = "name";
+	String c3Content = "content";
 
 	@Override
 	public List<Group> selectAll() {
@@ -20,8 +24,7 @@ public class DaoGroup implements IDao<Group> {
 
 			// 2: tao doi tuong prepareStatement
 			String sql = "select * from GroupPro";
-			PreparedStatement st = con.prepareStatement(sql
-					);
+			PreparedStatement st = con.prepareStatement(sql);
 
 			// 3; thuc thi cau lenh sql
 			ResultSet rs = st.executeQuery();
@@ -51,7 +54,7 @@ public class DaoGroup implements IDao<Group> {
 			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
-			String sql = "select * from GroupPro where groupID like '"+t +"'";
+			String sql = "select * from GroupPro where groupID like '" + t + "'";
 			PreparedStatement st = con.prepareStatement(sql);
 
 			// 3; thuc thi cau lenh sql
@@ -90,12 +93,12 @@ public class DaoGroup implements IDao<Group> {
 			Connection con = JDBCUtil.getConnection();
 			// 2 tao doi tuong
 			String sql = "insert into Group(groupID,name,content)";
-			PreparedStatement ps = con.prepareStatement(sql);
+			java.sql.Statement st = con.createStatement();
 
 			// 3. thuc thi cau lenh sql
-			ps.executeQuery();
+			check = st.executeUpdate(sql);
 			// 4. xu ly ket qua tra ve
-			check = ps.getUpdateCount();
+
 			// 5. ngat ket noi
 			JDBCUtil.closeConnection(con);
 		} catch (SQLException e) {

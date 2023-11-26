@@ -36,15 +36,6 @@ public class ProHandmade extends Product {
 		this.timeToUse = timeToUse;
 	}
 
-	public ProHandmade(String id, String name, String producer, double price, String decription, int qualityStorage,
-			String status, String type, String color, String size, String design, String timeToUse) {
-		super(id, name, producer, price, decription, qualityStorage, status, type);
-		this.color = color;
-		this.size = size;
-		this.design = design;
-		this.timeToUse = timeToUse;
-	}
-
 	public String getColor() {
 		return color;
 	}

@@ -6,48 +6,53 @@ import junit.framework.TestCase;
 import model.ProHandmade;
 
 public class TDaoProduct extends TestCase implements ITestDao {
-	DaoProduct p = new DaoProduct();
 
 	@Override
 	public void testSelectAll() {
-		// TODO Auto-generated method stub
+		Storage s = new Storage();
+		DaoProduct p = s.getDaoProduct();
 		System.out.println(p.selectAll());
 	}
 
 	@Override
 	public void testSelectById() {
-		// TODO Auto-generated method stub
+		Storage s = new Storage();
+		DaoProduct p = s.getDaoProduct();
 		System.out.println(p.selectByID("p001"));
 	}
 
 	@Override
-	public void testinsertAll() {
+	public void testInsertAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void testInsert() {
+		Storage s = new Storage();
+		DaoProduct p = s.getDaoProduct();
+		ProHandmade pro = new ProHandmade("p013", "ban hai tang", "c003", "gr001", "", 200000, "", 20, "", "handMade",
+				"do", "50*50", "nho va nhe", "2 nam");
+		System.out.println(pro.toString());
+
+		System.out.println( p.insert(pro));
+		System.out.println(p.selectByID("p013"));
+	}
+
+	@Override
+	public void testDeleteAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void testDelete() {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void testinsert() {
-		// TODO Auto-generated method stub
-		ProHandmade pro = new ProHandmade("p010", "ghe xoay", "nha og ba", 200000,
-				"nha toi ba doi lam bac si", 50, "do", "type", "50*50", "ghe xoay chan 6 ", "2-3 nam", "");
-		p.insert(pro);
-	}
-
-	@Override
-	public void testdeleteAll() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void testdelete() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void testupdate() {
+	public void testUpdate() {
 		// TODO Auto-generated method stub
 
 	}
