@@ -1,4 +1,4 @@
-use thucHanh1;
+  use thucHanh1;
 go
 drop database MyWebSite;
 go
@@ -202,7 +202,8 @@ insert into GroupPro(groupID,name,content) values
 ('gr001','Do Noi That',''),
 ('gr002','Do Trang Tri',''),
 ('gr003','Thiet Bi Ve Sinh',''),
-('gr004','Den Trang Tri','');
+('gr004','Den Trang Tri',''),
+('gr005','San Pham Thu Cong','');
 
 
 ----Category table
@@ -222,11 +223,77 @@ insert into Category(categoryID,name,content) values
 ('c013','Den chum',''),
 ('c014','Den am tran',''),
 ('c015','Den tha tran',''),
-('c016','Den cay-Den ban','');
+('c016','Den cay-Den ban',''),
+('c017','San pham thu cong','');
 
 ----Product table
-insert into product(productID,productName,categoryID,groupID,wattage,producer,
-packeged,brandOrigin,meterial,type,color,thicknessWood,space,design,timeToUse,price,decription,status,qualityInStorage) values
-	('p001','Den chum','c013','gr004','Cam ung khong cham,tang giam do cao','Bean Violight','1 den','Trung Quoc',
-	'Kim loai son tinh dien + Mika','decoration','Vang','','','','',1750000.0,
-	'thiet ke don gian,hien dai, tien nghi, cung do ben cao','',30);
+insert into product(productID,productName,categoryID,groupID
+,producer,price,type,decription,qualityInStorage,status
+,packeged,brandOrigin,meterial,size,wattage,color,thicknessWood
+,space,design,timeToUse) values
+	(	'p001'	,'Den chum'	,'c013'	,'gr004'	,'Bean Violight'	,1750000.0
+	,'decorativeLights'	,'thiet ke don gian	,hien dai	, tien nghi, cung do ben cao'
+	,30	,''	,''	,'Trung Quoc'	,'Kim loai son tinh dien + Mika'	,''	,'Cam ung khong cham,tang giam do cao'	,'Vang'	,''	,''	,''	,''),
+	('p002','Don luc binh dan thu cong','c017','gr005'	,'Bean Oem'	,500000.0
+	,'handMade'	,'Dung lam ghe ngoi hoac ban dung do trang tri phong khach, mau sac tu nhien tao khong gian thoang mat gan gui'
+	,10	,''	,'Viet Nam	'	,'Luc binh ket hop coi va be ngo'	,''	,'Nho gon, de dang di chuyen'
+	,''	,''	,''	,''	,'Tu nhien'	,'Lau den 3-5 nam'),
+
+	('p003'	,'Ke giay 6 tang '	,'c005','gr002'
+	,'Go MDF' --  producer
+	,1000000.0 -- price
+	,'decoration' -- type
+	,'Co suc chua 18 doi giay, con co the su dung
+	de trung bay sach doc, cay canh,lo hoa, chong tray va chong am cao' -- decription
+	,20 -- qualityInStorage
+	,'' -- status
+	,'No Brand' -- packeged
+	,'Viet Nam' -- brandOrigin
+	,'Phu kien kem theo: 1 giay huong dan lap rap va 1 bo oc dung de lap dat'-- meterial 
+	,'' -- size
+	,'' -- wattage
+	,'Nau' -- color
+	,'18mm' -- thicknessWood
+	,'' -- space
+	,'' -- design
+	,'' -- timeToUse
+	),	
+
+	('p004'	,'Chau rua mat Lavabo dat ban '	,'c012','gr003'
+	,'Bean Toto' --  producer
+	,3500000.0 -- price
+	,'sanitaryEquiment' -- type
+	,'Kieu dang doc dao,hien dai. Thiet ke voi lo thoat tran dang trang tri' -- decription
+	,15 -- qualityInStorage
+	,'' -- status
+	,'Bao gom voi xa va bo xa' -- packeged
+	,'Hoa Ky' -- brandOrigin
+	,'Tam SPCC va chup den PMMA' -- meterial
+	,'' -- size
+	,'' -- wattage
+	,'Trang' -- color
+	,'' -- thicknessWood
+	,'Dat noi tren ban' -- space
+	,'' -- design
+	,'' -- timeToUse
+	),
+
+	('p005'	,'Ghe an Basil HomeLand'	,'c002','gr001'
+	,'HomeLand' --  producer
+	,750000.0 -- price
+	,'decoration' -- type
+	,'Thiet ke theo kieu dang co ban, co gam mau phu hop voi khong gian noi that' -- decription
+	,20 -- qualityInStorage
+	,'' -- status
+	,'Bao gom voi xa va bo xa' -- packeged
+	,'Viet Nam' -- brandOrigin
+	,'Thep boc PVC/PU' -- meterial
+	,'Kich thuoc:460x610x980mmH' -- size
+	,'' -- wattage
+	,'Den,Nau' -- color
+	,'' -- thicknessWood
+	,'' -- space
+	,'' -- design
+	,'' -- timeToUse
+	);
+
