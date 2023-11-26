@@ -70,12 +70,13 @@ create table Cart(
 
 go
 create table CartDetails(
-	cartID  varchar(100) primary key,
-	productID  varchar(100),
+	cartID  varchar(100),
+	productID  varchar(100) not null  ,
 	qualityProduct int default 1,
 	price float,
 	isGift bit default 0,
 	isAvailable bit default 1,
+	primary key (cartID,productID),
 	foreign key (productID) references product(productID),
 	foreign key (cartID) references Cart(cartID)
 )
@@ -88,10 +89,11 @@ create table Orders(
 )
 go
 create table OrderDetails(
-	OrderID  varchar(100) primary key ,
+	OrderID  varchar(100),
 	productID varchaR(100) not null ,
 	quanlity int default 1,
 	totalAmount float,
+	primary key (OrderID,productID),
 	foreign key (OrderID) references Orders(OrderID),
 	foreign key (productID) references Product(productID)
 )
@@ -248,4 +250,38 @@ packeged,brandOrigin,meterial,size,type,color,thicknessWood,space,design,timeToU
 	('p005','Ghe an Basil HomeLand','c002','gr001','','HomeLand','','Viet Nam',
 	'Thep boc PVC/PU','Kich thuoc:460x610x980mmH','Do Noi That','Den,Nau','','','','',750000.0,
 	'Thiet ke theo kieu dang co ban, co gam mau phu hop voi khong gian noi that','',20);
+
+
+----Cart table
+insert into Cart(cartID,shppingCost,totalPriceSelected) values
+('ca001',30000.0,0.0),
+('ca002',50000.0,0.0),
+('ca003',70000.0,0.0),
+('ca004',100000.0,0.0);
+
+----CartDetails table
+insert into CartDetails(cartID,productID,qualityProduct,price,isGift,isAvailable) values
+('ca001','p002',10,500000.0,0,1),
+('ca001','p001',10,500000.0,0,1),
+('ca002','p001',2,1750000.0,1,1),
+('ca003','p003',5,1000000.0,0,1),
+('ca004','p004',7,3500000.0,0,1),
+('ca003','p005',3,750000.0,1,1);
+
+----Order table
+insert into Orders(orderID,createAt,shippingCost,status) values
+('or001','11/14/2023',70000.0,''),
+('or002','10/28/2023',30000.0,''),
+('or003','09/30/2023',100000.0,''),
+('or004','12/15/2023',50000.0,'');
+
+----OrderDetails table
+insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
+('or001','p002',10,5000000.0),
+('or002','p002',10,5000000.0),
+('or002','p003',10,5000000.0),
+('or003','p002',10,5000000.0),
+('or004','p002',10,5000000.0),
+('or004','p003',10,5000000.0);
+
 
