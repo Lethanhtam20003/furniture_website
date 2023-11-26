@@ -71,7 +71,7 @@ create table Cart(
 go
 create table CartDetails(
 	cartID  varchar(100) primary key,
-	productID  varchar(100) not null  ,
+	productID  varchar(100),
 	qualityProduct int default 1,
 	price float,
 	isGift bit default 0,
@@ -248,3 +248,4 @@ packeged,brandOrigin,meterial,size,type,color,thicknessWood,space,design,timeToU
 	('p005','Ghe an Basil HomeLand','c002','gr001','','HomeLand','','Viet Nam',
 	'Thep boc PVC/PU','Kich thuoc:460x610x980mmH','Do Noi That','Den,Nau','','','','',750000.0,
 	'Thiet ke theo kieu dang co ban, co gam mau phu hop voi khong gian noi that','',20);
+
