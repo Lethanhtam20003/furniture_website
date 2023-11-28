@@ -19,12 +19,12 @@
 
 <body>
 	<!-- menu -->
-	<jsp:include page="menu.jsp"/>
+	<jsp:include page="menu.jsp" />
 	<!--end menu-->
 
 	<!-- container main -->
 
-
+	<jsp:include page="ProductPortfolio.jsp" />
 	<!--end container main -->
 
 	<!-- footer -->
