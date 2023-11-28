@@ -31,8 +31,8 @@ public class TDaoProduct extends TestCase implements ITestDao {
 	public void testInsert() {
 		Storage s = new Storage();
 		DaoProduct p = s.getDaoProduct();
-		ProHandmade pro = new ProHandmade("p013", "ban hai tang", "c003", "gr001", "", 200000, "", 20, "", "handMade",
-				"do", "50*50", "nho va nhe", "2 nam");
+		ProHandmade pro = new ProHandmade("p013", "ban hai tang", "c003", "gr001", "", 200000, "", 20, "","", "handMade",
+				"do", "50*50", "nho va nhe", "2 nam","");
 		System.out.println(pro.toString());
 
 		System.out.println( p.insert(pro));

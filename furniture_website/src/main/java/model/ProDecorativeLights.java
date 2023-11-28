@@ -23,6 +23,7 @@ public class ProDecorativeLights extends Product {
 		this.wattage = wattage;
 	}
 
+
 	/**
 	 * @param id
 	 * @param name
@@ -30,10 +31,11 @@ public class ProDecorativeLights extends Product {
 	 * @param group
 	 * @param producer
 	 * @param price
+	 * @param type
 	 * @param decription
 	 * @param qualityStorage
 	 * @param status
-	 * @param type
+	 * @param imgPath
 	 * @param packaged
 	 * @param brandOrigin
 	 * @param meterial
@@ -41,9 +43,9 @@ public class ProDecorativeLights extends Product {
 	 * @param wattage
 	 */
 	public ProDecorativeLights(String id, String name, String category, String group, String producer, double price,
-			String decription, int qualityStorage, String status, String type, String packaged, String brandOrigin,
-			String meterial, String size, String wattage) {
-		super(id, name, category, group, producer, price, decription, qualityStorage, status, type);
+			String type, String decription, int qualityStorage, String status, String packaged,
+			String brandOrigin, String meterial, String size, String wattage, String imgPath) {
+		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath);
 		this.packaged = packaged;
 		this.brandOrigin = brandOrigin;
 		this.meterial = meterial;

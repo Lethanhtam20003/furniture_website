@@ -41,12 +41,12 @@ create table Product(
 	productName varchar(100) not null,
 	categoryID  varchar(100),
 	groupID varchar(100),
-	producer varchar(1000),
+	producer varchar(1000), -- thuong hieu
 	price float,
-	type  varchar(1000),
-	decription varchar(1000),
+	type  varchar(1000), -- the loai
+	decription varchar(1000),  -- mo ta
 	qualityInStorage int, -- so luong con lai trong kho
-	status varchar(1000) ,
+	status varchar(1000) , -- 
 	packeged  varchar(1000), -- cach dong goi
 	brandOrigin  varchar(1000), -- xuat xu
 	meterial varchar(1000), -- chat lieu
@@ -57,6 +57,7 @@ create table Product(
 	space varchar(1000), -- vi tri de
 	design varchar(1000), -- thiet ke
 	timeToUse varchar(1000), -- thoi han su dung
+	imgPath varchar(1000), -- duong dan link anh
 	foreign key (categoryID) references Category(categoryID),
 	foreign key (groupID) references GroupPro(groupID)
 
@@ -235,9 +236,12 @@ insert into product(productID,productName,categoryID,groupID
 ,space,design,timeToUse) values
 	(	'p001'	,'Den chum'	,'c013'	,'gr004'	,'Bean Violight'	,1750000.0
 	,'decorativeLights'	,'thiet ke don gian	,hien dai	, tien nghi, cung do ben cao'
-	,30	,''	,''	,'Trung Quoc'	,'Kim loai son tinh dien + Mika'	,''	,'Cam ung khong cham,tang giam do cao'	,'Vang'	,''	,''	,''	,''),
+	,30	,''	,''	,'Trung Quoc'	,'Kim loai son tinh dien + Mika'	,''	
+	,'Cam ung khong cham,tang giam do cao'	,'Vang'	,''	,''	,''	,''),
+	
 	('p002','Don luc binh dan thu cong','c017','gr005'	,'Bean Oem'	,500000.0
-	,'handMade'	,'Dung lam ghe ngoi hoac ban dung do trang tri phong khach, mau sac tu nhien tao khong gian thoang mat gan gui'
+	,'handMade'	,'Dung lam ghe ngoi hoac ban dung do
+	 trang tri phong khach, mau sac tu nhien tao khong gian thoang mat gan gui'
 	,10	,''	,'Viet Nam	'	,'Luc binh ket hop coi va be ngo'	,''	,'Nho gon, de dang di chuyen'
 	,''	,''	,''	,''	,'Tu nhien'	,'Lau den 3-5 nam'),
 

@@ -58,7 +58,7 @@ public class DaoProduct implements IDao<Product> {
 				String space = rs.getString("space");
 				String design = rs.getString("design");
 				String timeToUse = rs.getString("timeToUse");
-
+				String imgPath = rs.getString("imgPath");
 
 				// ep kieu
 				double priceThen = Double.parseDouble(price);
@@ -66,7 +66,7 @@ public class DaoProduct implements IDao<Product> {
 
 				Product p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type,
 						decription, QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage,
-						color, thickness, space, design, timeToUse);
+						color, thickness, space, design, timeToUse, imgPath);
 				if (p != null)
 					res.add(p);
 
@@ -115,6 +115,7 @@ public class DaoProduct implements IDao<Product> {
 				String space = rs.getString("space");
 				String design = rs.getString("design");
 				String timeToUse = rs.getString("timeToUse");
+				String imgPath = rs.getString("imgPath");
 
 				// ep kieu
 				double priceThen = Double.parseDouble(price);
@@ -122,7 +123,7 @@ public class DaoProduct implements IDao<Product> {
 
 				p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type, decription,
 						QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage, color, thickness,
-						space, design, timeToUse);
+						space, design, timeToUse, imgPath);
 
 			}
 			// : ngat ket noi
@@ -148,7 +149,7 @@ public class DaoProduct implements IDao<Product> {
 			String sql = "insert into Product(productID,productName,categoryID,groupID,producer,price,"
 					+ "type,decription,qualityInStorage,status,packeged,brandOrigin,meterial,size,wattage,"
 					+ "color,thicknessWood,space,design,timeToUse)"
-					+ "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+					+ "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, t.getId());
@@ -220,8 +221,21 @@ public class DaoProduct implements IDao<Product> {
 				st.setString(19, p.getDesign());
 				st.setString(20, p.getTimeToUse());
 
-			}
+			} else if (t.getType().equalsIgnoreCase("furniture")) {
+				ProHandmade p = (ProHandmade) t;
+				st.setString(11, "");
+				st.setString(12, "");
+				st.setString(13, "");
+				st.setString(14, p.getSize());
+				st.setString(15, "");
+				st.setString(16, p.getColor());
+				st.setString(17, "");
+				st.setString(18, "");
+				st.setString(19, p.getDesign());
+				st.setString(20, p.getTimeToUse());
 
+			}
+			st.setString(21, t.getImgPath());
 			// 3; thuc thi cau lenh sql
 			st.execute();
 			// check = st.executeUpdate(sql);

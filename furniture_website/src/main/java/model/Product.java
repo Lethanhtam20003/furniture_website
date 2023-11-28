@@ -13,6 +13,7 @@ public class Product {
 	private String decription;
 	private int qualityStorage;
 	private String status;
+	private String imgPath;
 
 	public Product() {
 		// TODO Auto-generated constructor stub
@@ -23,38 +24,27 @@ public class Product {
 	 * @param name
 	 * @param category
 	 * @param group
-	 * @param wattage
 	 * @param producer
 	 * @param price
+	 * @param type
 	 * @param decription
 	 * @param qualityStorage
 	 * @param status
-	 * @param type
+	 * @param imgPath
 	 */
-	public Product(String id, String name, String category, String group, String producer, double price,
-			String decription, int qualityStorage, String status, String type) {
+	public Product(String id, String name, String category, String group, String producer, double price, String type,
+			String decription, int qualityStorage, String status, String imgPath) {
 		this.id = id;
 		this.name = name;
 		this.category = Storage.getCategoryById(category);
 		this.group = Storage.getGroupByID(group);
 		this.producer = producer;
 		this.price = price;
+		this.type = type;
 		this.decription = decription;
 		this.qualityStorage = qualityStorage;
 		this.status = status;
-		this.type = type;
-	}
-
-	public Product(String id, String name, String producer, double price, String decription, int qualityStorage,
-			String status, String type) {
-		this.id = id;
-		this.name = name;
-		this.producer = producer;
-		this.price = price;
-		this.decription = decription;
-		this.qualityStorage = qualityStorage;
-		this.status = status;
-		this.type = type;
+		this.imgPath = imgPath;
 	}
 
 	public String getId() {
@@ -115,6 +105,14 @@ public class Product {
 
 	public int getQualityStorage() {
 		return qualityStorage;
+	}
+
+	public String getImgPath() {
+		return imgPath;
+	}
+
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
 	}
 
 	public void setQualityStorage(int qualityStorage) {
