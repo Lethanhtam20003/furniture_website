@@ -1,0 +1,30 @@
+.chuLon {
+	font-size: medium;
+	font-weight: bold;
+}
+
+.image-container {
+	position: relative;
+}
+
+.overlay-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: black;
+	padding: 20px;
+	color: red;
+}
+.colorr {
+	color: red;
+}
+
+.viTriTrenPhai {
+	
+	color: red;
+}
+
+.a{
+	
+}
+

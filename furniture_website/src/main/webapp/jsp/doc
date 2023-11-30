@@ -1,0 +1,53 @@
+
+<%
+		Storage s = (Storage) session.getAttribute("storage");
+		Map<String, Product> list = s.getListProduct();
+		int i = 0;
+		int j = 0;
+
+		list.forEach((key, value) -> {
+		%>
+		<div class="row ">
+			<%
+
+			%>
+			<div class="col-3 border ">
+				<div class="card" style="width: 18em;">
+					<div class="image-container">
+						<img src="../img/img_larg/pro_ke3.webp" class="card-img-top "
+							alt="...">
+						<div class="overlay-text">discount</div>
+					</div>
+					<div class="card-body text-bg-light	">
+						<p class="card-text"></p>
+					</div>
+				</div>
+			</div>
+			<%
+
+			%>
+		</div>
+		<%
+		});
+		%>
+		
+			<div class="row ">
+	<%
+	for (j = 0; j < 4; j++) {
+	%>
+	<div class="col-3 border ">
+		<div class="card" style="width: 18em;">
+			<div class="image-container">
+				<img src="../img/img_larg/pro_ke3.webp" class="card-img-top "
+					alt="...">
+				<div class="overlay-text">discount</div>
+			</div>
+			<div class="card-body text-bg-light	">
+				<p class="card-text"></p>
+			</div>
+		</div>
+	</div>
+	<%
+	}
+	%>
+</div>
