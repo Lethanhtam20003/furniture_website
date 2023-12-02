@@ -24,7 +24,7 @@ public class TDaoProduct extends TestCase implements ITestDao {
 	@Override
 	public void testInsertAll() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class TDaoProduct extends TestCase implements ITestDao {
 	@Override
 	public void testDeleteAll() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

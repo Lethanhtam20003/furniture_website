@@ -18,6 +18,27 @@ import model.Factory;
 public class DaoProduct implements IDao<Product> {
 
 	List<Product> list = new ArrayList<Product>();
+	private String id;
+	private String productName;
+	private String categoryID;
+	private String groupID;
+	private String producer;
+	private String price;
+	private String type;
+	private String decription;
+	private String QuallityInStorage;
+	private String status;
+	private String packeged;
+	private String brandOrigin;
+	private String meterial;
+	private String size;
+	private String wattage;
+	private String color;
+	private String thickness;
+	private String space;
+	private String design;
+	private String timeToUse;
+	private String imgPath;
 
 	public DaoProduct() {
 	}
@@ -43,7 +64,7 @@ public class DaoProduct implements IDao<Product> {
 				String categoryID = rs.getString("categoryID");
 				String groupID = rs.getString("groupID");
 				String producer = rs.getString("producer");
-				String price = rs.getString("price");
+				double price = rs.getDouble("price");
 				String type = rs.getString("type");
 				String decription = rs.getString("decription");
 				String QuallityInStorage = rs.getString("qualityInStorage");
@@ -61,7 +82,7 @@ public class DaoProduct implements IDao<Product> {
 				String imgPath = rs.getString("imgPath");
 
 				// ep kieu
-				double priceThen = Double.parseDouble(price);
+				double priceThen = (price);
 				int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);
 
 				Product p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type,
@@ -90,42 +111,43 @@ public class DaoProduct implements IDao<Product> {
 			// 2: tao doi tuong stament
 			String sql = "select * from Product where productID like '" + t + "'";
 			PreparedStatement st = con.prepareStatement(sql);
+//			st.setString(1, t);
 
 			// 3; thuc thi cau lenh sql
 			ResultSet rs = st.executeQuery();
 			// 4: xu ly ket qua tra ve
 			while (rs.next()) {
-				String id = rs.getString("productID");
-				String productName = rs.getString("productName");
-				String categoryID = rs.getString("categoryID");
-				String groupID = rs.getString("groupID");
-				String producer = rs.getString("producer");
-				String price = rs.getString("price");
-				String type = rs.getString("type");
-				String decription = rs.getString("decription");
-				String QuallityInStorage = rs.getString("qualityInStorage");
-				String status = rs.getString("status");
-				String packeged = rs.getString("packeged");
-				String brandOrigin = rs.getString("brandOrigin");
-				String meterial = rs.getString("meterial");
-				String size = rs.getString("size");
-				String wattage = rs.getString("wattage");
-				String color = rs.getString("color");
-				String thickness = rs.getString("thicknessWood");
-				String space = rs.getString("space");
-				String design = rs.getString("design");
-				String timeToUse = rs.getString("timeToUse");
-				String imgPath = rs.getString("imgPath");
+				id = rs.getString("productID");
+				productName = rs.getString("productName");
+				categoryID = rs.getString("categoryID");
+				groupID = rs.getString("groupID");
+				producer = rs.getString("producer");
+				price = rs.getString("price");
+				type = rs.getString("type");
+				decription = rs.getString("decription");
+				QuallityInStorage = rs.getString("qualityInStorage");
+				status = rs.getString("status");
+				packeged = rs.getString("packeged");
+				brandOrigin = rs.getString("brandOrigin");
+				meterial = rs.getString("meterial");
+				size = rs.getString("size");
+				wattage = rs.getString("wattage");
+				color = rs.getString("color");
+				thickness = rs.getString("thicknessWood");
+				space = rs.getString("space");
+				design = rs.getString("design");
+				timeToUse = rs.getString("timeToUse");
+				imgPath = rs.getString("imgPath");
 
 				// ep kieu
-				double priceThen = Double.parseDouble(price);
-				int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);
-
-				p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type, decription,
-						QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage, color, thickness,
-						space, design, timeToUse, imgPath);
 
 			}
+			double priceThen = Double.parseDouble(price);
+			int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);
+			p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type, decription,
+					QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage, color, thickness,
+					space, design, timeToUse, imgPath);
+
 			// : ngat ket noi
 			JDBCUtil.closeConnection(con);
 		} catch (SQLException e) {
@@ -237,7 +259,7 @@ public class DaoProduct implements IDao<Product> {
 			}
 			st.setString(21, t.getImgPath());
 			// 3; thuc thi cau lenh sql
-			st.execute();
+			check = st.executeUpdate();
 			// check = st.executeUpdate(sql);
 			// 4: xu ly ket qua tra ve
 
@@ -268,12 +290,12 @@ public class DaoProduct implements IDao<Product> {
 			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
-			String sql = "delete from Product where productID like '" + t.getId() + "'";
+			String sql = "delete from Product where productID like '?'";
 
 			PreparedStatement st = con.prepareStatement(sql);
-
+			st.setString(1, t.getId());
 			// 3; thuc thi cau lenh sql
-			check = st.executeUpdate(sql);
+			check = st.executeUpdate();
 
 			// 4: xu ly ket qua tra ve
 
@@ -305,79 +327,105 @@ public class DaoProduct implements IDao<Product> {
 			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
+//			"insert into Product(productID,productName,categoryID,groupID,producer,price,"
+//			+ "type,decription,qualityInStorage,status,packeged,brandOrigin,meterial,size,wattage,"
+//			+ "color,thicknessWood,space,design,timeToUse)"
+//			+ "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
 			String sql = "update Product" + "set productID = ?" + ",productName = ?" + ",categoryID = ?"
-					+ ",groupID  = ?" + ",wattage = ?" + ",producer  = ?" + ",amount  = ?" + ",packeged  = ?"
-					+ ",brandOrigin  = ?" + ",meterial  = ?" + ",type = ?" + ",color = ?" + ",thickness  = ?"
-					+ ",space = ?" + ",design = ?" + ",timeToUse  = ?" + ",price = ?" + ",decription = ?"
-					+ ",status = ?" + ",qualityInStorage = ?" + "where productID like '" + t.getId() + "'";
+					+ ",groupID  = ?" + ",producer  = ?" + ",price = ?" + ",type = ?" + ",decription = ?"
+					+ ",qualityInStorage = ?" + ",status = ?" + ",packeged  = ?" + ",brandOrigin  = ?"
+					+ ",meterial  = ?" + ",size  = ?" + ",wattage = ?" + ",color = ?" + ",thicknessWood  = ?"
+					+ ",space = ?" + ",design = ?" + ",timeToUse  = ?" + ",imgPath = ?" + "where productID like '?'";
 
 			PreparedStatement st = con.prepareStatement(sql);
-			st.setString(0, t.getId());
-			st.setString(1, t.getName());
-			st.setString(2, t.getCategory().getCategoryID());
-			st.setString(3, t.getGroup().getGroupID());
-			st.setString(4, t.getProducer());
-			st.setString(5, t.getPrice() + "");
-			st.setString(6, t.getType() + "");
-			st.setString(7, t.getDecription());
-			st.setString(8, t.getQualityStorage() + "");
-			st.setString(9, t.getStatus());
+			st.setString(1, t.getId());
+			st.setString(2, t.getName());
+			if (!(t.getCategory() == null)) {
+				st.setString(3, t.getCategory().getCategoryID());
+			} else
+				st.setString(3, "");
+			if (!(t.getGroup() == null)) {
+				st.setString(4, t.getGroup().getGroupID());
+			} else
+				st.setString(4, "");
+			st.setString(5, t.getProducer());
+			st.setString(6, t.getPrice() + "");
+			st.setString(7, t.getType() + "");
+			st.setString(8, t.getDecription());
+			st.setString(9, t.getQualityStorage() + "");
+			st.setString(10, t.getStatus());
 			if (t.getType().equalsIgnoreCase("decorativeLights")) {
 				ProDecorativeLights p = (ProDecorativeLights) t;
-				st.setString(10, p.getPackaged());
-				st.setString(11, p.getBrandOrigin());
-				st.setString(12, p.getMeterial());
-				st.setString(13, p.getSize());
-				st.setString(14, p.getWattage());
-				st.setString(15, "");
+
+				st.setString(11, p.getPackaged());
+				st.setString(12, p.getBrandOrigin());
+				st.setString(13, p.getMeterial());
+				st.setString(14, p.getSize());
+				st.setString(15, p.getWattage());
 				st.setString(16, "");
 				st.setString(17, "");
 				st.setString(18, "");
 				st.setString(19, "");
+				st.setString(20, "");
 
 			} else if (t.getType().equalsIgnoreCase("decoration ")) {
 				ProDecoration p = (ProDecoration) t;
-				st.setString(10, "");
 				st.setString(11, "");
 				st.setString(12, "");
-				st.setString(13, p.getSize());
+				st.setString(13, "");
+				st.setString(14, p.getSize());
 				st.setString(14, "");
-				st.setString(15, p.getColor());
-				st.setString(16, p.getThicknessWood());
-				st.setString(17, "");
+				st.setString(16, p.getColor());
+				st.setString(17, p.getThicknessWood());
 				st.setString(18, "");
 				st.setString(19, "");
+				st.setString(20, "");
 
 			} else if (t.getType().equalsIgnoreCase("sanitaryEquiment")) {
 				ProSanitaryEquiment p = (ProSanitaryEquiment) t;
-				st.setString(10, "");
 				st.setString(11, "");
-				st.setString(12, p.getMeterial());
-				st.setString(13, "");
+				st.setString(12, "");
+				st.setString(13, p.getMeterial());
 				st.setString(14, "");
 				st.setString(15, "");
 				st.setString(16, "");
-				st.setString(17, p.getSpace());
-				st.setString(18, "");
+				st.setString(17, "");
+				st.setString(18, p.getSpace());
 				st.setString(19, "");
+				st.setString(20, "");
 
 			} else if (t.getType().equalsIgnoreCase("handMade")) {
 				ProHandmade p = (ProHandmade) t;
-				st.setString(10, "");
 				st.setString(11, "");
 				st.setString(12, "");
-				st.setString(13, p.getSize());
-				st.setString(14, "");
-				st.setString(15, p.getColor());
-				st.setString(16, "");
+				st.setString(13, "");
+				st.setString(14, p.getSize());
+				st.setString(15, "");
+				st.setString(16, p.getColor());
 				st.setString(17, "");
-				st.setString(18, p.getDesign());
-				st.setString(19, p.getTimeToUse());
+				st.setString(18, "");
+				st.setString(19, p.getDesign());
+				st.setString(20, p.getTimeToUse());
+
+			} else if (t.getType().equalsIgnoreCase("furniture")) {
+				ProHandmade p = (ProHandmade) t;
+				st.setString(11, "");
+				st.setString(12, "");
+				st.setString(13, "");
+				st.setString(14, p.getSize());
+				st.setString(15, "");
+				st.setString(16, p.getColor());
+				st.setString(17, "");
+				st.setString(18, "");
+				st.setString(19, p.getDesign());
+				st.setString(20, p.getTimeToUse());
 
 			}
+			st.setString(21, t.getImgPath());
+			st.setString(22, t.getId());
 
 			// 3; thuc thi cau lenh sql
-			check = st.executeUpdate(sql);
+			check = st.executeUpdate();
 			// 4: xu ly ket qua tra ve
 
 			// 5: ngat ket noi
