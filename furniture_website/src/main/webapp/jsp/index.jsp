@@ -13,8 +13,11 @@
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../css/main_css.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="" href="../img/*">
+
 <title>Trang chủ</title>
+
 </head>
 
 <body>
@@ -23,13 +26,17 @@
 	<!--end menu-->
 
 	<!-- container main -->
-
+	<br>
 	<jsp:include page="ProductPortfolio.jsp" />
+	<br>
+	<jsp:include page="listProduct.jsp" flush="true" />
+
 	<!--end container main -->
 
 	<!-- footer -->
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="footer.jsp" />
 	<!-- end footer -->
+
 	<!--bootstrap js-->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+.chuLon {
+	font-size: medium;
+	font-weight: bold;
+}
+
+.image-container {
+	position: relative;
+}
+
+.overlay-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: black;
+}
+
+.colorr {
+	color: red;
+}
+
+.viTriTrenPhai {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+}
+
+a {
+	font-size: 20px;
+	color: green;
+	/* hoặc mã màu khác như #008000 hoặc rgb(0, 128, 0) */
+	text-decoration: none;
+	/* ( loại bỏ gạch chân liên kết) */
+
+}

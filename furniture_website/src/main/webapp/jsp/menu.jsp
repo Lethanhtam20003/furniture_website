@@ -10,18 +10,18 @@
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/main_css.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <title>menu</title>
 </head>
 <body>
 	<!-- menu -->
-	<nav class="navbar navbar-expand-lg bg-body-tertiary ">
-		<div class="container-xl">
+	<nav class="navbar navbar-expand-lg bg-success-subtle ">
+		<div class="container-xl bg-success-subtle">
 			<!-- logo -->
-			<nav class="navbar bg-body-tertiary">
-				<div class="container">
-					<a class="navbar-brand" href="#"> <img
-						src="../img/img_larg/th.jpeg" alt="Bootstrap" height="50">
+			<nav class="">
+				<div class="container-xll image-container ">
+					<a class="navbar-brand "  href="#"> <img
+						src="../img/img_larg/th.jpeg" alt="Bootstrap" height="60" width="400">
 					</a>
 				</div>
 			</nav>
@@ -57,12 +57,12 @@
 
 				</ul>
 				<!-- icon -->
-				<div clsss="chuLon">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<div clsss="chuLon bg-success-subtle">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-success-subtle">
 						<li class="nav-item">
-							<nav class="navbar bg-body-tertiary">
+							<nav class="navbar bg-success-subtle">
 								<div class="container">
-									<a class="navbar-brand" href="#"> <img
+									<a class="navbar-brand " href="#"> <img
 										src="../img/icon/icons8-search-32.png" alt="Bootstrap"
 										width="20">
 									</a>
@@ -70,7 +70,7 @@
 							</nav>
 						</li>
 						<li class="nav-item">
-							<nav class="navbar bg-body-tertiary">
+							<nav class="navbar bg-success-subtle">
 								<div class="container">
 									<a class="navbar-brand" href="#"> <img
 										src="../img/icon/icons8-person-32.png" alt="Bootstrap"
@@ -80,7 +80,7 @@
 							</nav>
 						</li>
 						<li class="nav-item">
-							<nav class="navbar bg-body-tertiary">
+							<nav class="navbar bg-success-subtle">
 								<div class="container">
 									<a class="navbar-brand" href="#"> <img
 										src="../img/icon/icons8-heart-32.png" alt="Bootstrap"
@@ -90,7 +90,7 @@
 							</nav>
 						</li>
 						<li class="nav-item">
-							<nav class="navbar bg-body-tertiary">
+							<nav class="navbar bg-success-subtle">
 								<div class="container">
 									<a class="navbar-brand" href="#"> <img
 										src="../img/icon/icons8-bag-32.png" alt="Bootstrap" width="20">

@@ -37,7 +37,8 @@ public class JDBCUtil {
 			String loginTimeout = "loginTimeout=30;";
 			String connectionUrl = url + database + name + password + encrypt + trustServerCertificate + loginTimeout;
 
-			// tao ket noi
+			// tao ket noi com.microsoft.sqlserver.jdbc.SQLServerDriver
+			// Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			c = DriverManager.getConnection(connectionUrl);
 		} catch (Exception e) {
 			e.printStackTrace();

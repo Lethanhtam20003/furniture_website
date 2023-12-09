@@ -1,6 +1,8 @@
 package model;
 
 public class ProDecoration extends Product {
+
+	private String design;
 	private String size;
 	private String color;
 	private String thicknessWood;
@@ -16,18 +18,21 @@ public class ProDecoration extends Product {
 	 * @param group
 	 * @param producer
 	 * @param price
+	 * @param type
 	 * @param decription
 	 * @param qualityStorage
 	 * @param status
-	 * @param type
+	 * @param imgPath
+	 * @param design
 	 * @param size
 	 * @param color
 	 * @param thicknessWood
 	 */
 	public ProDecoration(String id, String name, String category, String group, String producer, double price,
-			String decription, int qualityStorage, String status, String type, String size, String color,
-			String thicknessWood) {
-		super(id, name, category, group, producer, price, decription, qualityStorage, status, type);
+			String type, String decription, int qualityStorage, String status, String design, String size, String color,
+			String thicknessWood, String imgPath, String couponID) {
+		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID);
+		this.design = design;
 		this.size = size;
 		this.color = color;
 		this.thicknessWood = thicknessWood;
