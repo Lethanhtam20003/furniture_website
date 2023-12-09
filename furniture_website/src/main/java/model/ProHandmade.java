@@ -28,9 +28,9 @@ public class ProHandmade extends Product {
 	 * @param timeToUse
 	 */
 	public ProHandmade(String id, String name, String category, String group, String producer, double price,
-			String type, String decription, int qualityStorage, String status, String color,
-			String size, String design, String timeToUse, String imgPath) {
-		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath);
+			String type, String decription, int qualityStorage, String status, String color, String size, String design,
+			String timeToUse, String imgPath, String couponID) {
+		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID);
 		this.color = color;
 		this.size = size;
 		this.design = design;

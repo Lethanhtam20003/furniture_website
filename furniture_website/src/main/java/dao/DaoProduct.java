@@ -39,6 +39,7 @@ public class DaoProduct implements IDao<Product> {
 	private String design;
 	private String timeToUse;
 	private String imgPath;
+	private String couponID;
 
 	public DaoProduct() {
 	}
@@ -46,10 +47,11 @@ public class DaoProduct implements IDao<Product> {
 	@Override
 	public List<Product> selectAll() {
 		// TODO Auto-generated method stub
+		System.out.println("4");
 		List<Product> res = new ArrayList<Product>();
 		try {
 			// 1: tao ket noi den csdl
-			Connection con = JDBCUtil.getConnection();
+			Connection con = JDBCUtil.getConnection();  
 
 			// 2: tao doi tuong stament
 			String sql = "select * from Product";
@@ -58,6 +60,7 @@ public class DaoProduct implements IDao<Product> {
 			// 3; thuc thi cau lenh sql
 			ResultSet rs = st.executeQuery();
 			// 4: xu ly ket qua tra ve
+			System.out.println("a");
 			while (rs.next()) {
 				String id = rs.getString("productID");
 				String productName = rs.getString("productName");
@@ -80,16 +83,18 @@ public class DaoProduct implements IDao<Product> {
 				String design = rs.getString("design");
 				String timeToUse = rs.getString("timeToUse");
 				String imgPath = rs.getString("imgPath");
+				String couponID = rs.getString("coupon");
 
 				// ep kieu
 				double priceThen = (price);
 				int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);
-
+				System.out.println(type);
 				Product p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type,
 						decription, QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage,
-						color, thickness, space, design, timeToUse, imgPath);
-				if (p != null)
-					res.add(p);
+						color, thickness, space, design, timeToUse, imgPath, couponID);
+				if (p != null) {
+					System.out.println(res.add(p));
+				}
 
 			}
 			// 5: ngat ket noi
@@ -138,7 +143,7 @@ public class DaoProduct implements IDao<Product> {
 				design = rs.getString("design");
 				timeToUse = rs.getString("timeToUse");
 				imgPath = rs.getString("imgPath");
-
+				couponID = rs.getString("couponID");
 				// ep kieu
 
 			}
@@ -146,7 +151,7 @@ public class DaoProduct implements IDao<Product> {
 			int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);
 			p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type, decription,
 					QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage, color, thickness,
-					space, design, timeToUse, imgPath);
+					space, design, timeToUse, imgPath, couponID);
 
 			// : ngat ket noi
 			JDBCUtil.closeConnection(con);

@@ -7,6 +7,7 @@ public class ProFurniture extends Product {
 	private String color;
 	private String size;
 	private String thicknessWood;
+
 	/**
 	 * @param id
 	 * @param name
@@ -26,14 +27,14 @@ public class ProFurniture extends Product {
 	 * @param thicknessWood
 	 */
 	public ProFurniture(String id, String name, String category, String group, String producer, double price,
-			String type, String decription, int qualityStorage, String status, String brandOrigin,
-			String meterial, String color, String size, String thicknessWood, String imgPath) {
-		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath);
+			String type, String decription, int qualityStorage, String status, String brandOrigin, String meterial,
+			String color, String size, String thicknessWood, String imgPath, String couponID) {
+		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID);
 		this.brandOrigin = brandOrigin;
 		this.meterial = meterial;
 		this.color = color;
 		this.size = size;
 		this.thicknessWood = thicknessWood;
 	}
-	
+
 }

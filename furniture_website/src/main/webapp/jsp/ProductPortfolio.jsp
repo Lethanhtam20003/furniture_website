@@ -10,27 +10,38 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <meta charset="UTF-8">
+<style type="text/css">
+.linkXanh {
+	font-size: 20px;
+	color: green; /* hoặc mã màu khác như #008000 hoặc rgb(0, 128, 0) */
+	text-decoration: none; /* ( loại bỏ gạch chân liên kết) */
+}
+
+.lui {
+	margin-left: -10;
+	left: -10;
+}
+</style>
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container-xl  ">
-
+	<div class="container-xl ">
 		<div class="row p-3 ">
-			<div class="col-6 ">
+			<div class="col-6">
 				<div class="image-container">
-					<a href="index.jsp "> <img class=" "
+					<a href="index.jsp "> <img class=" lui"
 						src="../img/img_larg/cate_1_img.webp" alt="Mô tả của ảnh"
 						height="200" width=" 600">
 					</a>
 					<div class="overlay-text ">
 						<h5>
-							<a href="">Sản Phẩm bán chạy</a>
+							<a class="linkXanh" href="">Sản Phẩm bán chạy</a>
 						</h5>
 						<p>
 							Tiện ích cho nhu cầu sinh hoạt hàng ngày.<br> Giải pháp An
 							toàn - Tiết kiệm
 						</p>
-						<a href=""> <span>Xem Thêm</span></a>
+						<a class="linkXanh" href=""> <span>Xem Thêm</span></a>
 					</div>
 
 				</div>
@@ -43,7 +54,7 @@
 					</a>
 					<div class="overlay-text ">
 						<h5>
-							<a href="">Đèn trang trí</a>
+							<a class="linkXanh" href="">Đèn trang trí</a>
 						</h5>
 						<p>Thẩm mỹ độc đáo</p>
 					</div>
@@ -58,7 +69,7 @@
 					</a>
 					<div class="overlay-text ">
 						<h5>
-							<a href="">Đồ trang trí</a>
+							<a class="linkXanh" href="">Đồ trang trí</a>
 						</h5>
 						<p>Không gian nghệ thuật</p>
 
@@ -73,7 +84,7 @@
 					</a>
 					<div class="overlay-text ">
 						<h5>
-							<a href="">Thiết bị vệ sinh</a>
+							<a class="linkXanh" href="">Thiết bị vệ sinh</a>
 						</h5>
 						<p>Đa dạng mẫu mã</p>
 
@@ -82,19 +93,19 @@
 			</div>
 		</div>
 
-		<div class="row   p-2">
+		<div class="row p-2">
 			<div class="col-6 ">
 				<div class="image-container">
-				<a href="index.jsp "> 
-					<img class=" " src="../img/img_larg/cate_6_img.webp"
-						alt="Mô tả của ảnh" height="200" width=" 600">
-				</a>
+					<a href="index.jsp "> <img class=" "
+						src="../img/img_larg/cate_6_img.webp" alt="Mô tả của ảnh"
+						height="200" width=" 600">
+					</a>
 					<div class="overlay-text ">
 						<h5>
-							<a href="">Top sản phẩm bán chạy hàng đầu</a>
+							<a class="linkXanh" href="">Top sản phẩm bán chạy hàng đầu</a>
 						</h5>
 						<p>Thiết kế Đơn giản - Tinh tế - Hiện đại</p>
-						<a href=""> <span>Xem Thêm</span>
+						<a class="linkXanh" href=""> <span>Xem Thêm</span>
 
 						</a>
 					</div>
@@ -108,7 +119,7 @@
 					</a>
 					<div class="overlay-text ">
 						<h5>
-							<a href="">Đồ nội thất</a>
+							<a class="linkXanh" href="">Đồ nội thất</a>
 						</h5>
 						<p>Trang trí không gian</p>
 
@@ -123,12 +134,10 @@
 					</a>
 					<div class="overlay-text ">
 						<h5>
-							<a href="">Sản Phẩm Thủ Công</a>
+							<a class="linkXanh" href="">Sản Phẩm Thủ Công</a>
 						</h5>
-						<p>
-							Đường nét chạm khắc tinh tế
-						</p>
-						<a href=""> <span>Xem Thêm</span>
+						<p>Đường nét chạm khắc tinh tế</p>
+						<a class="linkXanh" href=""> <span>Xem Thêm</span>
 
 						</a>
 					</div>

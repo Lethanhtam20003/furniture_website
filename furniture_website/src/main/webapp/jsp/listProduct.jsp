@@ -15,7 +15,7 @@
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../css/css1.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" type="text/css" href="../css/listProductCSS.css">
 <style type="text/css">
 .nenMo {
@@ -38,62 +38,100 @@
 .anDoiTuong {
 	display: none;
 }
+
+a {
+	font-size: 20px;
+	color: green; /* hoặc mã màu khác như #008000 hoặc rgb(0, 128, 0) */
+	text-decoration: none; /* ( loại bỏ gạch chân liên kết) */
+}
+
+.chuMauDo {
+	color: red;
+}
+
+.chuMauDenMo {
+	color: #393E46;
+}
+
+.chu1Dong {
+	display: inline-block;
+	margin-right: 20px
+}
 </style>
 </head>
 <body>
-	<div class="container-lg  p-5 ">
-		<div class="text-center">
-			<h2>Top ban chay</h2>
-		</div>
 
-		<%
-		int index = 0, i = 0, j = 0;
-		while (true) {
-			if (j == 0) {
-		%>
-		<div class="row p-2">
+	<section class="bg-body-tertiary">
+
+
+
+		<div class="container-lg  p-5 ">
+			<div class="text-center">
+				<h2>Top ban chay</h2>
+			</div>
+
 			<%
-			}
+			
+			int index = 0, i = 0, j = 0;
+			while (true) {
+				if (j == 0) {
 			%>
-			<div class="col-3  ">
-				<div class="card " style="width: 17em;"
-					onmouseover="hienThiDoiTuong('<%=i + "" + j%>')"
-					onmouseleave="anDoiTuong('<%=i + "" + j%>')">
-					<div class="image-container ">
-						<a href=""> <img src="../img/img_larg/pro_ke3.webp"
-							class="card-img-top " alt="...">
-						</a>
-						<div class="overlay-text"></div>
-						<div id="addGioHang<%=i + "" + j%>"
-							class=" viTriTrenPhai nenMo text-center boGoc anDoiTuong ">
-							<img alt="" src="../img/icon/icons8-bag-32.png">
+			<div class="row p-2">
+				<%
+				}
+				%>
+				<div class="col-3  ">
+					<div class="card  border border-secondary-subtle rounded-2"
+						style="width: 17em;"
+						onmouseover="hienThiDoiTuong('<%=i + "" + j%>')"
+						onmouseleave="anDoiTuong('<%=i + "" + j%>')">
+						<div class="image-container ">
+							<a href=""> <img src="../img/img_larg/pro_ke3.webp"
+								class="card-img-top " alt="...">
+							</a>
+							<div class="overlay-text"></div>
+							<div id="addGioHang<%=i + "" + j%>"
+								class=" viTriTrenPhai nenMo text-center boGoc anDoiTuong ">
+								<img alt="" src="../img/icon/icons8-bag-32.png">
+							</div>
+							<div class="showCoupon overlay-text ">
+								<p class="" style="background: red; color: white">12%</p>
+							</div>
+						</div>
+						<div class="card-body text-bg-light	hienDoiTuong">
+							<p>
+								<strong> namessssssssssssssssssssssssssssssssssssss</strong>
+							</p>
+							<div class="card-text">
+								<div class=" chu1Dong">
+									<strong class="chuMauDo"> priceCurent </strong>
+								</div>
+								<div class="chu1Dong text-decoration-line-through chuMauDenMo">pricebefore</div>
+							</div>
 						</div>
 					</div>
-					<div class="card-body text-bg-light	hienDoiTuong">
-						<p>name</p>
-						<p class="card-text">price</p>
-					</div>
 				</div>
+				<%
+				if (j == 3) {
+				%>
 			</div>
 			<%
-			if (j == 3) {
+			j = 0;
+			i++;
+			} else {
+			j++;
+			}
+			if (i == 2) {
+			break;
+			}
+			index++;
+			}
 			%>
+
+
 		</div>
-		<%
-		j = 0;
-		i++;
-		} else {
-		j++;
-		}
-		if (i == 2) {
-		break;
-		}
-		index++;
-		}
-		%>
+	</section>
 
-
-	</div>
 	<script type="text/javascript">
 		function hienThiDoiTuong(id) {
 			document.getElementById('addGioHang' + id).style.display = 'block';

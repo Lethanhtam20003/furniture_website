@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import dao.DaoCategory;
+import dao.DaoCoupon;
 import dao.DaoGroup;
 import dao.DaoProduct;
 import model.Category;
+import model.Coupon;
 import model.Group;
 import model.ProDecoration;
 import model.ProDecorativeLights;
@@ -19,9 +21,12 @@ public class Storage {
 	private static Map<String, Product> listProduct;
 	private static Map<String, Category> listCategorys;
 	private static Map<String, Group> listGroups;
+	private static Map<String, Coupon> listCoupon;
+
 	private DaoProduct daoProduct;
 	private DaoGroup daoGroup;
 	private DaoCategory daoCategory;
+	private DaoCoupon daoCoupon;
 
 	public Storage() {
 		// TODO Auto-generated constructor stub
@@ -32,7 +37,7 @@ public class Storage {
 		daoProduct = new DaoProduct();
 		daoGroup = new DaoGroup();
 		daoCategory = new DaoCategory();
-
+		System.out.println("2");
 		setDataListProduct(daoProduct.selectAll());
 		setDataListGroup(daoGroup.selectAll());
 		setDataListCategory(daoCategory.selectAll());
@@ -58,14 +63,14 @@ public class Storage {
 		for (Product product : list) {
 			if (product.getType().equalsIgnoreCase("decoration")) {
 				listProduct.put(product.getId(), (ProDecoration) product);
-			}else if (product.getType().equalsIgnoreCase("decorativeLights")) {
+			} else if (product.getType().equalsIgnoreCase("decorativeLights")) {
 				listProduct.put(product.getId(), (ProDecorativeLights) product);
-			}else if (product.getType().equalsIgnoreCase("handMade")) {
+			} else if (product.getType().equalsIgnoreCase("handMade")) {
 				listProduct.put(product.getId(), (ProHandmade) product);
-			}else if (product.getType().equalsIgnoreCase("sanitaryEquiment")) {
+			} else if (product.getType().equalsIgnoreCase("sanitaryEquiment")) {
 				listProduct.put(product.getId(), (ProSanitaryEquiment) product);
 			}
-			
+
 		}
 
 	}
@@ -94,12 +99,12 @@ public class Storage {
 		Storage.listGroups = listGroups;
 	}
 
-	public static Category getCategoryById(String category) {
-		return getListCategorys().get(category);
-	}
-
 	public static Group getGroupByID(String group) {
 		return getListGroups().get(group);
+	}
+
+	public static Category getCategoryById(String category) {
+		return getListCategorys().get(category);
 	}
 
 	public DaoProduct getDaoProduct() {
@@ -114,13 +119,18 @@ public class Storage {
 		// TODO Auto-generated method stub
 		return daoProduct.selectByID(string);
 	}
+ 
+	public static Coupon getCouponByID(String coupon) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	public static void main(String[] args) {
+		System.out.println("1");
 		Storage s = new Storage();
 		DaoProduct p = s.getDaoProduct();
 		System.out.println(s.getListProduct());
 		System.out.println(s.getListProduct().size());
-		
-	}
 
+	}
 }

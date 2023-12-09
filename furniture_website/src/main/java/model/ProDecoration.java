@@ -29,9 +29,9 @@ public class ProDecoration extends Product {
 	 * @param thicknessWood
 	 */
 	public ProDecoration(String id, String name, String category, String group, String producer, double price,
-			String type, String decription, int qualityStorage, String status, String design,
-			String size, String color, String thicknessWood, String imgPath) {
-		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath);
+			String type, String decription, int qualityStorage, String status, String design, String size, String color,
+			String thicknessWood, String imgPath, String couponID) {
+		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID);
 		this.design = design;
 		this.size = size;
 		this.color = color;
