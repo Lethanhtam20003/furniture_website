@@ -47,11 +47,10 @@ public class DaoProduct implements IDao<Product> {
 	@Override
 	public List<Product> selectAll() {
 		// TODO Auto-generated method stub
-		System.out.println("4");
 		List<Product> res = new ArrayList<Product>();
 		try {
 			// 1: tao ket noi den csdl
-			Connection con = JDBCUtil.getConnection();  
+			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
 			String sql = "select * from Product";
@@ -60,7 +59,6 @@ public class DaoProduct implements IDao<Product> {
 			// 3; thuc thi cau lenh sql
 			ResultSet rs = st.executeQuery();
 			// 4: xu ly ket qua tra ve
-			System.out.println("a");
 			while (rs.next()) {
 				String id = rs.getString("productID");
 				String productName = rs.getString("productName");

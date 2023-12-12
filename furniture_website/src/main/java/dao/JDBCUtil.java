@@ -25,9 +25,9 @@ public class JDBCUtil {
 		Connection c = null;
 		try {
 			// dang ky sql server voi driveManager
-			DriverManager.registerDriver(new SQLServerDriver());
-
-			// cac thong so
+		//	DriverManager.registerDriver(new SQLServerDriver());
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			// cac thong so 
 			String url = "jdbc:sqlserver://LAPTOPFK:1433;";
 			String database = "database=MyWebSite;";
 			String name = "user=sa;";

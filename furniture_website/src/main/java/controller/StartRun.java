@@ -36,15 +36,16 @@ public class StartRun extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(); 
 		Storage data = new Storage();
 		List<Product> listProduct = new ArrayList<Product>(data.getListProduct().values());
 
 		session.setAttribute("listProduct", listProduct);
 		if (data != null) {
-//			getServletContext().getRequestDispatcher("/jsp/index.jsp").forward(request, response);
-			getServletContext().getRequestDispatcher("/jsp/listProduct.jsp").forward(request, response);
-			
+			// getServletContext().getRequestDispatcher("/jsp/index.jsp").forward(request,
+			// response);
+			getServletContext().getRequestDispatcher("/listProduct.jsp").forward(request, response);
+
 		}
 
 	}
