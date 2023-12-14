@@ -21,7 +21,7 @@
 			<nav class="">
 				<div class="container-xll image-container ">
 					<a class="navbar-brand "  href="#"> <img
-						src="../img/img_larg/th.jpeg" alt="Bootstrap" height="60" width="400">
+						src="img/img_larg/th.jpeg" alt="Bootstrap" height="60" width="400">
 					</a>
 				</div>
 			</nav>
@@ -63,7 +63,7 @@
 							<nav class="navbar bg-success-subtle">
 								<div class="container">
 									<a class="navbar-brand " href="#"> <img
-										src="../img/icon/icons8-search-32.png" alt="Bootstrap"
+										src="img/icon/icons8-search-32.png" alt="Bootstrap"
 										width="20">
 									</a>
 								</div>
@@ -73,7 +73,7 @@
 							<nav class="navbar bg-success-subtle">
 								<div class="container">
 									<a class="navbar-brand" href="#"> <img
-										src="../img/icon/icons8-person-32.png" alt="Bootstrap"
+										src="img/icon/icons8-person-32.png" alt="Bootstrap"
 										width="20">
 									</a>
 								</div>
@@ -83,7 +83,7 @@
 							<nav class="navbar bg-success-subtle">
 								<div class="container">
 									<a class="navbar-brand" href="#"> <img
-										src="../img/icon/icons8-heart-32.png" alt="Bootstrap"
+										src="img/icon/icons8-heart-32.png" alt="Bootstrap"
 										width="20">
 									</a>
 								</div>
@@ -93,7 +93,7 @@
 							<nav class="navbar bg-success-subtle">
 								<div class="container">
 									<a class="navbar-brand" href="#"> <img
-										src="../img/icon/icons8-bag-32.png" alt="Bootstrap" width="20">
+										src="img/icon/icons8-bag-32.png" alt="Bootstrap" width="20">
 									</a>
 								</div>
 							</nav>

@@ -8,7 +8,7 @@
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <meta charset="UTF-8">
 <style type="text/css">
 .linkXanh {
@@ -30,7 +30,7 @@
 			<div class="col-6">
 				<div class="image-container">
 					<a href="index.jsp "> <img class=" lui"
-						src="../img/img_larg/cate_1_img.webp" alt="Mô tả của ảnh"
+						src="img/img_larg/cate_1_img.webp" alt="Mô tả của ảnh"
 						height="200" width=" 600">
 					</a>
 					<div class="overlay-text ">
@@ -49,7 +49,7 @@
 			<div class="col-2 ">
 				<div class=" image-container">
 					<a href="index.jsp "> <img class=" "
-						src="../img/img_larg/cate_2_img.webp" alt="Mô tả của ảnh"
+						src="img/img_larg/cate_2_img.webp" alt="Mô tả của ảnh"
 						height="200" width="200">
 					</a>
 					<div class="overlay-text ">
@@ -64,7 +64,7 @@
 			<div class="col-2 ">
 				<div class="image-container">
 					<a href="index.jsp "> <img class=" "
-						src="../img/img_larg/cate_3_img.webp" alt="Mô tả của ảnh"
+						src="img/img_larg/cate_3_img.webp" alt="Mô tả của ảnh"
 						height="200" width="200">
 					</a>
 					<div class="overlay-text ">
@@ -79,7 +79,7 @@
 			<div class="col-2 ">
 				<div class="image-container">
 					<a href="index.jsp "> <img class=" "
-						src="../img/img_larg/cate_4_img.webp" alt="Mô tả của ảnh"
+						src="img/img_larg/cate_4_img.webp" alt="Mô tả của ảnh"
 						height="200" width="200">
 					</a>
 					<div class="overlay-text ">
@@ -97,7 +97,7 @@
 			<div class="col-6 ">
 				<div class="image-container">
 					<a href="index.jsp "> <img class=" "
-						src="../img/img_larg/cate_6_img.webp" alt="Mô tả của ảnh"
+						src="img/img_larg/cate_6_img.webp" alt="Mô tả của ảnh"
 						height="200" width=" 600">
 					</a>
 					<div class="overlay-text ">
@@ -114,7 +114,7 @@
 			<div class="col-2 ">
 				<div class="image-container ">
 					<a href="index.jsp "> <img class=" "
-						src="../img/img_larg/cate_7_img.webp" alt="Mô tả của ảnh"
+						src="img/img_larg/cate_7_img.webp" alt="Mô tả của ảnh"
 						height="200" width="200">
 					</a>
 					<div class="overlay-text ">
@@ -129,7 +129,7 @@
 			<div class="col-4 ">
 				<div class="image-container">
 					<a href="index.jsp "> <img class=" "
-						src="../img/img_larg/cate_5_img.webp" alt="Mô tả của ảnh"
+						src="img/img_larg/cate_5_img.webp" alt="Mô tả của ảnh"
 						height="200" width="420">
 					</a>
 					<div class="overlay-text ">
