@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.Date;
+
 import data.Storage;
 
 public class Product {
@@ -15,6 +17,7 @@ public class Product {
 	private String status;
 	private String imgPath;
 	private Coupon coupon;
+	private Date dateAdded;
 
 	public Product() {
 		// TODO Auto-generated constructor stub
@@ -34,7 +37,7 @@ public class Product {
 	 * @param imgPath
 	 */
 	public Product(String id, String name, String category, String group, String producer, double price, String type,
-			String decription, int qualityStorage, String status, String imgPath, String coupon) {
+			String decription, int qualityStorage, String status, String imgPath, String coupon, Date dateAdded) {
 		this.id = id;
 		this.name = name;
 		this.category = Storage.getCategoryById(category);
@@ -47,6 +50,7 @@ public class Product {
 		this.qualityStorage = qualityStorage;
 		this.status = status;
 		this.imgPath = imgPath;
+		this.dateAdded = dateAdded;
 	}
 
 	public String getId() {
@@ -89,8 +93,26 @@ public class Product {
 		this.producer = producer;
 	}
 
-	public double getPrice() {
-		return price;
+	public String getPrice() {
+		return FomatMonny(price);
+	}
+
+	private String FomatMonny(double p) {
+		// TODO Auto-generated method stub
+		String res = "";
+		String pp = p + "";
+		pp = pp.substring(0, pp.length() - 2);
+		for (int i = pp.length(); i >= 0; i -= 3) {
+			System.out.println(pp.length() + "dd" + i);
+			if (i > 3) {
+
+				res = "." + pp.substring(i - 3, i)+res;
+				System.out.println(res);
+			} else
+				res =  pp.substring(0, i)+res ;
+		}
+		System.out.println(res);
+		return res + " đ";
 	}
 
 	public void setPrice(double price) {
@@ -153,11 +175,25 @@ public class Product {
 		this.coupon = coupon;
 	}
 
+	public Date getDateAdded() {
+		return dateAdded;
+	}
+
+	public void setDateAdded(Date dateAdded) {
+		this.dateAdded = dateAdded;
+	}
+
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", category=" + category + ", group=" + group + ", producer="
-				+ producer + ", price=" + price + ", type=" + type  + ", qualityStorage="
-				+ qualityStorage +"-----------\n";
+				+ producer + ", price=" + price + ", type=" + type + ", qualityStorage=" + qualityStorage
+				+ "-----------\n";
+	}
+
+	public static void main(String[] args) {
+		int a = 1222000;
+		Product p = new Product();
+		System.out.println(p.FomatMonny(a));
 	}
 
 }

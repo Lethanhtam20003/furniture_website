@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.Date;
+
 public class ProSanitaryEquiment extends Product {
 	private String meterial;
 	private String space;
@@ -25,8 +27,9 @@ public class ProSanitaryEquiment extends Product {
 	 */
 	public ProSanitaryEquiment(String id, String name, String category, String group, String producer, double price,
 			String type, String decription, int qualityStorage, String status, String meterial, String space,
-			String imgPath, String couponID) {
-		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID);
+			String imgPath, String couponID, Date dateAdded) {
+		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID,
+				dateAdded);
 		this.meterial = meterial;
 		this.space = space;
 	}
