@@ -1,19 +1,21 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
+import model.Factory;
 import model.ProDecoration;
 import model.ProDecorativeLights;
 import model.ProHandmade;
 import model.ProSanitaryEquiment;
 import model.Product;
-import model.Factory;
 
 public class DaoProduct implements IDao<Product> {
 
@@ -40,6 +42,7 @@ public class DaoProduct implements IDao<Product> {
 	private String timeToUse;
 	private String imgPath;
 	private String couponID;
+	private Date dateAdded;
 
 	public DaoProduct() {
 	}
@@ -47,11 +50,10 @@ public class DaoProduct implements IDao<Product> {
 	@Override
 	public List<Product> selectAll() {
 		// TODO Auto-generated method stub
-		System.out.println("4");
 		List<Product> res = new ArrayList<Product>();
 		try {
 			// 1: tao ket noi den csdl
-			Connection con = JDBCUtil.getConnection();  
+			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
 			String sql = "select * from Product";
@@ -60,7 +62,6 @@ public class DaoProduct implements IDao<Product> {
 			// 3; thuc thi cau lenh sql
 			ResultSet rs = st.executeQuery();
 			// 4: xu ly ket qua tra ve
-			System.out.println("a");
 			while (rs.next()) {
 				String id = rs.getString("productID");
 				String productName = rs.getString("productName");
@@ -84,14 +85,19 @@ public class DaoProduct implements IDao<Product> {
 				String timeToUse = rs.getString("timeToUse");
 				String imgPath = rs.getString("imgPath");
 				String couponID = rs.getString("coupon");
+				String dateAdded = rs.getString("dateAdded");
 
 				// ep kieu
 				double priceThen = (price);
 				int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);
+				SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
+
+				Date dateAddedThen = Date.valueOf(dateAdded);
+				
 				System.out.println(type);
 				Product p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type,
 						decription, QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage,
-						color, thickness, space, design, timeToUse, imgPath, couponID);
+						color, thickness, space, design, timeToUse, imgPath, couponID, dateAddedThen);
 				if (p != null) {
 					System.out.println(res.add(p));
 				}
@@ -144,6 +150,7 @@ public class DaoProduct implements IDao<Product> {
 				timeToUse = rs.getString("timeToUse");
 				imgPath = rs.getString("imgPath");
 				couponID = rs.getString("couponID");
+				dateAdded = rs.getDate("dateAdded");
 				// ep kieu
 
 			}
@@ -151,7 +158,7 @@ public class DaoProduct implements IDao<Product> {
 			int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);
 			p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type, decription,
 					QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage, color, thickness,
-					space, design, timeToUse, imgPath, couponID);
+					space, design, timeToUse, imgPath, couponID, dateAdded);
 
 			// : ngat ket noi
 			JDBCUtil.closeConnection(con);
@@ -263,6 +270,7 @@ public class DaoProduct implements IDao<Product> {
 
 			}
 			st.setString(21, t.getImgPath());
+			st.setDate(22, t.getDateAdded());
 			// 3; thuc thi cau lenh sql
 			check = st.executeUpdate();
 			// check = st.executeUpdate(sql);
