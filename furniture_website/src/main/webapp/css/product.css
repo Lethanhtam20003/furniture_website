@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.nenMo {
+	background-color: aliceblue;
+	height: 32px;
+	width: 32px;
+	opacity: 0.7
+}
+
+.nenMo:hover {
+	opacity: 1;
+	background-color: #D8A142;
+}
+
+.boGoc {
+	border: 0px solid #333;
+	border-radius: 20%;
+}
+
+.anDoiTuong {
+	display: none;
+}
+
+a {
+	font-size: 20px;
+	color: green; /* hoặc mã màu khác như #008000 hoặc rgb(0, 128, 0) */
+	text-decoration: none; /* ( loại bỏ gạch chân liên kết) */
+}
+
+.chuMauDo {
+	color: red;
+}
+
+.chuMauDenMo {
+	color: #393E46;
+}
+
+.chu1Dong {
+	display: inline-block;
+	margin-right: 20px
+}
