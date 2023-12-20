@@ -103,15 +103,12 @@ public class Product {
 		String pp = p + "";
 		pp = pp.substring(0, pp.length() - 2);
 		for (int i = pp.length(); i >= 0; i -= 3) {
-			System.out.println(pp.length() + "dd" + i);
 			if (i > 3) {
 
-				res = "." + pp.substring(i - 3, i)+res;
-				System.out.println(res);
+				res = "." + pp.substring(i - 3, i) + res;
 			} else
-				res =  pp.substring(0, i)+res ;
+				res = pp.substring(0, i) + res;
 		}
-		System.out.println(res);
 		return res + " đ";
 	}
 
