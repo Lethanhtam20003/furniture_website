@@ -60,6 +60,7 @@ create table Product(
 	timeToUse varchar(1000), -- thoi han su dung
 	imgPath varchar(1000), -- duong dan link anh
 	coupon varchar(50), -- chuongtrinh giam gia
+	dateAdded date, -- ngay nhap hang
 	foreign key (categoryID) references Category(categoryID),
 	foreign key (groupID) references GroupPro(groupID)
 )

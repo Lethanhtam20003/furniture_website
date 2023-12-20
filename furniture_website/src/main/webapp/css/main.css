@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
-
 .chuLon {
 	font-size: medium;
 	font-weight: bold;
@@ -26,7 +24,12 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+}
 
+.viTriGiuaPhai {
+	position: absolute;
+	top: 500;
+	right: 0;
 }
 
 a {
@@ -35,5 +38,4 @@ a {
 	/* hoặc mã màu khác như #008000 hoặc rgb(0, 128, 0) */
 	text-decoration: none;
 	/* ( loại bỏ gạch chân liên kết) */
-
 }

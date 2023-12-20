@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.Date;
+
 public class ProHandmade extends Product {
 	private String color;
 	private String size;
@@ -29,8 +31,9 @@ public class ProHandmade extends Product {
 	 */
 	public ProHandmade(String id, String name, String category, String group, String producer, double price,
 			String type, String decription, int qualityStorage, String status, String color, String size, String design,
-			String timeToUse, String imgPath, String couponID) {
-		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID);
+			String timeToUse, String imgPath, String couponID, Date dateAdded) {
+		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID,
+				dateAdded);
 		this.color = color;
 		this.size = size;
 		this.design = design;
