@@ -1,4 +1,4 @@
-﻿  use thucHanh1;
+﻿use thucHanh1;
 go
 drop database MyWebSite;
 go
@@ -6,75 +6,78 @@ CREATE DATABASE MyWebSite;
 go
 use MyWebSite;
 go
+ALTER DATABASE MyWebSite COLLATE Latin1_General_100_CI_AS_SC_UTF8;
+
+go
 create table Account(
-	accountID varchar(100) primary key,
-	accountName varchar(100) not null unique,
-	password varchar(100) not null,
-	firstName varchar(100) not null,
-	lastName varchar(100) not null,
-	email varchar(100) not null,
+	accountID nvarchar(100) primary key,
+	accountName nvarchar(100) not null unique,
+	password nvarchar(100) not null,
+	firstName nvarchar(100) not null,
+	lastName nvarchar(100) not null,
+	email nvarchar(100) not null,
 	birthday Date,
-	gender varchar(100),
-	phoneNum varchar(100),
-	addressAccount varchar(100) not null,
-	addressOrder varchar(100),
+	gender nvarchar(100),
+	phoneNum nvarchar(100),
+	addressAccount nvarchar(100) not null,
+	addressOrder nvarchar(100),
 	createAt Date  not null,
 	lastLogin Date,
 	constraint chk_account_gender check (gender like 'nam' or gender like 'nu')
 )
 go
 create table GroupPro(
-	groupID varchar(100) primary key,
-	name varchar(100) not null,
-	content varchar(1000)
+	groupID nvarchar(100) primary key,
+	name nvarchar(100) not null,
+	content nvarchar(1000)
 );
 go
 create table Category(
-	categoryID varchar(100) primary key,
-	name varchar(100) not null,
-	content varchar(1000)
+	categoryID nvarchar(100) primary key,
+	name nvarchar(100) not null,
+	content nvarchar(1000)
 );
 
 go
 
 create table Product(
-	productID varchar(100) primary key,
-	productName varchar(100) not null,
-	categoryID  varchar(100),
-	groupID varchar(100),
-	producer varchar(1000), -- thuong hieu
+	productID nvarchar(100) primary key,
+	productName nvarchar(100) not null,
+	categoryID  nvarchar(100),
+	groupID nvarchar(100),
+	producer nvarchar(1000), -- thuong hieu
 	price float,
-	type  varchar(1000), -- the loai
-	decription varchar(5000),  -- mo ta
+	type  nvarchar(1000), -- the loai
+	decription nvarchar(4000),  -- mo ta
 	qualityInStorage int, -- so luong con lai trong kho
-	status varchar(5000) , -- 
-	packeged  varchar(1000), -- cach dong goi
-	brandOrigin  varchar(1000), -- xuat xu
-	meterial varchar(1000), -- chat lieu
-	size varchar(1000), -- kich thuoc
-	wattage varchar(1000), -- cong xuat
-	color varchar(1000), -- mua sac
-	thicknessWood varchar(1000), -- do day cua go
-	space varchar(1000), -- vi tri de
-	design varchar(1000), -- thiet ke
-	timeToUse varchar(1000), -- thoi han su dung
-	imgPath varchar(1000), -- duong dan link anh
-	coupon varchar(50), -- chuongtrinh giam gia
+	status nvarchar(4000) , -- 
+	packeged  nvarchar(1000), -- cach dong goi
+	brandOrigin  nvarchar(1000), -- xuat xu
+	meterial nvarchar(1000), -- chat lieu
+	size nvarchar(1000), -- kich thuoc
+	wattage nvarchar(1000), -- cong xuat
+	color nvarchar(1000), -- mua sac
+	thicknessWood nvarchar(1000), -- do day cua go
+	space nvarchar(1000), -- vi tri de
+	design nvarchar(1000), -- thiet ke
+	timeToUse nvarchar(1000), -- thoi han su dung
+	imgPath nvarchar(1000), -- duong dan link anh
+	coupon nvarchar(50), -- chuongtrinh giam gia
 	dateAdded date, -- ngay nhap hang
 	foreign key (categoryID) references Category(categoryID),
 	foreign key (groupID) references GroupPro(groupID)
 )
 go
 create table Cart(
-	cartID varchar(100) primary key,
+	cartID nvarchar(100) primary key,
 	shppingCost float,
 	totalPriceSelected float
 )
 
 go
 create table CartDetails(
-	cartID  varchar(100),
-	productID  varchar(100) not null  ,
+	cartID  nvarchar(100),
+	productID  nvarchar(100) not null  ,
 	qualityProduct int default 1,
 	price float,
 	isGift bit default 0,
@@ -85,15 +88,15 @@ create table CartDetails(
 )
 go
 create table Orders(
-	orderID  varchar(100) primary key,
+	orderID  nvarchar(100) primary key,
 	createAt date,
 	shippingCost float,
-	status  varchar(100)
+	status  nvarchar(100)
 )
 go
 create table OrderDetails(
-	OrderID  varchar(100),
-	productID varchaR(100) not null ,
+	OrderID  nvarchar(100),
+	productID nvarchar(100) not null ,
 	quanlity int default 1,
 	totalAmount float,
 	primary key (OrderID,productID),
@@ -102,44 +105,44 @@ create table OrderDetails(
 )
 go
 create table Payment(
-	paymentID  varchar(100) primary key,
-	accountID varchar(100) not null,
-	orderID varchar(100) not null,
-	paymentMethod varchar(1000) not null,
+	paymentID  nvarchar(100) primary key,
+	accountID nvarchar(100) not null,
+	orderID nvarchar(100) not null,
+	paymentMethod nvarchar(1000) not null,
 	amount float,
-	status varchar(1000),
-	transactionPaymen varchar(100) ,
-	gateway varchar(1000),
-	invoiceNumber varchar(100),
+	status nvarchar(1000),
+	transactionPaymen nvarchar(100) ,
+	gateway nvarchar(1000),
+	invoiceNumber nvarchar(100),
 	crateAt date not null,
 	doneAT Date,
-	address varchar(100),
+	address nvarchar(100),
 	foreign key (accountID) references Account(accountID),
 	foreign key (OrderID) references Orders(OrderID)
 )
 go
 create table Coupon(
-	couponID varchar(100) primary key,
-	code varchar(100) not null unique,
+	couponID nvarchar(100) primary key,
+	code nvarchar(100) not null unique,
 	discountAmount float not null,
-	discountType varchar(100) not null,
+	discountType nvarchar(100) not null,
 	createAt date not null, 
 	effectiveDate Date, -- ngay co hieu luc
  	expirationDate date, -- ngay het han
 	usageCount float, -- so lan su dung
 	minimum_purchase_amount float, -- so tien giam toi thieu
 	isActive bit not null,
-	accountLimit varchar,
-	decription varchar(1000)
+	accountLimit nvarchar,
+	decription nvarchar(1000)
 )
 go
 
 create table ProductReview(
-	reviewID varchar(100) primary key,
-	accountID varchar(100) not null,
+	reviewID nvarchar(100) primary key,
+	accountID nvarchar(100) not null,
 	rating int default 0, -- so luoc xem
-	title varchar(100), 
-	content varchar(1000),
+	title nvarchar(100), 
+	content nvarchar(1000),
 	createAt date not null,
 	likes int default 0,
 	dislieks int default 0
@@ -147,30 +150,30 @@ create table ProductReview(
 go
 
 create table NewsBlog(
-	blogId varchar(100) primary key,
-	title varchar(1000) not null,
-	content varchar(5000),
-	accountID varchar(100),
+	blogId nvarchar(100) primary key,
+	title nvarchar(1000) not null,
+	content nvarchar(4000),
+	accountID nvarchar(100),
 	views int default 0,
 	CreateAt Date
 )
 go
 create table Comment(
-	commentID varchar(100) primary key,
-	userID varchar(100) not null, 
-	content varchar(5000) not null,
-	subCommentID varchar(100),
-	reviewID varchar(100),
-	blogID varchar(100)
+	commentID nvarchar(100) primary key,
+	userID nvarchar(100) not null, 
+	content nvarchar(4000) not null,
+	subCommentID nvarchar(100),
+	reviewID nvarchar(100),
+	blogID nvarchar(100)
 
 )
 go
 create table Report(
-	reportID varchar(100) primary key,
-	content varchar(5000) not null,
-	subCommentID varchar(100),
-	reviewID varchar(100),
-	blogID varchar(100)
+	reportID nvarchar(100) primary key,
+	content nvarchar(4000) not null,
+	subCommentID nvarchar(100),
+	reviewID nvarchar(100),
+	blogID nvarchar(100)
 )
 go
 

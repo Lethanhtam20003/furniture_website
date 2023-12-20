@@ -38,6 +38,74 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- tieu de -->
+	<section>
+		<div id="carouselExampleIndicators" class="carousel slide "
+			data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators"
+					data-bs-slide-to="0" class="active" aria-current="true"
+					aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators"
+					data-bs-slide-to="1" aria-label="Slide 2"></button>
+			</div>
+			<div class="carousel-inner ">
+				<div class="carousel-item active ">
+					<img src="img/img_larg/slider_1.webp" class="d-block w-100"
+						alt="Slide 1">
+					<!-- card -->
+					<div
+						class="card position-absolute top-0 start-0 translate-middle-y bg-secondary-subtle "
+						style="width: 35rem; height: 18rem; margin-left: 5%; margin-top: 20%">
+						<!-- card -->
+						<div class="" style="margin: 5%">
+							<div class="card-body ">
+								<h5 class="card-title">
+									<strong> Bán Hàng nội thất online</strong>
+								</h5>
+								<h2 class="card-subtitle mb-2 text-body-secondary">Danh
+									sách sản Phẩm</h2>
+								<p class="card-text">Bộ sưu tập xu hướng mang đến nhiều
+									thiết kế hiện đại cho căn nhà của bạn</p>
+								<button type="button"
+									class="btn btn-outline-warning text-bg-warning ">
+									<a href="#" class="text_link ">xem ngay</a>
+								</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="img/img_larg/slider_2.webp" class="d-block w-100"
+						alt="Slide 2">
+					<!-- card -->
+					<div
+						class="card position-absolute top-0 start-0 translate-middle-y bg-secondary-subtle "
+						style="width: 35rem; height: 18rem; margin-left: 5%; margin-top: 20%">
+						<!-- card -->
+						<div class="" style="margin: 5%">
+							<div class="card-body ">
+								<h5 class="card-title">
+									<strong> Bán Hàng nội thất online</strong>
+								</h5>
+								<h2 class="card-subtitle mb-2 text-body-secondary">Sản phẩm
+									bán chạy</h2>
+								<p class="card-text">Bộ sưu tập xu hướng mang đến nhiều
+									thiết kế hiện đại cho căn nhà của bạn</p>
+								<button type="button"
+									class="btn btn-outline-warning text-bg-warning ">
+									<a href="#" class="text_link ">xem ngay</a>
+								</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br>
 	<div class="container-xl  linkProduct">
 		<div class="row p-2 ">
 			<div class="col-6">

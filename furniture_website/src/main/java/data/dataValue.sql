@@ -94,7 +94,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_den1.webp' --path img
 	,'' -- coupon
-	,'12/13/2002' --ngay nhap hang
+	,'1/1/2023' --ngay nhap hang
 	),
 
 	
@@ -133,7 +133,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'	Lên đến 3 - 5 năm' -- timeToUse
 	,'img\img_larg\pro_ghe1.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'1/12/2023' --ngay nhap hang
 	),
 
 	('p003'	,'Ke giay 6 tang '	,'c005','gr002'
@@ -156,7 +156,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_ke1.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'3/22/2023' --ngay nhap hang
 	),	
 
 	('p004'	,'Chậu Lavabo Toto tròn đặt bàn '	,'c012','gr003'
@@ -188,7 +188,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_lavabo3.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'6/24/2023' --ngay nhap hang
 	),
 
 	('p005'	,'Ghe an Basil HomeLand'	,'c002','gr001'
@@ -210,7 +210,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_ghe5.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'6/5/2023' --ngay nhap hang
 	),
 
 	('p006'	-- id
@@ -245,7 +245,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_ban1.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'7/4/2023' --ngay nhap hang
 	),
 
 	('p007'	-- id
@@ -275,7 +275,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_ghe5.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'5/15/2023' --ngay nhap hang
 	)
 
 

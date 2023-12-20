@@ -29,7 +29,6 @@
 	<!--end menu-->
 
 	<!-- container main -->
-	<br>
 	<jsp:include page="ProductPortfolio.jsp" />
 	<br>
 	<jsp:include page="listProduct.jsp" flush="true" />
