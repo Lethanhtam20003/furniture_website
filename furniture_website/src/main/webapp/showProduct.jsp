@@ -1,17 +1,14 @@
+
 <%@page import="data.Storage"%>
 <%@page import="model.Product"%>
 <%@page import="java.util.*"%>
 <%@page import="soft.*"%>
-
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Insert title here</title>
+<meta charset="UTF-8">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -20,22 +17,17 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/product.css">
 <script type="text/javascript" src="js/product.js"></script>
-<style type="text/css">
-</style>
+<title>san pham</title>
 </head>
 <body>
-
+	<!-- menu -->
+	<jsp:include page="menu.jsp" />
+	<!--end menu-->
 	<section class="bg-body-tertiary">
-
-
-
 		<div class="container-lg  p-5 ">
-			<div class="text-center">
-				<h2>Hàng Mới Nhập</h2>
-			</div>
+			<div class="text-center"></div>
 			<%
-			List<Product> list = (ArrayList<Product>) session.getAttribute("listProduct");
-			list.sort(new sortByDateAddBefore());
+			List<Product> list = (ArrayList<Product>) session.getAttribute("listCurent");
 			int index = 0, i = 0, j = 0;
 			for (Product p : list) {
 				if (j == 0) {
@@ -107,17 +99,30 @@
 			}
 			index++;
 			}
+			int pageNum = (int) session.getAttribute("pageNum") + 1;
 			%>
+			<div class="container  d-flex justify-content-center">
+				<nav aria-label="Page navigation example ">
+					<ul class="pagination">
+						<%
+						for (int in = 1; in <= pageNum; in++) {
+						%>
 
+						<li class="page-item"><a class="page-link"
+							href="PhanTrang?curentPage=<%=in - 1%>"><%=in%></a></li>
+						<%
+						}
+						%>
 
+					</ul>
+				</nav>
+
+			</div>
 		</div>
 		<div></div>
 	</section>
-
+	<!-- footer -->
+	<jsp:include page="footer.jsp" />
+	<!-- end footer -->
 </body>
 </html>
-
-
-
-
-

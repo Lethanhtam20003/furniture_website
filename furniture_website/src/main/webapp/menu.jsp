@@ -59,7 +59,7 @@ a {
 
 					<li><a class="nav-link mx-3" aria-current="page"
 						href="introduction.jsp">Giới thiệu</a></li>
-					<li class="nav-item mx-3"><a class="nav-link" href="">Sản
+					<li class="nav-item mx-3"><a class="nav-link" href="PhanTrang?curentPage=0">Sản
 							phẩm</a></li>
 					<!-- drop menu -->
 					<li class="nav-item dropdown"><a
