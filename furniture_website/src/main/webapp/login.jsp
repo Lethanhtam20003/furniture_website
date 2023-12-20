@@ -5,6 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Trang Đăng Nhập</title>
+<style>
+	body{
+	display:flex;
+
+	justify-content: center;
+	height: 100vh;
+	margin:0;
+	}
+	form{
+		width: 300px;
+		
+	}
+	input {
+	width: 100%;
+	margin-bottom:10px;
+}
+
+
+</style>
 </head>
 <body>
 	<h2>Login</h2>
