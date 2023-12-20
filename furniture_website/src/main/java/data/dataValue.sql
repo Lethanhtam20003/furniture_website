@@ -62,7 +62,7 @@ go
 insert into product(productID,productName,categoryID,groupID
 ,producer,price,type,decription,qualityInStorage,status
 ,packeged,brandOrigin,meterial,size,wattage,color,thicknessWood
-,space,design,timeToUse,imgPath,coupon ) values
+,space,design,timeToUse,imgPath,coupon,dateAdded ) values
 	('p001'	-- id
 	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
 	,'c014' -- caregory
@@ -92,8 +92,9 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- space
 	,'' -- design
 	,'' -- timeToUse
-	,'..\img\img_larg\pro_gden1.webp' --path img
+	,'img\img_larg\pro_den1.webp' --path img
 	,'' -- coupon
+	,'12/13/2002' --ngay nhap hang
 	),
 
 	
@@ -130,8 +131,9 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- space
 	,'Nhỏ gọn, dễ di chuyển' -- design
 	,'	Lên đến 3 - 5 năm' -- timeToUse
-	,'..\img\img_larg\pro_ghe1.webp' --path img
+	,'img\img_larg\pro_ghe1.webp' --path img
 	,'' -- coupon
+	,'' --ngay nhap hang
 	),
 
 	('p003'	,'Ke giay 6 tang '	,'c005','gr002'
@@ -152,8 +154,9 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- space
 	,'' -- design
 	,'' -- timeToUse
-	,'..\img\img_larg\pro_ke1.webp' --path img
+	,'img\img_larg\pro_ke1.webp' --path img
 	,'' -- coupon
+	,'' --ngay nhap hang
 	),	
 
 	('p004'	,'Chậu Lavabo Toto tròn đặt bàn '	,'c012','gr003'
@@ -183,8 +186,9 @@ insert into product(productID,productName,categoryID,groupID
 	,'Dat noi tren ban' -- space
 	,'' -- design
 	,'' -- timeToUse
-	,'..\img\img_larg\pro_lavabo3.webp' --path img
+	,'img\img_larg\pro_lavabo3.webp' --path img
 	,'' -- coupon
+	,'' --ngay nhap hang
 	),
 
 	('p005'	,'Ghe an Basil HomeLand'	,'c002','gr001'
@@ -204,8 +208,9 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- space
 	,'' -- design
 	,'' -- timeToUse
-	,'..\img\img_larg\pro_ghe5.webp' --path img
+	,'img\img_larg\pro_ghe5.webp' --path img
 	,'' -- coupon
+	,'' --ngay nhap hang
 	),
 
 	('p006'	-- id
@@ -238,8 +243,9 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- space
 	,'' -- design
 	,'' -- timeToUse
-	,'..\img\img_larg\pro_ban1.webp' --path img
+	,'img\img_larg\pro_ban1.webp' --path img
 	,'' -- coupon
+	,'' --ngay nhap hang
 	),
 
 	('p007'	-- id
@@ -267,13 +273,14 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- space
 	,'' -- design
 	,'' -- timeToUse
-	,'..\img\img_larg\pro_ghe5.webp' --path img
+	,'img\img_larg\pro_ghe5.webp' --path img
 	,'' -- coupon
+	,'' --ngay nhap hang
 	)
 
 
 
-
+	go
 ----Cart table
 insert into Cart(cartID,shppingCost,totalPriceSelected) values
 ('ca001',30000.0,0.0),
@@ -315,7 +322,7 @@ insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
 	--,  -- price
 	--,'' -- type
 	--,'' -- decription
-	--, -- qualityInStorage
+	--, -- qualityInStoraged
 	--,'' -- status
 	--,'' -- packeged
 	--,'' -- brandOrigin
@@ -327,6 +334,7 @@ insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
 	--,'' -- space
 	--,'' -- design
 	--,'' -- timeToUse
-	--,'..\img\img_larg\pro_ghe5.webp' --path img
+	--,'img\img_larg\pro_ghe5.webp' --path img
 	--,'' -- coupon
+	--,'' --ngay nhap hang
 	--),

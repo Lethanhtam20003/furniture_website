@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import data.Storage;
 import model.Product;
+import soft.sortByDateAddBefore;
 
 /**
- * Servlet implementation class StartRun
+ * Servlet implementation class PhanTrang
  */
-@WebServlet("/StartRun")
-public class StartRun extends HttpServlet {
+@WebServlet("/PhanTrang")
+public class PhanTrang extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public StartRun() {
+	public PhanTrang() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -37,14 +37,11 @@ public class StartRun extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-		Storage data = new Storage();
-		List<Product> listProduct = new ArrayList<Product>(data.getListProduct().values());
 
-		session.setAttribute("listProduct", listProduct);
-		if (data != null) {
-			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-
-		}
+		List<Product> dangSach = (ArrayList<Product>) session.getAttribute("listProduct");
+		dangSach.sort(new sortByDateAddBefore());
+		int soTrang = dangSach.size() / 8 + 1;
+		int numProductPerPage = 8, startIndex, endIndex, curentPage;
 
 	}
 

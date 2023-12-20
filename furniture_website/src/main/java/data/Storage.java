@@ -37,7 +37,6 @@ public class Storage {
 		daoProduct = new DaoProduct();
 		daoGroup = new DaoGroup();
 		daoCategory = new DaoCategory();
-		System.out.println("2");
 		setDataListProduct(daoProduct.selectAll());
 		setDataListGroup(daoGroup.selectAll());
 		setDataListCategory(daoCategory.selectAll());
@@ -119,18 +118,16 @@ public class Storage {
 		// TODO Auto-generated method stub
 		return daoProduct.selectByID(string);
 	}
- 
+
 	public static Coupon getCouponByID(String coupon) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public static void main(String[] args) {
-		System.out.println("1");
 		Storage s = new Storage();
 		DaoProduct p = s.getDaoProduct();
 		System.out.println(s.getListProduct());
-		System.out.println(s.getListProduct().size());
 
 	}
 }
