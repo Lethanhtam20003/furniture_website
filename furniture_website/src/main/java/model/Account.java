@@ -106,5 +106,8 @@ public class Account extends Person {
 	public void setOrder(Order order) {
 		this.order = order;
 	}
+	public boolean authenticate(String enteredPassword) {
+		return this.password.equals(enteredPassword);
+	}
 
 }
