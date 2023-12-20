@@ -103,7 +103,7 @@ public class Storage {
 	}
 
 	public static Category getCategoryById(String category) {
-		return getListCategorys().get(category);
+		return getListCategorys().get(category); 
 	}
 
 	public DaoProduct getDaoProduct() {

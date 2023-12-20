@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import data.Storage;
 import model.Factory;
 import model.ProDecoration;
 import model.ProDecorativeLights;
@@ -93,13 +94,12 @@ public class DaoProduct implements IDao<Product> {
 				SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
 
 				Date dateAddedThen = Date.valueOf(dateAdded);
-				
-				System.out.println(type);
+
 				Product p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type,
 						decription, QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage,
 						color, thickness, space, design, timeToUse, imgPath, couponID, dateAddedThen);
 				if (p != null) {
-					System.out.println(res.add(p));
+					res.add(p);
 				}
 
 			}
@@ -107,7 +107,6 @@ public class DaoProduct implements IDao<Product> {
 			JDBCUtil.closeConnection(con);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		return res;
 	}
@@ -127,7 +126,7 @@ public class DaoProduct implements IDao<Product> {
 			// 3; thuc thi cau lenh sql
 			ResultSet rs = st.executeQuery();
 			// 4: xu ly ket qua tra ve
-			while (rs.next()) {
+			while (rs.next() == false) {
 				id = rs.getString("productID");
 				productName = rs.getString("productName");
 				categoryID = rs.getString("categoryID");
@@ -451,4 +450,9 @@ public class DaoProduct implements IDao<Product> {
 
 	}
 
+	public static void main(String[] args) {
+		Storage d = new Storage();
+		DaoProduct a = new DaoProduct();
+		System.out.println(a.selectAll());
+	}
 }
