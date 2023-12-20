@@ -18,6 +18,7 @@ public class Product {
 	private String imgPath;
 	private Coupon coupon;
 	private Date dateAdded;
+	private int qualityRemaining;
 
 	public Product() {
 		// TODO Auto-generated constructor stub
@@ -40,9 +41,9 @@ public class Product {
 			String decription, int qualityStorage, String status, String imgPath, String coupon, Date dateAdded) {
 		this.id = id;
 		this.name = name;
-		this.category = Storage.getCategoryById(category);
-		this.group = Storage.getGroupByID(group);
-		this.coupon = Storage.getCouponByID(coupon);
+		this.category = (Storage.getCategoryById(category) != null) ? Storage.getCategoryById(category) : null;
+		this.group = (Storage.getGroupByID(group) != null) ? Storage.getGroupByID(group) : null;
+		this.coupon = (Storage.getCouponByID(coupon) != null) ? Storage.getCouponByID(coupon) : null;
 		this.producer = producer;
 		this.price = price;
 		this.type = type;
@@ -51,6 +52,15 @@ public class Product {
 		this.status = status;
 		this.imgPath = imgPath;
 		this.dateAdded = dateAdded;
+		this.qualityRemaining = qualityStorage;
+	}
+
+	public int getQualityRemaining() {
+		return qualityRemaining;
+	}
+
+	public void setQualityRemaining(int qualityRemaining) {
+		this.qualityRemaining = qualityRemaining;
 	}
 
 	public String getId() {
@@ -103,15 +113,12 @@ public class Product {
 		String pp = p + "";
 		pp = pp.substring(0, pp.length() - 2);
 		for (int i = pp.length(); i >= 0; i -= 3) {
-			System.out.println(pp.length() + "dd" + i);
 			if (i > 3) {
 
-				res = "." + pp.substring(i - 3, i)+res;
-				System.out.println(res);
+				res = "." + pp.substring(i - 3, i) + res;
 			} else
-				res =  pp.substring(0, i)+res ;
+				res = pp.substring(0, i) + res;
 		}
-		System.out.println(res);
 		return res + " đ";
 	}
 
@@ -191,6 +198,7 @@ public class Product {
 	}
 
 	public static void main(String[] args) {
+
 		int a = 1222000;
 		Product p = new Product();
 		System.out.println(p.FomatMonny(a));

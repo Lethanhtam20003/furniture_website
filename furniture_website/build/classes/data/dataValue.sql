@@ -94,7 +94,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_den1.webp' --path img
 	,'' -- coupon
-	,'12/13/2002' --ngay nhap hang
+	,'1/1/2023' --ngay nhap hang
 	),
 
 	
@@ -133,7 +133,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'	Lên đến 3 - 5 năm' -- timeToUse
 	,'img\img_larg\pro_ghe1.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'1/12/2023' --ngay nhap hang
 	),
 
 	('p003'	,'Ke giay 6 tang '	,'c005','gr002'
@@ -156,7 +156,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_ke1.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'3/22/2023' --ngay nhap hang
 	),	
 
 	('p004'	,'Chậu Lavabo Toto tròn đặt bàn '	,'c012','gr003'
@@ -188,7 +188,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_lavabo3.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'6/24/2023' --ngay nhap hang
 	),
 
 	('p005'	,'Ghe an Basil HomeLand'	,'c002','gr001'
@@ -210,7 +210,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_ghe5.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'6/5/2023' --ngay nhap hang
 	),
 
 	('p006'	-- id
@@ -245,7 +245,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_ban1.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'7/4/2023' --ngay nhap hang
 	),
 
 	('p007'	-- id
@@ -275,7 +275,134 @@ insert into product(productID,productName,categoryID,groupID
 	,'' -- timeToUse
 	,'img\img_larg\pro_ghe5.webp' --path img
 	,'' -- coupon
-	,'' --ngay nhap hang
+	,'5/15/2023' --ngay nhap hang
+	),
+
+	('p008'	-- id
+	,'Vòi rửa chén lạnh 2 đầu inox 304 Hobby'	 -- name
+	,'' -- caregory
+	,''  -- group
+	,'Hobby Home Decor' --  producer
+	,390000  -- price
+	,'sanitaryEquiment' -- type
+	,'Vòi rửa chén lạnh 2 đầu inox 304 Hobby được làm từ chất liệu cao cấp sáng bóng, không rỉ sét, vòi tích hợp có 2 cần rửa chén, thuận tiện cho 2 người sử dụng cùng lúc' -- decription
+	,15 -- qualityInStoraged
+	,'Đặc điểm nổi bật của sản phẩm
+
+Chất liệu: Inox 304 không rỉ sét
+Có 2 đầu xả
+Tặng kèm dây cấp nước dài 60cm
+Phù hợp cho chậu rửa không dùng nước nóng lạnh
+Trọng lượng: 834gram
+Phù hợp cho mọi chậu rửa chén
+Sản phẩm thiết kế phù hợp cho mọi không gian bếp' -- status
+	,'1 vòi kèm dây cấp nước dài 60cm' -- packeged
+	,'Việt Nam' -- brandOrigin
+	,'Inox 304 không rỉ sét' -- meterial
+	,'834gram' -- size
+	,'' -- wattage
+	,'' -- color
+	,'' -- thicknessWood
+	,'Mọi không gian bếp' -- space
+	,'' -- design
+	,'' -- timeToUse
+	,'img\img_larg\pro_voi6.webp' --path img
+	,'' -- coupon
+	,'12/20/2023' --ngay nhap hang
+	),
+
+	('p009'	-- id
+	,'Vòi xịt cho chậu rửa chén Inox 304 Hobby'	 -- name
+	,'c003' -- caregory
+	,'gr001'  -- group
+	,'Hobby Home Decor' --  producer
+	, 290000 -- price
+	,'sanitaryEquiment' -- type
+	,'Vòi xịt cho chậu rửa chén Hobby Home Decor GB1 được làm từ chất liệu inox 304 cao cấp không gỉ, dễ dàng lắp ráp và gắn vào chậu rửa chén bát, giúp các bà nội trợ dễ dàng sử dụng để làm sạch chậu rửa một cách đơn giản, nhẹ nhàng.' -- decription
+	, 22-- qualityInStoraged
+	,'Vòi xịt cho chậu rửa chén Hobby Home Decor GB1 được làm từ chất liệu inox 304 cao cấp không gỉ, dễ dàng lắp ráp và gắn vào chậu rửa chén bát, giúp các bà nội trợ dễ dàng sử dụng để làm sạch chậu rửa một cách đơn giản, nhẹ nhàng.
+
+Banner
+
+Tính năng và thông tin sản phẩm
+
+Chất liệu Inox 304 không rỉ sét
+Phù hợp cho chậu rửa chén có lỗ 23-28mm
+Dây vòi xịt 1.5m
+Rất tiện để xịt rửa bồn rửa chén
+Sản phẩm decor dành cho chung cư căn hộ nhà phố' -- status
+	,'	1 vòi kèm dây cấp nước dài 60cm' -- packeged
+	,'Trung Quốc' -- brandOrigin
+	,'	Inox 304 không rỉ sét' -- meterial
+	,'1.5m' -- size
+	,'' -- wattage
+	,'' -- color
+	,'' -- thicknessWood
+	,'' -- space
+	,'Dành cho chung cư căn hộ nhà phố' -- design
+	,'' -- timeToUse
+	,'img\img_larg\pro_voi7.webp' --path img
+	,'' -- coupon
+	,'12/12/2023' --ngay nhap hang
+	),
+	('p009'	-- id
+	,'Vòi xả chậu lavabo lạnh Hobby'	 -- name
+	,'c003' -- caregory
+	,'gr001'  -- group
+	,'Hobby Home Decor' --  producer
+	,290000  -- price
+	,'sanitaryEquiment' -- type
+	,'Vòi xả chậu lavabo lạnh Hobby Home Decor LBL2 Inox 304 được thiết kế mang xu hướng sang trọng, hiện đại, phù hợp cho mọi lavabo rửa mặt thông thường từ chậu sứ cho tới chậu đá.' -- decription
+	,16 -- qualityInStoraged
+	,'Vòi xả chậu lavabo lạnh Hobby Home Decor LBL2 Inox 304 được thiết kế mang xu hướng sang trọng, hiện đại, phù hợp cho mọi lavabo rửa mặt thông thường từ chậu sứ cho tới chậu đá.
+
+Banner
+
+Tính năng nổi bật 
+
+Vòi được làm từ chất liệu inox cao cấp, chống gỉ và oxy hóa
+Đầu vòi lavabo được thiết lọc và tạo bọt trong dòng chảy giúp tiết kiệm nước, không bắn nước.
+Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ bền cao, thích nghi với hầu hết mọi môi trường nước, mang lại tuổi thọ cao và khả năng bền đẹp với thời gian.' -- status
+	,'' -- packeged
+	,'Trung Quốc' -- brandOrigin
+	,'Inox 304 không rỉ sét' -- meterial
+	,'Lỗ gắn tối thiếu	2cm' -- size
+	,'' -- wattage
+	,'' -- color
+	,'' -- thicknessWood
+	,'Mọi chậu rửa từ sứ tới chậu đá' -- space
+	,'' -- design
+	,'' -- timeToUse
+	,'img\img_larg\pro_voi8.webp' --path img
+	,'' -- coupon
+	,'5/1/2023' --ngay nhap hang
+	),
+
+	('p010'	-- id
+	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
+	,'c003' -- caregory
+	,'gr001'  -- group
+	,'	Bean Violight' --  producer
+	,2055000  -- price
+	,'decorativeLights' -- type
+	,'Đèn trang trí phòng khách luôn là một trong những vấn đề quan tâm hàng đầu của mỗi công trình. Mẫu đèn trang trí  chùm hiện đại -  thiết kế thả ngang, ống led nghệ thuật DC-4108 với thiết kế đơn giản, hiện đại, tiện nghi, cùng độ bền cao sẽ là một sự lựa chọn mua sắm, tham khảo rất tốt đối với quý Khách hàng. Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,  showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn' -- decription
+	,4 -- qualityInStoraged
+	,'Đèn trang trí phòng khách luôn là một trong những vấn đề quan tâm hàng đầu của mỗi công trình. Mẫu đèn trang trí  chùm hiện đại -  thiết kế thả ngang, ống led nghệ thuật DC-4108 với thiết kế đơn giản, hiện đại, tiện nghi, cùng độ bền cao sẽ là một sự lựa chọn mua sắm, tham khảo rất tốt đối với quý Khách hàng. Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,  showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn
+
+Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,  showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn...' -- status
+	,'1 đèn' -- packeged
+	,'	Trung Quốc' -- brandOrigin
+	,'	Kim loại sơn tỉnh điện + Mika' -- meterial
+	,'	D400mm hoặc D600mm' -- size
+	,'	Cảm ứng không chạm, tăng giảm độ cao' -- wattage
+	,'' -- color
+	,'' -- thicknessWood
+	,'' -- space
+	,'' -- design
+	,'' -- timeToUse
+	,'img\img_larg\pro_den8.webp' --path img
+	,'' -- coupon
+	,'5/25/2023' --ngay nhap hang
 	)
 
 
