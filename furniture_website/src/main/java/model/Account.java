@@ -3,20 +3,55 @@ package model;
 import java.sql.Date;
 
 public class Account extends Person {
+	private String accountID;
 	private String accountName;
 	private String password;
+	private String firstName;
+	private String lastName;
 	private String emaill;
-	private Date createAt;
-	private Date lastLogin;
 	private Date birthday;
+	private String gender;
 	private String phoneNum;
 	private String addressAccount;
 	private String addressOrder;
+	private Date createAt;
+	private Date lastLogin;
 	private Cart cart;
 	private Order order;
 
 	public Account() {
 		// TODO Auto-generated constructor stub
+	}
+
+
+	public Account(String accountName, String password) {
+		this.accountName = accountName;
+		this.password = password;
+	}
+
+
+	public String getAccountID() {
+		return accountID;
+	}
+
+	public void setAccountID(String accountID) {
+		this.accountID = accountID;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getAccountName() {
