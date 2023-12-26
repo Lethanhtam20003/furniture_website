@@ -6,26 +6,144 @@ go
 ---Account table
 insert into Account(accountID,accountName,password,firstName,lastName,
 email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)
-values ('ac001','user001','user001','Le','Tam','user001@gmail.com','04/14/2003','nam',
-			'123454782','Ho Chi Minh','15 Mai Chi Tho,tp.Thu Duc,TP.Ho Chi Minh',GETDATE(),GETDATE()),
-		('ac002','user002','user002','Nguyen','Tri','user002@gmail.com','07/17/2003','nam',
-			'123454382','Ha Noi','81 Nguyen Hue,Dong Da,Ha Noi',GETDATE(),GETDATE()),
-		('ac003','user003','user003','Pham','Bac','user003@gmail.com','10/25/2003','nam',
-			'125454782','Ho Chi Minh','1998 Quoc Lo 1A,Binh Tri Dong,Quan 12,TP.Ho Chi Minh',GETDATE(),GETDATE()),
-		('ac004','user004','user004','Nguyen','Son','user004@gmail.com','11/29/2003','nam',
-			'123654782','Ha Noi','15 Han Mac Tu,Cau Giay,Ha Noi',GETDATE(),GETDATE()),
-		('ac005','user005','user005','Vo','Tai','user005@gmail.com','02/16/2003','nam',
-			'123344782','Binh Dinh','Phong An, Cat Trinh,Phu Cat,Binh Dinh',GETDATE(),GETDATE()),
-		('ac006','user006','user006','Ngo','Tan','user006@gmail.com','11/10/2003','nam',
-			'125454782','Binh Duong','142 Quoc lo 1K,Di An,Binh Duong',GETDATE(),GETDATE()),
-		('ac007','user007','user007','Pham','Tuyet','user007@gmail.com','08/04/2000','nu',
-			'125554782','Ho Chi Minh','6 Nguyen Van Ba,Linh Dong,tp.Thu Duc,TP.Ho Chi Minh',GETDATE(),GETDATE()),
-		('ac008','user008','user008','Nguyen','Huong','user008@gmail.com','04/04/2000','nu',
-			'123654782','Ho Chi Minh','188/32 Tan Ky Tan Quy, phuong Tan Son Nhi,Binh Tan,TP.Ho Chi Minh',GETDATE(),GETDATE()),
-		('ac009','user009','user009','Ly','Dan','user009@gmail.com','04/24/2000','nam',
-			'123344782','Binh Phuoc','Cong vien Binh Long,Binh Phuoc',GETDATE(),GETDATE()),
-		('ac010','user010','user010','Mai','Hoa','user010@gmail.com','09/02/2000','nu',
-			'123454342','Binh Duong','15 Duong 18,phuong Dong Ba,Di An,Binh Duong',GETDATE(),GETDATE());
+values --a1
+		('ac001'
+		,'user001'
+		,'user001'
+		,'Le'
+		,'Tam'
+		,'user001@gmail.com'
+		,'04/14/2003'
+		,'nam'
+		,'123454782'
+		,'Ho Chi Minh'
+		,'15 Mai Chi Tho,tp.Thu Duc,TP.Ho Chi Minh'
+		,GETDATE()
+		,GETDATE()),
+		--a2
+		('ac002'
+		,'user002'
+		,'user002'
+		,'Nguyen'
+		,'Tri'
+		,'user002@gmail.com'
+		,'07/17/2003'
+		,'nam'
+		,'123454382'
+		,'Ha Noi'
+		,'81 Nguyen Hue,Dong Da,Ha Noi'
+		,GETDATE()
+		,GETDATE()),
+		--a3
+		('ac003'
+		,'user003'
+		,'user003'
+		,'Pham'
+		,'Bac'
+		,'user003@gmail.com'
+		,'10/25/2003'
+		,'nam'
+		,'125454782'
+		,'Ho Chi Minh'
+		,'1998 Quoc Lo 1A,Binh Tri Dong,Quan 12,TP.Ho Chi Minh'
+		,GETDATE()
+		,GETDATE()),
+		--a4
+		('ac004'
+		,'user004'
+		,'user004'
+		,'Nguyen'
+		,'Son'
+		,'user004@gmail.com'
+		,'11/29/2003'
+		,'nam'
+		,'123654782'
+		,'Ha Noi'
+		,'15 Han Mac Tu,Cau Giay,Ha Noi'
+		,GETDATE()
+		,GETDATE()),
+		--a5
+		('ac005'
+		,'user005'
+		,'user005'
+		,'Vo'
+		,'Tai'
+		,'user005@gmail.com'
+		,'02/16/2003'
+		,'nam'
+		,'123344782'
+		,'Binh Dinh','Phong An, Cat Trinh,Phu Cat,Binh Dinh'
+		,GETDATE()
+		,GETDATE()),
+		--a6
+		('ac006'
+		,'user006'
+		,'user006'
+		,'Ngo'
+		,'Tan'
+		,'user006@gmail.com'
+		,'11/10/2003'
+		,'nam'
+		,'125454782'
+		,'Binh Duong'
+		,'142 Quoc lo 1K,Di An,Binh Duong'
+		,GETDATE()
+		,GETDATE()),
+		--a7
+		('ac007'
+		,'user007'
+		,'user007'
+		,'Pham','Tuyet'
+		,'user007@gmail.com'
+		,'08/04/2000'
+		,'nu'
+		,'125554782'
+		,'Ho Chi Minh'
+		,'6 Nguyen Van Ba,Linh Dong,tp.Thu Duc,TP.Ho Chi Minh'
+		,GETDATE()
+		,GETDATE()),
+		--a8
+		('ac008'
+		,'user008'
+		,'user008'
+		,'Nguyen'
+		,'Huong'
+		,'user008@gmail.com'
+		,'04/04/2000'
+		,'nu'
+		,'123654782'
+		,'Ho Chi Minh'
+		,'188/32 Tan Ky Tan Quy, phuong Tan Son Nhi,Binh Tan,TP.Ho Chi Minh'
+		,GETDATE()
+		,GETDATE()),
+		--a9
+		('ac009'
+		,'user009'
+		,'user009'
+		,'Ly'
+		,'Dan'
+		,'user009@gmail.com'
+		,'04/24/2000'
+		,'nam'
+		,'123344782'
+		,'Binh Phuoc'
+		,'Cong vien Binh Long,Binh Phuoc'
+		,GETDATE()
+		,GETDATE()),
+		--a10
+		('ac010'
+		,'user010'
+		,'user010'
+		,'Mai'
+		,'Hoa'
+		,'user010@gmail.com'
+		,'09/02/2000'
+		,'nu'
+		,'123454342'
+		,'Binh Duong'
+		,'15 Duong 18,phuong Dong Ba,Di An,Binh Duong'
+		,GETDATE()
+		,GETDATE());
 
 go
 
@@ -280,8 +398,8 @@ insert into product(productID,productName,categoryID,groupID
 
 	('p008'	-- id
 	,'Vòi rửa chén lạnh 2 đầu inox 304 Hobby'	 -- name
-	,'' -- caregory
-	,''  -- group
+	,'c011' -- caregory
+	,'gr003'  -- group
 	,'Hobby Home Decor' --  producer
 	,390000  -- price
 	,'sanitaryEquiment' -- type
@@ -314,7 +432,7 @@ Sản phẩm thiết kế phù hợp cho mọi không gian bếp' -- status
 	('p009'	-- id
 	,'Vòi xịt cho chậu rửa chén Inox 304 Hobby'	 -- name
 	,'c003' -- caregory
-	,'gr001'  -- group
+	,'gr003'  -- group
 	,'Hobby Home Decor' --  producer
 	, 290000 -- price
 	,'sanitaryEquiment' -- type
@@ -345,9 +463,9 @@ Sản phẩm decor dành cho chung cư căn hộ nhà phố' -- status
 	,'' -- coupon
 	,'12/12/2023' --ngay nhap hang
 	),
-	('p009'	-- id
+	('p010'	-- id
 	,'Vòi xả chậu lavabo lạnh Hobby'	 -- name
-	,'c003' -- caregory
+	,'c011' -- caregory
 	,'gr001'  -- group
 	,'Hobby Home Decor' --  producer
 	,290000  -- price
@@ -378,10 +496,10 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 	,'5/1/2023' --ngay nhap hang
 	),
 
-	('p010'	-- id
+	('p011'	-- id
 	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
-	,'c003' -- caregory
-	,'gr001'  -- group
+	,'c013' -- caregory
+	,'gr004'  -- group
 	,'	Bean Violight' --  producer
 	,2055000  -- price
 	,'decorativeLights' -- type

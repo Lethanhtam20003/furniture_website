@@ -28,7 +28,11 @@ public class JDBCUtil {
 		//	DriverManager.registerDriver(new SQLServerDriver());
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			// cac thong so 
-			String url = "jdbc:sqlserver://LAPTOPFK:1433;";
+			//đường dẫn tâm
+			//String url = "jdbc:sqlserver://LAPTOPFK:1433;";
+			//đường dẫn tai
+			String url = "jdbc:sqlserver://localhost:1433;";
+			
 			String database = "database=MyWebSite;";
 			String name = "user=sa;";
 			String password = "password=123456789;";
