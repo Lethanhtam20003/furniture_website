@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<title>Insert title here</title>
 <style type="text/css">
 .imgIntroduc {
 	position: relative;
@@ -49,55 +47,29 @@
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-<link rel="stylesheet" type="text/css" href="../css/menu.css">
-
-<link rel="stylesheet" type="" href="../img/*">
-<title>Introduction page</title>
 </head>
 <body>
-
 	<!-- menu -->
-	<jsp:include page="menu.jsp" />
+	<jsp:include page="/menu.jsp" />
 	<!--end menu-->
-
+	<%
+	String url = (String) session.getAttribute("url");
+	String titleHDCS = (String) session.getAttribute("titleHDCS");
+	%>
 	<section class="imgIntroduc backgroundSection">
 		<div class="text-overlay">
-			<p>Giới thiệu</p>
+			<p><%=titleHDCS%></p>
 			<div class=text-overlay2>
 				<p>
-					<a href="index.jsp" style="color: white">Trang chủ ></a> Giới thiệu
+					<a href="index.jsp" style="color: white">Trang chủ ></a>
+					<%=titleHDCS%>
 				</p>
 			</div>
 		</div>
 	</section>
-	<div id="introduction" style="margin: 20px">
-		<p>Bean Furniture tự hào với đội ngũ thiết kế trẻ, luôn sáng tạo
-			luôn cập nhật các xu hướng thiết kế mới. Thế mạnh chủ lực là tư vấn
-			thiết kế, thi công đồ gỗ. Với phương châm “Không Đâu Bằng Nhà” Bean
-			Furniture đã tự tin khẳng định chất lượng, dịch vụ và tính thẩm mĩ
-			cao trong từng chi tiết thiết kế, thi công. Luôn mang lại sự hài lòng
-			cho Khách Hàng!</p>
-		<p>Đến với chúng tôi bạn sẽ được quyền lợi:</p>
-		<p>
-			<b>Bảo hành chuyên nghiệp:</b> Dịch vụ bảo hành chuyên nghiệp, tận
-			tình và chu đáo cho khách hàng
-		</p>
-		<p>
-			<b>Giá tốt nhất tại Việt Nam:</b> Tự tin là nhà cung cấp đồ trang trí
-			với giá cả tốt nhất tại Việt Nam
-		</p>
-		<p>
-			<b>Sản phẩm chính hãng:</b> Chúng tôi cam kết 100% sản phẩm là uy
-			tín, chất lượng cao
-		</p>
-		<%
-		String imgPath = "img/img_larg/image-set-1-7eef45b0-d147-4c83-81b7-ed4cbc7414be.jpg";
-		%>
-		<img alt="introduc" src="<%=imgPath%>">
-	</div>
-	<br>
+
+	<jsp:include page="<%=url%>" />
+
 	<!-- footer -->
 	<jsp:include page="footer.jsp" />
 	<!-- end footer -->
@@ -106,5 +78,6 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
+	</script>
 </body>
 </html>

@@ -39,3 +39,15 @@ a {
 	display: inline-block;
 	margin-right: 20px
 }
+
+.backgroundSection {
+	background-image: url('img/img_larg/breadcrumb.jpg');
+	/* Đường dẫn đến hình ảnh */
+	background-size: cover;
+	/* Tùy chỉnh kích thước hình ảnh để nó che phủ hoàn toàn phần background */
+	background-position: center; /* Căn giữa hình ảnh */
+	color: #ffffff;
+	/* Màu chữ để đảm bảo đọc được trên background hình ảnh */
+	height: 200px;
+	width: 100%;
+}

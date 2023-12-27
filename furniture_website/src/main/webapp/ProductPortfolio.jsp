@@ -35,6 +35,16 @@
 	color: #FF9800;
 }
 </style>
+<script type="text/javascript">
+<!-- Tự động chuyển slide sau mỗi 3 giây -->
+	setInterval(function() {
+		var carousel = new bootstrap.Carousel(document
+				.getElementById('carouselExampleIndicators'), {
+			interval : 5000
+		// Khoảng thời gian giữa các slide, tính bằng mili giây (ở đây là 5 giây)
+		});
+	}, 3000); // Khoảng thời gian giữa các lần kích hoạt, tính bằng mili giây (ở đây là 3 giây)
+</script>
 <title>Insert title here</title>
 </head>
 <body>
