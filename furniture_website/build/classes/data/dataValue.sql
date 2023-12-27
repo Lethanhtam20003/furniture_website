@@ -280,8 +280,8 @@ insert into product(productID,productName,categoryID,groupID
 
 	('p008'	-- id
 	,'Vòi rửa chén lạnh 2 đầu inox 304 Hobby'	 -- name
-	,'' -- caregory
-	,''  -- group
+	,'c011' -- caregory
+	,'gr003'  -- group
 	,'Hobby Home Decor' --  producer
 	,390000  -- price
 	,'sanitaryEquiment' -- type
@@ -314,7 +314,7 @@ Sản phẩm thiết kế phù hợp cho mọi không gian bếp' -- status
 	('p009'	-- id
 	,'Vòi xịt cho chậu rửa chén Inox 304 Hobby'	 -- name
 	,'c003' -- caregory
-	,'gr001'  -- group
+	,'gr003'  -- group
 	,'Hobby Home Decor' --  producer
 	, 290000 -- price
 	,'sanitaryEquiment' -- type
@@ -345,9 +345,9 @@ Sản phẩm decor dành cho chung cư căn hộ nhà phố' -- status
 	,'' -- coupon
 	,'12/12/2023' --ngay nhap hang
 	),
-	('p009'	-- id
+	('p010'	-- id
 	,'Vòi xả chậu lavabo lạnh Hobby'	 -- name
-	,'c003' -- caregory
+	,'c011' -- caregory
 	,'gr001'  -- group
 	,'Hobby Home Decor' --  producer
 	,290000  -- price
@@ -378,10 +378,10 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 	,'5/1/2023' --ngay nhap hang
 	),
 
-	('p010'	-- id
+	('p011'	-- id
 	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
-	,'c003' -- caregory
-	,'gr001'  -- group
+	,'c013' -- caregory
+	,'gr004'  -- group
 	,'	Bean Violight' --  producer
 	,2055000  -- price
 	,'decorativeLights' -- type

@@ -52,7 +52,7 @@
 						onmouseleave="anDoiTuong('<%=i + "" + j%>')">
 						<!-- ảnh san pham -->
 						<div class="image-container ">
-							<a href=""> <img src="<%=p.getImgPath()%>"
+							<a href="detailsProduct?idProduct=<%=p.getId()%>"> <img src="<%=p.getImgPath()%>"
 								class="card-img-top " alt="...">
 							</a>
 							<div class="overlay-text"></div>

@@ -98,19 +98,19 @@
 					<h5>Chính sách</h5>
 					<ul class="nav flex-column">
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/ChinhSach/thanhVien.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/ChinhSach/thanhVien.jsp"
 							class="nav-link p-0 white_text">Chính sách thành viên</a></li>
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/ChinhSach/thanhToan.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/ChinhSach/thanhToan.jsp"
 							class="nav-link p-0 white_text">Chính sách thanh toán</a></li>
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/ChinhSach/doiSanPham.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/ChinhSach/doiSanPham.jsp"
 							class="nav-link p-0 white_text">Chính sách đổi sản phẩm</a></li>
 						<li class="nav-item mb-2"><a
-							href=" huongDan_chinhSach/ChinhSach/baoMat.jsp"
+							href=" ChuyenHuongCSHD?url=/huongDan_chinhSach/ChinhSach/baoMat.jsp"
 							class="nav-link p-0 white_text">Chính sách bảo mật</a></li>
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/ChinhSach/congTacVien.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/ChinhSach/congTacVien.jsp"
 							class="nav-link p-0 white_text">Chính sách cộng tác viên</a></li>
 					</ul>
 				</div>
@@ -120,19 +120,19 @@
 					<h5>HƯỚNG DẪN</h5>
 					<ul class="nav flex-column ">
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/HuongDan/muaHang.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/HuongDan/muaHang.jsp"
 							class="nav-link p-0 white_text">Hướng dẫn mua hàng</a></li>
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/HuongDan/DoiTra.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/HuongDan/DoiTra.jsp"
 							class="nav-link p-0 white_text">Hướng dẫn đổi trả</a></li>
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/HuongDan/thanhToan.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/HuongDan/thanhToan.jsp"
 							class="nav-link p-0 white_text">Hướng dẫn thanh toán</a></li>
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/HuongDan/congTacVien.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/HuongDan/congTacVien.jsp"
 							class="nav-link p-0 white_text">Chương trình công tác viên</a></li>
 						<li class="nav-item mb-2"><a
-							href="huongDan_chinhSach/HuongDan/GiaiDapThacMac.jsp"
+							href="ChuyenHuongCSHD?url=/huongDan_chinhSach/HuongDan/GiaiDapThacMac.jsp"
 							class="nav-link p-0 white_text">Giải đáp thắc mắc</a></li>
 					</ul>
 				</div>
