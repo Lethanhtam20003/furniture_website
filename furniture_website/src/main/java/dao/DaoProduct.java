@@ -87,7 +87,6 @@ public class DaoProduct implements IDao<Product> {
 				String imgPath = rs.getString("imgPath");
 				String couponID = rs.getString("coupon");
 				String dateAdded = rs.getString("dateAdded");
-
 				// ep kieu
 				double priceThen = (price);
 				int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);

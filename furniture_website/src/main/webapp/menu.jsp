@@ -50,8 +50,8 @@ a {
 
 					<li><a class="nav-link mx-3" aria-current="page"
 						href="introduction.jsp">Giới thiệu</a></li>
-					<li class="nav-item mx-3"><a class="nav-link" href="PhanTrang?curentPage=0">Sản
-							phẩm</a></li>
+					<li class="nav-item mx-3"><a class="nav-link"
+						href="PhanTrang?curentPage=0">Sản phẩm</a></li>
 					<!-- drop menu -->
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" role="button"
@@ -89,12 +89,12 @@ a {
 								<div class="container">
 
 									<a class="navbar-brand" href="login.jsp"> <img
-
 										src="img/icon/icons8-person-32.png" alt="Bootstrap" width="20">
 									</a>
 								</div>
 							</nav>
 						</li>
+						<!--  		
 						<li class="nav-item">
 							<nav class="navbar bg-success-subtle">
 
@@ -108,13 +108,14 @@ a {
 								</div>
 							</nav>
 						</li>
+						-->
 						<li class="nav-item">
 							<nav class="navbar bg-success-subtle">
 								<div class="container position-relative">
 									<span
 										class="position-absolute pt-2 start-50 translate-middle badge rounded-pill bg-danger">
 										0 <span class="visually-hidden">unread messages</span>
-									</span> <a class="navbar-brand" href="#"> <img
+									</span> <a class="navbar-brand" href="cart.jsp"> <img
 										src="img/icon/icons8-bag-32.png" alt="Bootstrap" width="20">
 									</a>
 								</div>
@@ -128,7 +129,7 @@ a {
 		</div>
 	</nav>
 	<!--end menu-->
-	
+
 
 </body>
 </html>
