@@ -72,4 +72,5 @@ public class ProHandmade extends Product {
 		this.timeToUse = timeToUse;
 	}
 
+
 }

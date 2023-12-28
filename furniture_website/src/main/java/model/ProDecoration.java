@@ -65,4 +65,6 @@ public class ProDecoration extends Product {
 		this.thicknessWood = thicknessWood;
 	}
 
+	
+
 }

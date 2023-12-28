@@ -194,7 +194,7 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", category=" + category + ", group=" + group + ", producer="
 				+ producer + ", price=" + price + ", type=" + type + ", qualityStorage=" + qualityStorage
-				+ "-----------\n";
+				+ "-----------\n" ;
 	}
 
 	public static void main(String[] args) {

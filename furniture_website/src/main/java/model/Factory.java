@@ -17,7 +17,7 @@ public class Factory {
 					quallityInStorageThen, status, design, size, color, thickness, imgPath, couponID, dateAdded);
 		} else if (type.equalsIgnoreCase("decorativeLights")) {
 			p = new ProDecorativeLights(id, productName, categoryID, groupID, producer, price, type, decription,
-					quallityInStorageThen, status, space, brandOrigin, meterial, size, wattage, imgPath, couponID,
+					quallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage, imgPath, couponID,
 					dateAdded);
 		} else if (type.equalsIgnoreCase("handMade")) {
 			p = new ProHandmade(id, productName, categoryID, groupID, producer, price, type, decription,

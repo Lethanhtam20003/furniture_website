@@ -3,6 +3,7 @@ go
 use MyWebSite;
 go
 
+select * from Product
 ---Account table
 insert into Account(accountID,accountName,password,firstName,lastName,
 email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)
@@ -500,7 +501,7 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
 	,'c013' -- caregory
 	,'gr004'  -- group
-	,'	Bean Violight' --  producer
+	,'Bean Violight' --  producer
 	,2055000  -- price
 	,'decorativeLights' -- type
 	,'Đèn trang trí phòng khách luôn là một trong những vấn đề quan tâm hàng đầu của mỗi công trình. Mẫu đèn trang trí  chùm hiện đại -  thiết kế thả ngang, ống led nghệ thuật DC-4108 với thiết kế đơn giản, hiện đại, tiện nghi, cùng độ bền cao sẽ là một sự lựa chọn mua sắm, tham khảo rất tốt đối với quý Khách hàng. Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,  showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn' -- decription

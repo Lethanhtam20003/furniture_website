@@ -83,4 +83,10 @@ public class ProDecorativeLights extends Product {
 		this.size = size;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() ;
+	}
+
 }
