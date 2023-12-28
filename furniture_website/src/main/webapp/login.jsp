@@ -40,6 +40,15 @@ input {
 	margin-top: 5px;
 }
 
+button {
+	width: 100%;
+	padding: 10px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
 /* Add your other CSS styles here */
 =======
 <title>Trang Đăng Nhập</title>
@@ -66,9 +75,11 @@ input {
 <body>
 
 	<div class="login-container">
-		<h2>Login</h2>
-
+		
 		<form action="login" method="post">
+			<h2>Login</h2>
+			<p class="text-danger" style = "color:red;text-align:left">${mess}</p>
+			
 			<div class="form-row">
 				<input type="text" id="username" name="username"
 					placeholder="Username" required>

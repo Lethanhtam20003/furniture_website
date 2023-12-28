@@ -16,19 +16,41 @@ public class Account extends Person {
 	private String addressOrder;
 	private Date createAt;
 	private Date lastLogin;
-	private Cart cart;
-	private Order order;
+//	private Cart cart;
+//	private Order order;
 
 	public Account() {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Account(String accountName) {
+		this.accountName = accountName;
+	}
 
 	public Account(String accountName, String password) {
 		this.accountName = accountName;
 		this.password = password;
 	}
+	
 
+	public Account(String accountID, String accountName, String password, String firstName, String lastName,
+			String emaill, Date birthday, String gender, String phoneNum, String addressAccount, String addressOrder,
+			Date createAt, Date lastLogin) {
+		super();
+		this.accountID = accountID;
+		this.accountName = accountName;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emaill = emaill;
+		this.birthday = birthday;
+		this.gender = gender;
+		this.phoneNum = phoneNum;
+		this.addressAccount = addressAccount;
+		this.addressOrder = addressOrder;
+		this.createAt = createAt;
+		this.lastLogin = lastLogin;
+	}
 
 	public String getAccountID() {
 		return accountID;
@@ -126,21 +148,21 @@ public class Account extends Person {
 		this.addressOrder = addressOrder;
 	}
 
-	public Cart getCart() {
-		return cart;
-	}
-
-	public void setCart(Cart cart) {
-		this.cart = cart;
-	}
-
-	public Order getOrder() {
-		return order;
-	}
-
-	public void setOrder(Order order) {
-		this.order = order;
-	}
+//	public Cart getCart() {
+//		return cart;
+//	}
+//
+//	public void setCart(Cart cart) {
+//		this.cart = cart;
+//	}
+//
+//	public Order getOrder() {
+//		return order;
+//	}
+//
+//	public void setOrder(Order order) {
+//		this.order = order;
+//	}
 	public boolean authenticate(String enteredPassword) {
 		return this.password.equals(enteredPassword);
 	}
