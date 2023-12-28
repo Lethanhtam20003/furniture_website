@@ -4,16 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript">
-<!-- Tự động chuyển slide sau mỗi 3 giây -->
-	setInterval(function() {
-		var carousel = new bootstrap.Carousel(document
-				.getElementById('carouselExampleIndicators'), {
-			interval : 5000
-		// Khoảng thời gian giữa các slide, tính bằng mili giây (ở đây là 5 giây)
-		});
-	}, 3000); // Khoảng thời gian giữa các lần kích hoạt, tính bằng mili giây (ở đây là 3 giây)
-</script>
+
 <!-- link css file -->
 
 <!--  dinh dang style -->
@@ -96,7 +87,9 @@ a {
 						<li class="nav-item">
 							<nav class="navbar bg-success-subtle">
 								<div class="container">
+
 									<a class="navbar-brand" href="login.jsp"> <img
+
 										src="img/icon/icons8-person-32.png" alt="Bootstrap" width="20">
 									</a>
 								</div>
