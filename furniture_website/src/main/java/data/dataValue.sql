@@ -373,7 +373,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'gr002'  -- group
 	,'SIMPLEHOME (Thương Hiệu Cao Cấp)' --  producer
 	,2490000  -- price
-	,'furniture ' -- type
+	,'furniture' -- type
 	,'Kệ Đa năng nhập khẩu, vừa tiện lợi phù hợp với các mẹ bỉm sữa , tiệm spa để làm xe đẩy spa. kệ spa, kệ để sách kệ để đồ nhà bếp thông minh Sản phẩm được làm bằng chất liệu nhựa ABS, PP có độ bền cao' -- decription
 	,33 -- qualityInStorage
 	,'Kệ Đa năng nhập khẩu, vừa tiện lợi phù hợp với các mẹ bỉm sữa , tiệm spa để làm xe đẩy spa. kệ spa, kệ để sách kệ để đồ nhà bếp thông minh Sản phẩm được làm bằng chất liệu nhựa ABS, PP có độ bền cao

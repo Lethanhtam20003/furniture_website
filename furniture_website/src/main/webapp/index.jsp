@@ -35,7 +35,7 @@
 	<!-- container main -->
 	<jsp:include page="ProductPortfolio.jsp" />
 	<br>
-	<jsp:include page="listProduct.jsp" flush="true" />
+	<jsp:include page="ProductList.jsp" flush="true" />
 
 	<!--end container main -->
 

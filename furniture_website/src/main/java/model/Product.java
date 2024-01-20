@@ -103,6 +103,10 @@ public class Product {
 		this.producer = producer;
 	}
 
+	public double getPriceValue() {
+		return price;
+	}
+
 	public String getPrice() {
 		return FomatMonny(price);
 	}
@@ -194,7 +198,7 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", category=" + category + ", group=" + group + ", producer="
 				+ producer + ", price=" + price + ", type=" + type + ", qualityStorage=" + qualityStorage
-				+ "-----------\n" ;
+				+ "-----------\n";
 	}
 
 	public static void main(String[] args) {
@@ -206,9 +210,9 @@ public class Product {
 
 	public String getRemainingAmount() {
 		String res = "Hết Hàng";
-		if(qualityRemaining>0)
+		if (qualityRemaining > 0)
 			return "Còn Hàng";
-		
+
 		return res;
 	}
 

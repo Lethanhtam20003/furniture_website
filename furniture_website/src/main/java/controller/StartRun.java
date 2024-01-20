@@ -16,7 +16,7 @@ import model.Product;
 
 /**
  * Servlet implementation class StartRun
- */
+ **/
 @WebServlet("/StartRun")
 public class StartRun extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,14 +35,14 @@ public class StartRun extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub	
+		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		Storage data = new Storage();
 		List<Product> listProduct = new ArrayList<Product>(data.getListProduct().values());
 
 		session.setAttribute("listProduct", listProduct);
 		session.setAttribute("data", data);
-		
+
 		if (data != null) {
 			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 
