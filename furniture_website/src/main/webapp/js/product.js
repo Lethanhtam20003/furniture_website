@@ -8,3 +8,4 @@ function hienThiDoiTuong(id) {
 function anDoiTuong(id) {
 	document.getElementById('addGioHang' + id).style.display = 'none';
 }
+

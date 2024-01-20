@@ -204,4 +204,12 @@ public class Product {
 		System.out.println(p.FomatMonny(a));
 	}
 
+	public String getRemainingAmount() {
+		String res = "Hết Hàng";
+		if(qualityRemaining>0)
+			return "Còn Hàng";
+		
+		return res;
+	}
+
 }
