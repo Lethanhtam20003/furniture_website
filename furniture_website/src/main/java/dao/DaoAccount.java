@@ -1,17 +1,20 @@
 package dao;
 
 import java.sql.Connection;
+import java.util.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
 import model.Account;
 
 public class DaoAccount implements IDao<Account> {
+	List<Account> list = new ArrayList<Account>();
 
 	public Account login(String user, String pass) {
 		try {
@@ -37,8 +40,7 @@ public class DaoAccount implements IDao<Account> {
 		}
 		return null;
 	}
-	
-	
+
 	public Account checkAccountExist(String user) {
 		try {
 			// Tạo kết nối đến JDBC
@@ -66,7 +68,7 @@ public class DaoAccount implements IDao<Account> {
 				a.setAddressAccount(rs.getString(10));
 				a.setAddressOrder(rs.getString(11));
 				a.setCreateAt(rs.getDate(12));
-				a.setLastLogin(rs.getDate(13));	
+				a.setLastLogin(rs.getDate(13));
 				return a;
 				// ngắt kết nối\
 //				JDBCUtil.closeConnection(connection);
@@ -76,35 +78,51 @@ public class DaoAccount implements IDao<Account> {
 		}
 		return null;
 	}
-	public void register(String user,String pass,String fName,String lName,String email,String address,String birthday) {
+
+	public void register(String user, String pass, String fName, String lName, String email,String birthday,String gender,String phoneNum,
+				String addressAcount,String addressOrder) {
 		try {
 			// Tạo kết nối đến JDBC
 			Connection connection = JDBCUtil.getConnection();
+			String idAccount = addId(connection);
 
 			// Tạo đối tượng prepastatement
 			String sql = "insert into Account(accountID,accountName,password,firstName,lastName,"
-					+"email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)"
+					+ "email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)"
 					+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement ps;
 			ps = connection.prepareStatement(sql);
-			ps.setString(1, "hdzh");
+			ps.setString(1, idAccount);
 			ps.setString(2, user);
 			ps.setString(3, pass);
 			ps.setString(4, fName);
 			ps.setString(5, lName);
 			ps.setString(6, email);
 			ps.setString(7, birthday);
-			ps.setString(8, "");
-			ps.setString(9, "");
-			ps.setString(10, "");
-			ps.setString(11, address);
-			ps.setString(12, "");
-			ps.setString(13, "");
+			ps.setString(8, gender);
+			ps.setString(9, phoneNum);
+			ps.setString(10, addressAcount);
+			ps.setString(11, addressOrder);
+			ps.setTimestamp(12, new Timestamp(new Date().getTime()));
+			ps.setTimestamp(13, null );
 			ps.executeUpdate();
-			
-			ps.execute();
+
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
+	}
+
+	private String addId(Connection connection) throws SQLException {
+		String sql = "SELECT COUNT(*) FROM Account";
+		try(PreparedStatement ps = connection.prepareStatement(sql)){
+			try(ResultSet rs = ps.executeQuery()){
+				if(rs.next()) {
+					int count = rs.getInt(1)+1;
+					return "acc"+count;
+				}
+			}
+		}
+		return null;
 	}
 
 	@Override
@@ -148,4 +166,5 @@ public class DaoAccount implements IDao<Account> {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 }

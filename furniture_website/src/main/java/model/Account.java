@@ -16,8 +16,8 @@ public class Account extends Person {
 	private String addressOrder;
 	private Date createAt;
 	private Date lastLogin;
-//	private Cart cart;
-//	private Order order;
+	private Cart cart;
+	private Order order;
 
 	public Account() {
 		// TODO Auto-generated constructor stub
@@ -148,23 +148,32 @@ public class Account extends Person {
 		this.addressOrder = addressOrder;
 	}
 
-//	public Cart getCart() {
-//		return cart;
-//	}
-//
-//	public void setCart(Cart cart) {
-//		this.cart = cart;
-//	}
-//
-//	public Order getOrder() {
-//		return order;
-//	}
-//
-//	public void setOrder(Order order) {
-//		this.order = order;
-//	}
+	public Cart getCart() {
+		return cart;
+	}
+
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
 	public boolean authenticate(String enteredPassword) {
 		return this.password.equals(enteredPassword);
 	}
+
+	@Override
+	public String toString() {
+		return "Account accountID:" + accountID + ", accountName:" + accountName + ", password:" + password
+				+ ", firstName:" + firstName + ", lastName:" + lastName + ", emaill:" + emaill + ", birthday:"
+				+ birthday + ", gender:" + gender + ", phoneNum:" + phoneNum + ", addressAccount:" + addressAccount
+				+ ", addressOrder:" + addressOrder + ", createAt:" + createAt + ", lastLogin:" + lastLogin ;
+	}
+	
 
 }

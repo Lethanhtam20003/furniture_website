@@ -28,16 +28,21 @@ public class RegisterControl extends HttpServlet {
 	        String firstName = request.getParameter("firstName");
 	        String lastName = request.getParameter("lastName");
 	        String email = request.getParameter("email");
-	        String address = request.getParameter("address");	
 	        String birthday = request.getParameter("birthday");
+	        String gender = request.getParameter("gender");
+	        String phone = request.getParameter("phoneNum");
+	        String addressAcc = request.getParameter("adress-ac");	
+	        String addressOrd = request.getParameter("address");
 	        		if(!password.equals(confirmPassword)) {
-			response.sendRedirect("register.jsp");
+	        			request.setAttribute("errorMessage", "Passwords do not match");
+	        			request.getRequestDispatcher("register.jsp").forward(request, response);
 		}else {
 			DaoAccount dao = new DaoAccount();
 			Account a = dao.checkAccountExist(username);
 			if(a==null) {
 				//được đăng kí
-				dao.register(username, password, firstName, lastName, email, address, birthday);
+				
+				dao.register(username, password, firstName, lastName, email,birthday, gender, phone, addressAcc, addressOrd);
 				response.sendRedirect("index.jsp");
 				
 			}else {

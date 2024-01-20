@@ -14,7 +14,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
-	background-color: #4CAF50; /* Màu xanh lá */
+	background-color: white;
 }
 
 .login-container {
@@ -43,7 +43,7 @@ input {
 button {
 	width: 100%;
 	padding: 10px;
-	background-color: #4CAF50;
+	background-color: #FFCC33;
 	color: #fff;
 	border: none;
 	cursor: pointer;
