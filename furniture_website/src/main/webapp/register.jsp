@@ -9,7 +9,7 @@
 <style>
 body {
 	font-family: Arial, sans-serif;
-	background-color: #4CAF50;
+	background-color: white;
 	margin: 0;
 	display: flex;
 	justify-content: center;
@@ -21,7 +21,7 @@ body {
 	text-align: center;
 	border: 1px solid #ccc;
 	padding: 20px;
-	width: 400px;
+	width: 100%;
 	background-color: #fff;
 }
 
@@ -44,12 +44,24 @@ body {
 }
 
 button {
-	width: 100%;
+	width: 30%;
 	padding: 10px;
 	background-color: #4CAF50;
 	color: #fff;
 	border: none;
 	cursor: pointer;
+}
+
+.column {
+	width: 50%; /* Đặt chiều rộng cho mỗi cột */
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
 }
 </style>
 </head>
@@ -57,53 +69,75 @@ button {
 
 	<div class="register-container">
 		<h2>Register</h2>
+		<%String errorMessage = (String)request.getAttribute("errorMessage"); %>
+		<%if((errorMessage)!= null){ %>
+			<div style="color:red;">
+				<%= errorMessage %>
+			</div>
+		<%} %>
 
 		<form action="register" method="post">
+			<main>
+				<div class="column">
+					<div class="form-group">
+						<label for="username">Username:</label> <input type="text"
+							id="username" name="username" required>
+					</div>
 
-			<div class="form-group">
-				<label for="username">Username:</label> <input type="text"
-					id="username" name="username" required>
-			</div>
+					<div class="form-group">
+						<label for="password">Password:</label> <input type="password"
+							id="password" name="password" required>
+					</div>
 
-			<div class="form-group">
-				<label for="password">Password:</label> <input type="password"
-					id="password" name="password" required>
-			</div>
-			
-			<div class="form-group">
-				<label for="con-password">Confirm Password:</label> <input
-					type="password" id="con-password" name="con-password" required>
-			</div>
+					<div class="form-group">
+						<label for="con-password">Confirm Password:</label> <input
+							type="password" id="con-password" name="con-password" required>
+					</div>
 
-			<div class="form-group">
-				<label for="firstName">First Name:</label> <input type="text"
-					id="firstName" name="firstName" required>
-			</div>
+					<div class="form-group">
+						<label for="firstName">First Name:</label> <input type="text"
+							id="firstName" name="firstName" required>
+					</div>
 
-			<div class="form-group">
-				<label for="lastName">Last Name:</label> <input type="text"
-					id="lastName" name="lastName" required>
-			</div>
+					<div class="form-group">
+						<label for="lastName">Last Name:</label> <input type="text"
+							id="lastName" name="lastName" required>
+					</div>
 
-			<div class="form-group">
-				<label for="email">Email:</label> <input type="email" id="email"
-					name="email" required>
-			</div>
+					<div class="form-group">
+						<label for="email">Email:</label> <input type="email" id="email"
+							name="email" required>
+					</div>
+				</div>
+				<div class="column">
+					<div class="form-group">
+						<label for="birthday">Birthday:</label> <input type="date"
+							id="birthday" name="birthday">
+					</div>
+					<div class="form-group">
+						<label for="gender">Gender:</label> <input type="text"
+							id="gender" name="gender">
+					</div>
 
-			<div class="form-group">
-				<label for="address">Address:</label> <input type="address"
-					id="address" name="address" required>
-			</div>
-
-			<div class="form-group">
-				<label for="birthday">Birthday:</label> <input type="date"
-					id="birthday" name="birthday">
-			</div>
+					<div class="form-group">
+						<label for="phoneNum">Phone Number:</label> <input type="text"
+							id="phoneNum" name="phoneNum">
+					</div>
+					<div class="form-group">
+						<label for="addres-ac">Address Account:</label> <input
+							type="text" id="address-ac" name="adress-ac" required>
+					</div>
+					<div class="form-group">
+						<label for="address">Address Order:</label> <input type="text"
+							id="address" name="address" required>
+					</div>
+				</div>
+			</main>
 
 			<button type="submit">Register</button>
 		</form>
 
-		<p>
+		<p>	
 			Already have an account? <a href="login.jsp">Login</a>
 		</p>
 	</div>
