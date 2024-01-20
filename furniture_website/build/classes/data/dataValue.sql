@@ -7,7 +7,7 @@ select * from Product
 ---Account table
 insert into Account(accountID,accountName,password,firstName,lastName,
 email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)
-values --a1
+values
 		('ac001'
 		,'user001'
 		,'user001'
@@ -144,7 +144,23 @@ values --a1
 		,'Binh Duong'
 		,'15 Duong 18,phuong Dong Ba,Di An,Binh Duong'
 		,GETDATE()
+		,GETDATE()),
+		--ac011
+		('ac011'
+		,'user011'
+		,'user011'
+		,'Vo'
+		,'Hung'
+		,'user011@gmail.com'
+		,'12/22/2003'
+		,'nam'
+		,'0938487221'
+		,'Ha Noi'
+		,'998 Hai Ba Trung,Cau Giay,Ha Noi'
+		,GETDATE()
 		,GETDATE());
+
+		
 
 go
 
