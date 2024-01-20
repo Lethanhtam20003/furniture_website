@@ -1,14 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--bootstrap css -->
+
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
+
 
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" type="text/css" href="../css/menu.css">
@@ -26,6 +32,8 @@ input {
 	padding: 10px;
 	margin-top: 5px;
 }
+
+
 
 .imgIntroduc {
 	position: relative;
@@ -50,6 +58,7 @@ input {
 	text-align: center;
 }
 
+
 .column {
 	width: 49.5%; /* Đặt chiều rộng cho mỗi cột */
 	padding: 10px;
@@ -72,18 +81,40 @@ button {
 }
 </style>
 <title>Liên hệ</title>
+=======
+.backgroundSection {
+	background-image: url('img/img_larg/breadcrumb.jpg');
+	/* Đường dẫn đến hình ảnh */
+	background-size: cover;
+	/* Tùy chỉnh kích thước hình ảnh để nó che phủ hoàn toàn phần background */
+	background-position: center; /* Căn giữa hình ảnh */
+	color: #ffffff;
+	/* Màu chữ để đảm bảo đọc được trên background hình ảnh */
+	height: 200px;
+	width: 100%;
+}
+</style>
+<title>Tin Tức</title>
+
 </head>
+
 <body>
 	<!-- menu -->
 	<jsp:include page="menu.jsp" />
 	<!--end menu-->
+
 	<div class="imgIntroduc">
 		<img alt="" src="img/img_larg/breadcrumb.jpg"
 			style="width: 1297px; height: 250px">
+
+
+	<section class="imgIntroduc backgroundSection">
+
 		<div class="text-overlay">
 			<p>Giới thiệu</p>
 			<div class=text-overlay2>
 				<p>
+
 					<a href="index.jsp" style="color: white">Trang chủ ></a> Liên hệ
 				</p>
 			</div>
@@ -123,6 +154,16 @@ button {
 	<jsp:include page="footer.jsp" />
 	<!-- end footer -->
 
+					<a href="index.jsp" style="color: white">Trang chủ ></a> Liên Hệ
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<jsp:include page="footer.jsp" />
+	<!-- end footer -->
+
 	<!--bootstrap js-->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -131,3 +172,10 @@ button {
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+

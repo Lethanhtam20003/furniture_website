@@ -40,4 +40,6 @@ public class ProFurniture extends Product {
 		this.thicknessWood = thicknessWood;
 	}
 
+
+
 }
