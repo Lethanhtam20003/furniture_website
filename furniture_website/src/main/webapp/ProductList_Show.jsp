@@ -2,7 +2,7 @@
 <%@page import="data.Storage"%>
 <%@page import="model.Product"%>
 <%@page import="java.util.*"%>
-<%@page import="soft.*"%>
+<%@page import="functions.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -53,6 +53,15 @@
 	height: 200px;
 	width: 100%;
 }
+
+.decorativeLights, .handMade, .decoration, .sanitaryEquiment, .furniture,
+	.allProduct {
+	color: red;
+}
+
+.p100000, .p500000, .p1000000, .p2000000, .p5000000 {
+	color: blue;
+}
 </style>
 <title>san pham</title>
 </head>
@@ -64,11 +73,20 @@
 	<div class="imgIntroduc backgroundSection ">
 		<div class="text-overlay">
 			<p>Sản Phẩm</p>
+			<%
+			String category = (String) request.getAttribute("category");
+			%>
 			<div class=text-overlay2>
 				<p>
-					<a href="index.jsp" style="color: white">Trang chủ ></a> <a>Sản
-						Phẩm</a>
-
+					<a href="index.jsp" style="color: white">Trang chủ ></a> <a
+						href="PhanTrang?curentPage=0&acction=">Sản Phẩm</a>
+					<%
+					if (category != null) {
+					%>
+					<a> > <%=category%></a>
+					<%
+					}
+					%>
 				</p>
 			</div>
 		</div>
@@ -81,49 +99,116 @@
 			<div class="container ms-4 pe-4 ">
 
 				<div class=" container col bg-body-tertiary mb-4 border  ">
-					Danh Mục Sản Phẩm
+					<!-- 
+				type 
+				- decorativeLights
+				- handMade
+				- decoration
+				- sanitaryEquiment
+				- furniture
+				
+				 -->
+					<%
+					String type = "";
+					if (session.getAttribute("categoryType") != null) {
+						type = (String) session.getAttribute("categoryType");
+					}
+					%>
+					<h3>Danh Mục Sản Phẩm</h3>
 					<div class="row m-1">
-						<a> Đèn Trang Trí</a>
+						<a class="<%if (type.equals("decorativeLights"))%><%=type%>"
+							href="productFiltering?acction=fillteringByType&type=decorativeLights"
+							type="post"> Đèn Trang Trí</a>
 					</div>
 					<div class="row m-1">
-						<a>Đồ Trang Trí</a>
+						<a class="<%if (type.equals("decoration"))%><%=type%>"
+							href="productFiltering?acction=fillteringByType&type=decoration">Đồ
+							Trang Trí</a>
 					</div>
 					<div class="row m-1">
-						<a>Đồ Nội Thất</a>
+						<a class="<%if (type.equals("furniture"))%><%=type%>"
+							href="productFiltering?acction=fillteringByType&type=furniture">Đồ
+							Nội Thất</a>
 					</div>
 					<div class="row m-1">
-						<a>Thiết Bị Vệ Sinh</a>
+						<a class="<%if (type.equals("sanitaryEquiment"))%><%=type%>"
+							href="productFiltering?acction=fillteringByType&type=sanitaryEquiment">Thiết
+							Bị Vệ Sinh</a>
 					</div>
 					<div class="row m-1">
-						<a>Sản Phẩm Thủ Công</a>
+						<a class="<%if (type.equals("handMade"))%><%=type%>"
+							href="productFiltering?acction=fillteringByType&type=handMade">Sản
+							Phẩm Thủ Công</a>
+					</div>
+					<div class="row m-1">
+						<a
+							class="<%if (session.getAttribute("categoryType") != null) {
+	if (session.getAttribute("categoryType").equals("")) {%> allProduct<%}
+} else {%>allProduct<%}%> "
+							href="PhanTrang?curentPage=0&acction=">Tất cả sản phẩm</a>
 					</div>
 				</div>
 
+				<%
+				String priceCost = "";
+				if (session.getAttribute("priceCost") != null) {
+					priceCost = "p" + session.getAttribute("priceCost");
+				}
+				%>
 				<div class=" container col   mb-4 border">
 					Lọc theo mức giá
 					<div class="row m-1">
-						<a> 100000</a>
+						<a
+							class="<%if (priceCost.equals("p100000")) {%> <%=priceCost%> <%}%> "
+							href="productFiltering?acction=fillterByPrice&price=100000">
+							100000</a>
 					</div>
 					<div class="row m-1">
-						<a>500000</a>
+						<a
+							class="<%if (priceCost.equals("p500000")) {%> <%=priceCost%>  <%}%>"
+							href="productFiltering?acction=fillterByPrice&price=500000">500.000</a>
 					</div>
 					<div class="row m-1">
-						<a>1000000</a>
+						<a
+							class="<%if (priceCost.equals("p1000000")) {%> <%=priceCost%> <%}%> "
+							href="productFiltering?acction=fillterByPrice&price=1000000">1.000.000</a>
 					</div>
 					<div class="row m-1">
-						<a>2000000</a>
+						<a
+							class="<%if (priceCost.equals("p2000000")) {%> <%=priceCost%> <%}%> "
+							href="productFiltering?acction=fillterByPrice&price=2000000">2.000.000</a>
 					</div>
 					<div class="row m-1">
-						<a>5000000</a>
+						<a
+							class="<%if (priceCost.equals("p5000000")) {%> <%=priceCost%>  <%}%>"
+							href="productFiltering?acction=fillterByPrice&price=5000000">5.000.000</a>
 					</div>
 				</div>
 				<div class=" container col  mb-4 border ">
 					Phương Thức Sắp Xếp
 					<div class="row m-1">
-						<a> giá tiền </a>
+						<%
+						int arrangeNum_softByPrice = 0;// 0: ascending ;1: decrease;2: no soft by price
+
+						if (request.getAttribute("arrangeNum_softByPrice") != null) {
+							arrangeNum_softByPrice = (int) request.getAttribute("arrangeNum_softByPrice");
+						}
+						%>
+						<a
+							href="productFiltering?acction=softByPrice&arrangeNum_softByPrice=<%=arrangeNum_softByPrice%>">
+							giá tiền </a>
 					</div>
 					<div class="row m-1">
-						<a>thời gian nhập hàng</a>
+						<%
+						int arrangeNum_softByDate = 0; // 0: ascending ;1: decrease;2: no soft by price
+
+						if (request.getAttribute("arrangeNum_softByDate") != null) {
+							arrangeNum_softByDate = (int) request.getAttribute("arrangeNum_softByDate");
+						}
+						%>
+						<a
+							href="productFiltering?acction=softByDate&arrangeNum_softByDate=<%=arrangeNum_softByDate%>">thời
+							gian nhập hàng</a>
 					</div>
 
 				</div>
@@ -137,6 +222,11 @@
 				<div class="text-center"></div>
 				<%
 				List<Product> list = (ArrayList<Product>) session.getAttribute("listCurent");
+				if (list.size() == 0) {
+				%>
+				Khong có san Phẩm!
+				<%
+				} else {
 				int index = 0, i = 0, j = 0;
 				for (Product p : list) {
 					if (j == 0) {
@@ -153,8 +243,8 @@
 							onmouseleave="anDoiTuong('<%=i + "" + j%>')">
 							<!-- ảnh san pham -->
 							<div class="image-container ">
-								<a href="detailsProduct?idProduct=<%=p.getId()%>"> <img src="<%=p.getImgPath()%>"
-									class="card-img-top " alt="...">
+								<a href="detailsProduct?idProduct=<%=p.getId()%>"> <img
+									src="<%=p.getImgPath()%>" class="card-img-top " alt="...">
 								</a>
 								<div class="overlay-text"></div>
 								<!-- button them gio hang -->
@@ -208,6 +298,7 @@
 				}
 				index++;
 				}
+				}
 				int pageNum = (int) session.getAttribute("pageNum") + 1;
 				%>
 
@@ -219,11 +310,12 @@
 		<nav aria-label="Page navigation example ">
 			<ul class="pagination">
 				<%
+				String acction = (String) request.getAttribute("acction");
 				for (int in = 1; in <= pageNum; in++) {
 				%>
 
 				<li class="page-item"><a class="page-link"
-					href="PhanTrang?curentPage=<%=in - 1%>"><%=in%></a></li>
+					href="PhanTrang?curentPage=<%=in - 1%>&acction=<%=acction%>"><%=in%></a></li>
 				<%
 				}
 				%>

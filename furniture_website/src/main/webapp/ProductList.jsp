@@ -1,7 +1,7 @@
 <%@page import="data.Storage"%>
 <%@page import="model.Product"%>
 <%@page import="java.util.*"%>
-<%@page import="soft.*"%>
+<%@page import="functions.*"%>
 
 
 
@@ -35,7 +35,6 @@
 			</div>
 			<%
 			List<Product> list = (ArrayList<Product>) session.getAttribute("listProduct");
-			list.sort(new sortByDateAddBefore());
 			int index = 0, i = 0, j = 0;
 			for (Product p : list) {
 				if (j == 0) {
@@ -52,8 +51,8 @@
 						onmouseleave="anDoiTuong('<%=i + "" + j%>')">
 						<!-- ảnh san pham -->
 						<div class="image-container ">
-							<a href="detailsProduct?idProduct=<%=p.getId()%>"> <img src="<%=p.getImgPath()%>"
-								class="card-img-top " alt="...">
+							<a href="detailsProduct?idProduct=<%=p.getId()%>"> <img
+								src="<%=p.getImgPath()%>" class="card-img-top " alt="...">
 							</a>
 							<div class="overlay-text"></div>
 							<!-- button them gio hang -->

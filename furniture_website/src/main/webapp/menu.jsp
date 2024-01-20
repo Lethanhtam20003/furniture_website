@@ -51,20 +51,8 @@ a {
 					<li><a class="nav-link mx-3" aria-current="page"
 						href="introduction.jsp">Giới thiệu</a></li>
 					<li class="nav-item mx-3"><a class="nav-link"
-						href="PhanTrang?curentPage=0">Sản phẩm</a></li>
-					<!-- drop menu -->
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" role="button"
-						data-bs-toggle="dropdown" aria-expanded="false"> </a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">S</a></li>
-						</ul></li>
-					<!-- end drop menu -->
+						href="PhanTrang?curentPage=0&acction=">Sản phẩm</a></li>
+
 					<li class="nav-item"><a class="nav-link mx-3" href="news.jsp">Tin
 							tức</a></li>
 					<li class="nav-item"><a class="nav-link mx-3"
