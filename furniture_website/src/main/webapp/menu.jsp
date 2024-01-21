@@ -87,12 +87,26 @@ a {
 						<li class="nav-item">
 							<nav class="navbar bg-success-subtle">
 								<div class="container">
+									<div class="dropdown">
+										<a  class="navbar-brand  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <img
+											src="img/icon/icons8-person-32.png" alt="Bootstrap"
+											width="20">
+										</a>
+										<ul class="dropdown-menu">
+											<c:if test="${sessionScope.acc != null }">
+												<li><a class="dropdown-item" href="index.jsp">Thoát</a></li>
+											</c:if>
+											<c:if test="${sessionScope.acc == null }">
+											
+												<li><a class="dropdown-item" href="login.jsp">Đăng nhập</a></li>
+											</c:if>
+											
+											<li><a class="dropdown-item" href="register.jsp">Đăng ký</a></li>
+										</ul>
 
-									<a class="navbar-brand" href="login.jsp"> <img
-										src="img/icon/icons8-person-32.png" alt="Bootstrap" width="20">
-									</a>
+									</div>
 								</div>
-							</nav>
+							</nav> 
 						</li>
 						<!--  		
 						<li class="nav-item">
