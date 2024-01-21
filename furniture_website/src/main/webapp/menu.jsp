@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,7 +62,7 @@ a {
 
 				</ul>
 				<!-- icon -->
-				<div clsss="chuLon bg-success-subtle">
+				<div class="chuLon bg-success-subtle">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-success-subtle">
 						<li class="nav-item">
 							<nav class="navbar bg-success-subtle">
@@ -81,15 +82,9 @@ a {
 											width="20">
 										</a>
 										<ul class="dropdown-menu">
-											<c:if test="${sessionScope.acc != null }">
 												<li><a class="dropdown-item" href="index.jsp">Thoát</a></li>
-											</c:if>
-											<c:if test="${sessionScope.acc == null }">
-											
 												<li><a class="dropdown-item" href="login.jsp">Đăng nhập</a></li>
-											</c:if>
-											
-											<li><a class="dropdown-item" href="register.jsp">Đăng ký</a></li>
+												<li><a class="dropdown-item" href="register.jsp">Đăng ký</a></li>
 										</ul>
 
 									</div>
