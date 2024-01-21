@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.DaoAccount;
 import model.Account;
@@ -31,6 +32,8 @@ public class LoginControl extends HttpServlet {
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			
 		}else {
+			HttpSession session = request.getSession();
+			session.setAttribute("acc", a);
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 			
