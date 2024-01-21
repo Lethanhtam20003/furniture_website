@@ -42,13 +42,10 @@ public class PhanTrang extends HttpServlet {
 		case "":
 			phanTrang(session, request, response);
 			break;
-		case "fillterByType":
-			fillterByType(session, request, response);
+		case "fillter":
+			fillter(session, request, response);
 			break;
 
-		case "fillterByPrice":
-			fillterByPrice(session, request, response);
-			break;
 		case "softByPrice":
 			softByPrice(session, request, response);
 			break;
@@ -73,8 +70,8 @@ public class PhanTrang extends HttpServlet {
 	private void phanTrang(HttpSession session, HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setAttribute("acction", "");
-		if (session.getAttribute("listProductThenFillterByType") != null) {
-			session.removeAttribute("listProductThenFillterByType");
+		if (session.getAttribute("listProductThenFillter") != null) {
+			session.removeAttribute("listProductThenFillter");
 		}
 		if (session.getAttribute("listProductThenFillterByPrice ") != null) {
 			session.removeAttribute("listProductThenFillterByPrice");
@@ -103,16 +100,15 @@ public class PhanTrang extends HttpServlet {
 
 	}
 
-	private void fillterByType(HttpSession session, HttpServletRequest request, HttpServletResponse response)
+	private void fillter(HttpSession session, HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		List<Product> dangSach = (ArrayList<Product>) session.getAttribute("listProductThenFillterByType");
+		List<Product> dangSach = (ArrayList<Product>) session.getAttribute("listProductThenFillter");
 
 		int curentPage = Integer.parseInt(request.getParameter("curentPage"));
 		int pageNum = dangSach.size() / 8;
 		if (curentPage > pageNum) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/loi.jsp");
 			dispatcher.forward(request, response);
-
 		}
 		int pageSite = 8, startIndex, endIndex;
 		List<Product> listCurent = new ArrayList<Product>();
@@ -125,30 +121,6 @@ public class PhanTrang extends HttpServlet {
 		session.setAttribute("listCurent", listCurent);
 		session.setAttribute("pageNum", pageNum);
 		request.getServletContext().getRequestDispatcher("/ProductList_Show.jsp").forward(request, response);
-	}
-
-	private void fillterByPrice(HttpSession session, HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		List<Product> dangSach = (ArrayList<Product>) session.getAttribute("listProductThenFillterByPrice");
-
-		int curentPage = Integer.parseInt(request.getParameter("curentPage"));
-		int pageNum = dangSach.size() / 8;
-		if (curentPage > pageNum) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/loi.jsp");
-			dispatcher.forward(request, response);
-
-		}
-		int pageSite = 8, startIndex, endIndex;
-		List<Product> listCurent = new ArrayList<Product>();
-		startIndex = curentPage * pageSite;
-		endIndex = startIndex + ((curentPage != pageNum) ? pageSite : dangSach.size() - pageSite * curentPage);
-		for (int i = startIndex; i < endIndex; i++) {
-			listCurent.add(dangSach.get(i));
-		}
-		session.setAttribute("listCurent", listCurent);
-		session.setAttribute("pageNum", pageNum);
-		request.getServletContext().getRequestDispatcher("/ProductList_Show.jsp").forward(request, response);
-
 	}
 
 	private void softByPrice(HttpSession session, HttpServletRequest request, HttpServletResponse response)

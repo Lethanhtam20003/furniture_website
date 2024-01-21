@@ -150,8 +150,11 @@
 			<p><%=p.getName()%></p>
 			<div class=text-overlay2>
 				<p>
-					<a href="index.jsp" style="color: white">Trang chủ ></a> <a>
-						loai san pham</a> <span style="color: white;"> ></span>
+					<a href="index.jsp" style="color: white">Trang chủ ></a> <span><a
+						href="PhanTrang?curentPage=0&acction=">Sản Phẩm ></a></span> <a
+						href="productFiltering?acction=fillter&type=<%=p.getType()%>&price=">
+						<%=p.getCategory(p.getType())%></a> <span style="color: white;">
+						></span>
 					<%=p.getName()%>
 			</div>
 		</div>
@@ -232,6 +235,7 @@
 				%>
 				<%=type%>
 				<%
+				// start switch case
 				switch (type) {
 				case "decorativeLights":
 					ProDecorativeLights proL = (ProDecorativeLights) p;
@@ -265,25 +269,38 @@
 				</table>
 				<%
 				break;
+				// decoration
 				case "decoration":
 					ProDecoration proD = (ProDecoration) p;
+
+					System.out.println(proD);
 				%>
 				<table class="bang table table-striped">
 					<!-- Tiêu đề cột -->
 
 					<!-- Dữ liệu -->
-					
+
 					<tr>
 						<th>Màu sắc</th>
 						<td><%=proD.getColor()%></td>
 
 					</tr>
-					
+
 					<tr>
-						<th>Hãng Sản Xuất</th>
-						<td><%=proD.getProducer() %></td>
+						<th>Kích thước</th>
+						<td><%=proD.getSize()%></td>
 					</tr>
-					
+					<tr>
+						<th>Thiết kế</th>
+						<td><%=proD.getSize()%></td>
+					</tr>
+
+					<tr>
+						<th>Độ dài của gỗ</th>
+						<td><%=proD.getThicknessWood()%></td>
+					</tr>
+
+
 				</table>
 				<%
 				break;
@@ -305,7 +322,7 @@
 		</div>
 
 	</div>
-
+	<div style="height: 200px"></div>
 	<!-- footer -->
 	<jsp:include page="footer.jsp" />
 	<!-- end footer -->

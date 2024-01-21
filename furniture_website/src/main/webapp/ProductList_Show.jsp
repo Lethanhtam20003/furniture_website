@@ -62,8 +62,12 @@
 .p100000, .p500000, .p1000000, .p2000000, .p5000000 {
 	color: blue;
 }
+
+a:hover {
+	color: #F3A270;
+}
 </style>
-<title>san pham</title>
+<title>Sản Phẩm</title>
 </head>
 <body>
 	<!-- menu -->
@@ -110,34 +114,38 @@
 				 -->
 					<%
 					String type = "";
-					if (session.getAttribute("categoryType") != null) {
-						type = (String) session.getAttribute("categoryType");
+					String price = "";
+					if (request.getAttribute("type") != null) {
+						type = (String) request.getAttribute("type");
+					}
+					if (request.getAttribute("price") != null) {
+						price = (String) request.getAttribute("price");
 					}
 					%>
 					<h3>Danh Mục Sản Phẩm</h3>
 					<div class="row m-1">
 						<a class="<%if (type.equals("decorativeLights"))%><%=type%>"
-							href="productFiltering?acction=fillteringByType&type=decorativeLights"
+							href="productFiltering?acction=fillter&type=decorativeLights&price=<%=price%>"
 							type="post"> Đèn Trang Trí</a>
 					</div>
 					<div class="row m-1">
 						<a class="<%if (type.equals("decoration"))%><%=type%>"
-							href="productFiltering?acction=fillteringByType&type=decoration">Đồ
+							href="productFiltering?acction=fillter&type=decoration&price=<%=price%>">Đồ
 							Trang Trí</a>
 					</div>
 					<div class="row m-1">
 						<a class="<%if (type.equals("furniture"))%><%=type%>"
-							href="productFiltering?acction=fillteringByType&type=furniture">Đồ
+							href="productFiltering?acction=fillter&type=furniture&price=<%=price%>">Đồ
 							Nội Thất</a>
 					</div>
 					<div class="row m-1">
 						<a class="<%if (type.equals("sanitaryEquiment"))%><%=type%>"
-							href="productFiltering?acction=fillteringByType&type=sanitaryEquiment">Thiết
+							href="productFiltering?acction=fillter&type=sanitaryEquiment&price=<%=price%>">Thiết
 							Bị Vệ Sinh</a>
 					</div>
 					<div class="row m-1">
 						<a class="<%if (type.equals("handMade"))%><%=type%>"
-							href="productFiltering?acction=fillteringByType&type=handMade">Sản
+							href="productFiltering?acction=fillter&type=handMade&price=<%=price%>">Sản
 							Phẩm Thủ Công</a>
 					</div>
 					<div class="row m-1">
@@ -151,8 +159,8 @@
 
 				<%
 				String priceCost = "";
-				if (session.getAttribute("priceCost") != null) {
-					priceCost = "p" + session.getAttribute("priceCost");
+				if (request.getAttribute("price") != null) {
+					priceCost = "p" + request.getAttribute("price");
 				}
 				%>
 				<div class=" container col   mb-4 border">
@@ -160,28 +168,28 @@
 					<div class="row m-1">
 						<a
 							class="<%if (priceCost.equals("p100000")) {%> <%=priceCost%> <%}%> "
-							href="productFiltering?acction=fillterByPrice&price=100000">
+							href="productFiltering?acction=fillter&price=100000&type=<%=type%>">
 							100000</a>
 					</div>
 					<div class="row m-1">
 						<a
 							class="<%if (priceCost.equals("p500000")) {%> <%=priceCost%>  <%}%>"
-							href="productFiltering?acction=fillterByPrice&price=500000">500.000</a>
+							href="productFiltering?acction=fillter&price=500000&type=<%=type%>">500.000</a>
 					</div>
 					<div class="row m-1">
 						<a
 							class="<%if (priceCost.equals("p1000000")) {%> <%=priceCost%> <%}%> "
-							href="productFiltering?acction=fillterByPrice&price=1000000">1.000.000</a>
+							href="productFiltering?acction=fillter&price=1000000&type=<%=type%>">1.000.000</a>
 					</div>
 					<div class="row m-1">
 						<a
 							class="<%if (priceCost.equals("p2000000")) {%> <%=priceCost%> <%}%> "
-							href="productFiltering?acction=fillterByPrice&price=2000000">2.000.000</a>
+							href="productFiltering?acction=fillter&price=2000000&type=<%=type%>">2.000.000</a>
 					</div>
 					<div class="row m-1">
 						<a
 							class="<%if (priceCost.equals("p5000000")) {%> <%=priceCost%>  <%}%>"
-							href="productFiltering?acction=fillterByPrice&price=5000000">5.000.000</a>
+							href="productFiltering?acction=fillter&price=5000000&type=<%=type%>">5.000.000</a>
 					</div>
 				</div>
 				<div class=" container col  mb-4 border ">
@@ -195,8 +203,15 @@
 						}
 						%>
 						<a
-							href="productFiltering?acction=softByPrice&arrangeNum_softByPrice=<%=arrangeNum_softByPrice%>">
-							giá tiền </a>
+							href="productFiltering?acction=softByPrice&arrangeNum_softByPrice=<%=arrangeNum_softByPrice%>&type=<%=type%>&price=<%=price%>">
+							giá tiền: <span style="color: green;"> <%
+ if (arrangeNum_softByPrice == 1) {
+ %> nhỏ đến lớn<%
+ } else if (arrangeNum_softByPrice == 2) {
+ %> lớn đến nhỏ<%
+ }
+ %></span>
+						</a>
 					</div>
 					<div class="row m-1">
 						<%
@@ -207,8 +222,15 @@
 						}
 						%>
 						<a
-							href="productFiltering?acction=softByDate&arrangeNum_softByDate=<%=arrangeNum_softByDate%>">thời
-							gian nhập hàng</a>
+							href="productFiltering?acction=softByDate&arrangeNum_softByDate=<%=arrangeNum_softByDate%>&type=<%=type%>&price=<%=price%>">thời
+							gian nhập hàng:<span style="color: green;"> <%
+ if (arrangeNum_softByDate == 1) {
+ %> gần nhất<%
+ } else if (arrangeNum_softByDate == 2) {
+ %> lâu nhất<%
+ }
+ %></span>
+						</a>
 					</div>
 
 				</div>
@@ -306,6 +328,7 @@
 		</div>
 		<!-- end list product -->
 	</div>
+
 	<div class="container  d-flex justify-content-center">
 		<nav aria-label="Page navigation example ">
 			<ul class="pagination">

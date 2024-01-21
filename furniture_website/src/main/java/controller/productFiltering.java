@@ -16,7 +16,7 @@ import functions.Soft;
 import model.Product;
 
 /**
- * Servlet implementation class productFiltering
+ * Servlet implementation class productFiltering2
  */
 @WebServlet("/productFiltering")
 public class productFiltering extends HttpServlet {
@@ -36,26 +36,23 @@ public class productFiltering extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		String acction = request.getParameter("acction");
 		String type = request.getParameter("type");
+		String price = request.getParameter("price");
+
 		switch (acction) {
-		case "fillteringByType":
-			fillteringByType(session, request, response, type);
-			break;
-		case "fillterByPrice":
-			int cost = Integer.parseInt(request.getParameter("price"));
-			fillterByPrice(session, request, response, cost);
+		case "fillter":
+			filltering(session, request, response, type, price);
 			break;
 		case "softByPrice":
 			int arrangeNum_softByPrice = Integer.parseInt(request.getParameter("arrangeNum_softByPrice"));
 
-			softByPrice(session, request, response, arrangeNum_softByPrice);
+			softByPrice(session, request, response, arrangeNum_softByPrice, type, price);
 			break;
 		case "softByDate":
 			int arrangeNum_softByDate = Integer.parseInt(request.getParameter("arrangeNum_softByDate"));
-			softByDate(session, request, response, arrangeNum_softByDate);
+			softByDate(session, request, response, arrangeNum_softByDate, type, price);
 			break;
 
 		default:
@@ -63,18 +60,32 @@ public class productFiltering extends HttpServlet {
 		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	private void filltering(HttpSession session, HttpServletRequest request, HttpServletResponse response, String type,
+			String price) throws ServletException, IOException {
+		// hien thi danh muc nao dang duoc loc
+		String category = getCategory(type);
+		request.setAttribute("category", category);
+		request.setAttribute("acction", "fillter");
+		List<Product> listProduct = (ArrayList<Product>) session.getAttribute("listProduct");
+		List<Product> listThenFillter = new ArrayList<Product>(listProduct);
+		if (!type.equals("")) {
+			functions.Fillter fill = new Fillter();
+			listThenFillter = fill.fillterCatategory(listProduct, type);
+		}
+		if (!price.equals("")) {
+			functions.Fillter fillter = new Fillter();
+			int priceValue = Integer.parseInt(price);
+			listThenFillter = fillter.getProductSmallerThenCost(listThenFillter, priceValue);
+		}
+		request.setAttribute("type", type);
+		request.setAttribute("price", price);
+		session.setAttribute("categoryType", type);
+		session.setAttribute("listProductThenFillter", listThenFillter);
+		getServletContext().getRequestDispatcher("/PhanTrang?curentPage=0&acction=fillter").forward(request, response);
 	}
 
-	private void fillteringByType(HttpSession session, HttpServletRequest request, HttpServletResponse response,
-			String type) throws ServletException, IOException {
+	private String getCategory(String type) {
+		// TODO Auto-generated method stub
 		String category = "";
 		switch (type) {
 		case "decorativeLights":
@@ -94,55 +105,22 @@ public class productFiltering extends HttpServlet {
 			break;
 
 		}
-		request.setAttribute("category", category);
-		request.setAttribute("acction", "fillter");
-		List<Product> listProduct = (ArrayList<Product>) session.getAttribute("listProductThenfillterByPrice");
-		System.out.println("ds " + listProduct);
-		if (listProduct == null) {
-			listProduct = (ArrayList<Product>) session.getAttribute("listProduct");
-		}
-		functions.Fillter fill = new Fillter();
-		List<Product> listThenFillter = fill.fillterCatategory(listProduct, type);
-		session.setAttribute("categoryType", type);
-		session.setAttribute("listProductThenFillterByType", listThenFillter);
-		getServletContext().getRequestDispatcher("/PhanTrang?curentPage=0&acction=fillterByType").forward(request,
-				response);
+		return category;
 	}
 
-	private void fillterByPrice(HttpSession session, HttpServletRequest request, HttpServletResponse response,
-			int price) throws ServletException, IOException {
-		List<Product> listProduct = new ArrayList<Product>();
-		List<Product> fillterList = new ArrayList<Product>();
-		if (session.getAttribute("listProductThenFillterByType") != null
-				&& session.getAttribute("listProductThenFillterByPrice") != null) {
-			listProduct = (ArrayList<Product>) session.getAttribute("listProductThenFillterByType");
-		} else if (session.getAttribute("listProductThenFillterByType") != null) {
-			listProduct = (ArrayList<Product>) session.getAttribute("listProductThenFillterByType");
-		} else if (listProduct == null) {
-			listProduct = (ArrayList<Product>) session.getAttribute("listProduct");
-		}
-		functions.Fillter fillter = new Fillter();
-		List<Product> listThenFillter = fillter.getProductSmallerThenCost(listProduct, price);
-		if (session.getAttribute("listProductThenFillterByType") != null) {
-			fillterList = listThenFillter;
-			session.setAttribute("fillterList", fillterList);
-		}
-		session.setAttribute("priceCost", price);
-		session.setAttribute("listProductThenFillterByPrice", listThenFillter);
-		System.out.println(listThenFillter);
-		getServletContext().getRequestDispatcher("/PhanTrang?curentPage=0&acction=fillterByPrice").forward(request,
-				response);
-
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
 	}
 
 	private void softByPrice(HttpSession session, HttpServletRequest request, HttpServletResponse response,
-			int arrangeNum_softByPrice) throws ServletException, IOException {
+			int arrangeNum_softByPrice, String type, String price) throws ServletException, IOException {
 
-		List<Product> listProduct = (ArrayList<Product>) session.getAttribute("fillterList");
-		if (listProduct == null)
-			listProduct = (ArrayList<Product>) session.getAttribute("listProductThenFillterByType");
-		if (listProduct == null)
-			listProduct = (ArrayList<Product>) session.getAttribute("listProductThenFillterByPrice");
+		List<Product> listProduct = (ArrayList<Product>) session.getAttribute("listProductThenFillter");
 		if (listProduct == null)
 			listProduct = (ArrayList<Product>) session.getAttribute("listProduct");
 		functions.Soft soft = new Soft();
@@ -163,12 +141,8 @@ public class productFiltering extends HttpServlet {
 	}
 
 	private void softByDate(HttpSession session, HttpServletRequest request, HttpServletResponse response,
-			int arrangeNum_softByDate) throws ServletException, IOException {
-		List<Product> listProduct = (ArrayList<Product>) session.getAttribute("fillterList");
-		if (listProduct == null)
-			listProduct = (ArrayList<Product>) session.getAttribute("listProductThenFillterByType");
-		if (listProduct == null)
-			listProduct = (ArrayList<Product>) session.getAttribute("listProductThenFillterByPrice");
+			int arrangeNum_softByDate, String type, String price) throws ServletException, IOException {
+		List<Product> listProduct = (ArrayList<Product>) session.getAttribute("listProductThenFillter");
 		if (listProduct == null)
 			listProduct = (ArrayList<Product>) session.getAttribute("listProduct");
 		functions.Soft soft = new Soft();

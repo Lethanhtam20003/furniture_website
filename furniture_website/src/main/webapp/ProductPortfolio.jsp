@@ -120,19 +120,20 @@
 		<div class="row p-2 ">
 			<div class="col-6">
 				<div class="image-container">
-					<a href="index.jsp "> <img class=""
+					<a href="PhanTrang?curentPage=0&acction="> <img class=""
 						src="img/img_larg/cate_1_img.webp" alt="Mô tả của ảnh"
 						height="200" width=" 600">
 					</a>
 					<div class="overlay-text m-4 m-4">
 						<h5>
-							<a class="linkXanh" href="">Sản Phẩm bán chạy</a>
+							<a class="linkXanh" href="PhanTrang?curentPage=0&acction=">Sản
+								Phẩm bán chạy</a>
 						</h5>
 						<p>
 							Tiện ích cho nhu cầu sinh hoạt hàng ngày.<br> Giải pháp An
 							toàn - Tiết kiệm
 						</p>
-						<a class="linkXanh" href=""> <svg
+						<a class="linkXanh" href="PhanTrang?curentPage=0&acction="> <svg
 								xmlns="http://www.w3.org/2000/svg" width="32" height="32"
 								fill="currentColor" class="bi bi-caret-right "
 								viewBox="0 0 16 16" style="margin-top: -10px">
@@ -145,13 +146,16 @@
 			</div>
 			<div class="col-2 ">
 				<div class=" image-container">
-					<a href="index.jsp "> <img class=" "
-						src="img/img_larg/cate_2_img.webp" alt="Mô tả của ảnh"
-						height="200" width="200">
+					<a
+						href="productFiltering?acction=fillter&type=decorativeLights&price= ">
+						<img class=" " src="img/img_larg/cate_2_img.webp"
+						alt="Mô tả của ảnh" height="200" width="200">
 					</a>
 					<div class="overlay-text m-4 ">
 						<h5>
-							<a class="linkXanh" href="">Đèn trang trí</a>
+							<a class="linkXanh"
+								href="productFiltering?acction=fillter&type=decorativeLights&price=">Đèn
+								trang trí</a>
 						</h5>
 						<p>Thẩm mỹ độc đáo</p>
 					</div>
@@ -160,13 +164,15 @@
 			</div>
 			<div class="col-2 ">
 				<div class="image-container">
-					<a href="index.jsp "> <img class=" "
-						src="img/img_larg/cate_3_img.webp" alt="Mô tả của ảnh"
-						height="200" width="200">
+					<a href="productFiltering?acction=fillter&type=decoration&price=">
+						<img class=" " src="img/img_larg/cate_3_img.webp"
+						alt="Mô tả của ảnh" height="200" width="200">
 					</a>
 					<div class="overlay-text m-4 ">
 						<h5>
-							<a class="linkXanh" href="">Đồ trang trí</a>
+							<a class="linkXanh"
+								href="productFiltering?acction=fillter&type=decoration&price=">Đồ
+								trang trí</a>
 						</h5>
 						<p>Không gian nghệ thuật</p>
 
@@ -175,13 +181,16 @@
 			</div>
 			<div class="col-2 ">
 				<div class="image-container">
-					<a href="index.jsp "> <img class=" "
-						src="img/img_larg/cate_4_img.webp" alt="Mô tả của ảnh"
-						height="200" width="200">
+					<a
+						href="productFiltering?acction=fillter&type=sanitaryEquiment&price=">
+						<img class=" " src="img/img_larg/cate_4_img.webp"
+						alt="Mô tả của ảnh" height="200" width="200">
 					</a>
 					<div class="overlay-text m-4 ">
 						<h5>
-							<a class="linkXanh" href="">Thiết bị vệ sinh</a>
+							<a class="linkXanh"
+								href="productFiltering?acction=fillter&type=sanitaryEquiment&price=">Thiết
+								bị vệ sinh</a>
 						</h5>
 						<p>Đa dạng mẫu mã</p>
 
@@ -193,16 +202,17 @@
 		<div class="row p-2">
 			<div class="col-6 ">
 				<div class="image-container">
-					<a href="index.jsp "> <img class=" "
+					<a href="PhanTrang?curentPage=0&acction="> <img class=" "
 						src="img/img_larg/cate_6_img.webp" alt="Mô tả của ảnh"
 						height="200" width=" 600">
 					</a>
 					<div class="overlay-text m-4 ">
 						<h5>
-							<a class="linkXanh" href="">Top sản phẩm bán chạy hàng đầu</a>
+							<a class="linkXanh" href="PhanTrang?curentPage=0&acction=">Top
+								sản phẩm bán chạy hàng đầu</a>
 						</h5>
 						<p>Thiết kế Đơn giản - Tinh tế - Hiện đại</p>
-						<a class="linkXanh" href=""> <svg
+						<a class="linkXanh" href="PhanTrang?curentPage=0&acction="> <svg
 								xmlns="http://www.w3.org/2000/svg" width="32" height="32"
 								fill="currentColor" class="bi bi-caret-right "
 								viewBox="0 0 16 16" style="margin-top: -10px">
@@ -216,13 +226,15 @@
 			</div>
 			<div class="col-2 ">
 				<div class="image-container ">
-					<a href="index.jsp "> <img class=" "
-						src="img/img_larg/cate_7_img.webp" alt="Mô tả của ảnh"
-						height="200" width="200">
+					<a href="productFiltering?acction=fillter&type=furniture&price=">
+						<img class=" " src="img/img_larg/cate_7_img.webp"
+						alt="Mô tả của ảnh" height="200" width="200">
 					</a>
 					<div class="overlay-text m-4 ">
 						<h5>
-							<a class="linkXanh" href="">Đồ nội thất</a>
+							<a class="linkXanh"
+								href="productFiltering?acction=fillter&type=furniture&price=">Đồ
+								nội thất</a>
 						</h5>
 						<p>Trang trí không gian</p>
 
@@ -231,17 +243,20 @@
 			</div>
 			<div class="col-4 ">
 				<div class="image-container">
-					<a href="index.jsp "> <img class=" "
-						src="img/img_larg/cate_5_img.webp" alt="Mô tả của ảnh"
-						height="200" width="420">
+					<a href="productFiltering?acction=fillter&type=handMade&price=">
+						<img class=" " src="img/img_larg/cate_5_img.webp"
+						alt="Mô tả của ảnh" height="200" width="420">
 					</a>
 					<div class="overlay-text m-4 ">
 						<h5>
-							<a class="linkXanh" href="">Sản Phẩm Thủ Công</a>
+							<a class="linkXanh"
+								href="productFiltering?acction=fillter&type=handMade&price=">Sản
+								Phẩm Thủ Công</a>
 						</h5>
 						<p>Đường nét chạm khắc tinh tế</p>
-						<a class="linkXanh" href=""> <svg
-								xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+						<a class="linkXanh"
+							href="productFiltering?acction=fillter&type=handMade&price=">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
 								fill="currentColor" class="bi bi-caret-right "
 								viewBox="0 0 16 16" style="margin-top: -10px">
 	  									<path

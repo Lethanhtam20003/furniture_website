@@ -1,5 +1,7 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="model.Cart"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,7 +56,7 @@
 }
 </style>
 
-<title>Insert title here</title>
+<title>Giỏ Hàng</title>
 </head>
 <body>
 	<!-- menu -->
@@ -70,6 +72,29 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- main body   -->
+	<div class="container">
+		<%
+		Cart cart = (Cart) session.getAttribute("Cart");
+		if (cart.getListCartItem().size() == 0) {
+		%>
+		<div class=" col container text-center " style="height: 400px">
+			<div class="row rounded mx-auto d-block">
+				<img class="img-fluid" src="img/icon/icons8-bag-64.png"
+					style="height: 64px; width: 64px">
+			</div>
+			<div class="row">
+				<p>khong có sản phẩm nào trong giỏ hàng của bạn</p>
+			</div>
+
+		</div>
+		<%
+		}
+		%>
+	</div>
+
+
 	<!-- footer -->
 	<jsp:include page="footer.jsp" />
 	<!-- end footer -->
