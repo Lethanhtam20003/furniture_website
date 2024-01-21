@@ -25,26 +25,13 @@ create table Account(
 	lastLogin Date,
 	constraint chk_account_gender check (gender like 'nam' or gender like 'nu')
 )
-go
-create table GroupPro(
-	groupID nvarchar(100) primary key,
-	name nvarchar(100) not null,
-	content nvarchar(1000)
-);
-go
-create table Category(
-	categoryID nvarchar(100) primary key,
-	name nvarchar(100) not null,
-	content nvarchar(1000)
-);
+
 
 go
 
 create table Product(
 	productID nvarchar(100) primary key,
 	productName nvarchar(100) not null,
-	categoryID  nvarchar(100),
-	groupID nvarchar(100),
 	producer nvarchar(1000), -- thuong hieu
 	price float,
 	type  nvarchar(1000), -- the loai
@@ -64,8 +51,6 @@ create table Product(
 	imgPath nvarchar(1000), -- duong dan link anh
 	coupon nvarchar(50), -- chuongtrinh giam gia
 	dateAdded date, -- ngay nhap hang
-	foreign key (categoryID) references Category(categoryID),
-	foreign key (groupID) references GroupPro(groupID)
 )
 go
 create table Cart(

@@ -164,44 +164,14 @@ values
 
 go
 
-----GroupPro table
-insert into GroupPro(groupID,name,content) values 
-('gr001','Do Noi That',''),
-('gr002','Do Trang Tri',''),
-('gr003','Thiet Bi Ve Sinh',''),
-('gr004','Den Trang Tri',''),
-('gr005','San Pham Thu Cong','');
 
-go
-----Category table
-insert into Category(categoryID,name,content) values
-('c001','Noi that phong khach',''),
-('c002','Noi that phong bep',''),
-('c003','Noi that phong ngu',''),
-('c004','Noi that phong tam',''),
-('c005','Ke sach',''),
-('c006','Dong ho treo tuong',''),
-('c007','Ban ghe Sofa',''),
-('c008','Khung tranh anh',''),
-('c009','Bon tam',''),
-('c010','Voi sen',''),
-('c011','Voi Lavabo',''),
-('c012','Chau Lavabo',''),
-('c013','Den chum',''),
-('c014','Den am tran',''),
-('c015','Den tha tran',''),
-('c016','Den cay-Den ban',''),
-('c017','San pham thu cong','');
-go
 ----Product table
-insert into product(productID,productName,categoryID,groupID
+insert into product(productID,productName
 ,producer,price,type,decription,qualityInStorage,status
 ,packeged,brandOrigin,meterial,size,wattage,color,thicknessWood
 ,space,design,timeToUse,imgPath,coupon,dateAdded ) values
 	('p001'	-- id
 	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
-	,'c014' -- caregory
-	,'gr004'  -- group
 	,'Bean Violight' --  producer
 	,2055000  -- price
 	,'decorativeLights' -- type
@@ -235,8 +205,6 @@ insert into product(productID,productName,categoryID,groupID
 	
 	('p002'	-- id
 	,'Đôn lục bình đan thủ công trang trí phòng khách'	 -- name
-	,'c003' -- caregory
-	,'gr001'  -- group
 	,'	Bean Oem' --  producer
 	,530000  -- price
 	,'handMade' -- type
@@ -271,7 +239,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'1/12/2023' --ngay nhap hang
 	),
 
-	('p003'	,'Ke giay 6 tang '	,'c005','gr002'
+	('p003'	,'Ke giay 6 tang '	
 	,'Go MDF' --  producer
 	,1000000.0 -- price
 	,'decoration' -- type
@@ -299,7 +267,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'3/22/2023' --ngay nhap hang
 	),	
 
-	('p004'	,'Chậu Lavabo Toto tròn đặt bàn '	,'c012','gr003'
+	('p004'	,'Chậu Lavabo Toto tròn đặt bàn '	
 	,'Bean Toto' --  producer
 	,3500000.0 -- price
 	,'sanitaryEquiment' -- type
@@ -331,7 +299,7 @@ insert into product(productID,productName,categoryID,groupID
 	,'6/24/2023' --ngay nhap hang
 	),
 
-	('p005'	,'Ghe an Basil HomeLand'	,'c002','gr001'
+	('p005'	,'Ghe an Basil HomeLand'	
 	,'HomeLand' --  producer
 	,750000.0 -- price
 	,'decoration' -- type
@@ -355,8 +323,6 @@ insert into product(productID,productName,categoryID,groupID
 
 	('p006'	-- id
 	,'Bàn trang trí Mobilia BH-488 1.2M White OAK'	 -- name
-	,'c003' -- caregory
-	,'gr001'  -- group
 	,'' --  producer
 	,7000000  -- price
 	,'furniture' -- type
@@ -390,8 +356,6 @@ insert into product(productID,productName,categoryID,groupID
 
 	('p007'	-- id
 	,'Kệ 3 Tầng 290-3 Trắng'	 -- name
-	,'c001' -- caregory
-	,'gr002'  -- group
 	,'SIMPLEHOME (Thương Hiệu Cao Cấp)' --  producer
 	,2490000  -- price
 	,'furniture' -- type
@@ -420,8 +384,6 @@ insert into product(productID,productName,categoryID,groupID
 
 	('p008'	-- id
 	,'Vòi rửa chén lạnh 2 đầu inox 304 Hobby'	 -- name
-	,'c011' -- caregory
-	,'gr003'  -- group
 	,'Hobby Home Decor' --  producer
 	,390000  -- price
 	,'sanitaryEquiment' -- type
@@ -453,8 +415,6 @@ Sản phẩm thiết kế phù hợp cho mọi không gian bếp' -- status
 
 	('p009'	-- id
 	,'Vòi xịt cho chậu rửa chén Inox 304 Hobby'	 -- name
-	,'c003' -- caregory
-	,'gr003'  -- group
 	,'Hobby Home Decor' --  producer
 	, 290000 -- price
 	,'sanitaryEquiment' -- type
@@ -487,8 +447,6 @@ Sản phẩm decor dành cho chung cư căn hộ nhà phố' -- status
 	),
 	('p010'	-- id
 	,'Vòi xả chậu lavabo lạnh Hobby'	 -- name
-	,'c011' -- caregory
-	,'gr001'  -- group
 	,'Hobby Home Decor' --  producer
 	,290000  -- price
 	,'sanitaryEquiment' -- type
@@ -520,8 +478,6 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 
 	('p011'	-- id
 	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
-	,'c013' -- caregory
-	,'gr004'  -- group
 	,'Bean Violight' --  producer
 	,2055000  -- price
 	,'decorativeLights' -- type
