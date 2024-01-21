@@ -7,8 +7,6 @@ import data.Storage;
 public class Product {
 	private String id;
 	private String name;
-	private Category category;
-	private Group group;
 	private String producer;
 	private double price;
 	private String type;
@@ -37,12 +35,10 @@ public class Product {
 	 * @param status
 	 * @param imgPath
 	 */
-	public Product(String id, String name, String category, String group, String producer, double price, String type,
-			String decription, int qualityStorage, String status, String imgPath, String coupon, Date dateAdded) {
+	public Product(String id, String name, String producer, double price, String type, String decription,
+			int qualityStorage, String status, String imgPath, String coupon, Date dateAdded) {
 		this.id = id;
 		this.name = name;
-		this.category = (Storage.getCategoryById(category) != null) ? Storage.getCategoryById(category) : null;
-		this.group = (Storage.getGroupByID(group) != null) ? Storage.getGroupByID(group) : null;
 		this.coupon = (Storage.getCouponByID(coupon) != null) ? Storage.getCouponByID(coupon) : null;
 		this.producer = producer;
 		this.price = price;
@@ -77,22 +73,6 @@ public class Product {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = Storage.getCategoryById(category);
-	}
-
-	public Group getGroup() {
-		return group;
-	}
-
-	public void setGroup(String group) {
-		this.group = Storage.getGroupByID(group);
 	}
 
 	public String getProducer() {
@@ -170,14 +150,6 @@ public class Product {
 		this.type = type;
 	}
 
-	public void setCategory(Category category) {
-		this.category = category;
-	}
-
-	public void setGroup(Group group) {
-		this.group = group;
-	}
-
 	public Coupon getCoupon() {
 		return coupon;
 	}
@@ -219,9 +191,8 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", category=" + category + ", group=" + group + ", producer="
-				+ producer + ", price=" + price + ", type=" + type + ", qualityStorage=" + qualityStorage
-				+ "-----------\n";
+		return "Product [id=" + id + ", name=" + name + ", producer=" + producer + ", price=" + price + ", type=" + type
+				+ ", qualityStorage=" + qualityStorage + "-----------\n";
 	}
 
 	public static void main(String[] args) {

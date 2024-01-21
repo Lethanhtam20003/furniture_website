@@ -561,3 +561,5 @@ insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
 	--,'' -- coupon
 	--,'' --ngay nhap hang
 	--),
+
+	select * from Product
