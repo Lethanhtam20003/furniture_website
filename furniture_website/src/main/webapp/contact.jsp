@@ -91,6 +91,9 @@ button {
 	height: 200px;
 	width: 100%;
 }
+#map{
+height: 400px;
+}
 </style>
 <title>Liên hệ</title>
 
@@ -141,13 +144,16 @@ button {
 				</div>
 				<button type="submit">Send</button>
 		</div>
-		<div class="column">ádjad</div>
+		<div class="column">
+			<script src="https://www.google.com/maps/place/
+				C%C3%B4ng+Ty+TNHH+TMDV+V%C3%A2n+Ph%C6%B0%C6%A1ng/
+				@9.6034229,105.9635586,17z/data=!3m1!4b1!4m6!3m5!1s0x31a052063936eb4b
+				:0x55bdcdd48e59b21!8m2!3d9.6034176!4d105.9661389!16s%2Fg%2F1pzwzqvf3?hl=vi-VN&entry=ttu">		
+			</script>
+			
+		
+		</div>
 	</main>
-	<!-- footer -->
-	<jsp:include page="footer.jsp" />
-	<!-- end footer -->
-
-					<a href="index.jsp" style="color: white">Trang chủ ></a> Liên Hệ
 	<!-- footer -->
 	<jsp:include page="footer.jsp" />
 	<!-- end footer -->
