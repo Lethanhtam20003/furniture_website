@@ -106,7 +106,7 @@
 
 <script type="text/javascript">
 	// Khai báo biến để lưu trữ giá trị
-	var count = 0;
+	var count = 1;
 
 	function increment() {
 		// Tăng giá trị và cập nhật trên giao diện
@@ -230,17 +230,20 @@
 				<p><%=p.getStatus()%></p>
 			</div>
 			<div class="col-5">
-				<%
-				String type = p.getType();
-				%>
-				<%=type%>
-				<%
-				// start switch case
-				switch (type) {
-				case "decorativeLights":
-					ProDecorativeLights proL = (ProDecorativeLights) p;
-				%>
+				<div></div>
 				<table class="bang table table-striped">
+					<thead>
+						<p style="font-size: 25px">Thông số kỹ thuật</p>
+					</thead>
+					<hr>
+					<%
+					String type = p.getType();
+
+					// start switch case
+					switch (type) {
+					case "decorativeLights":
+						ProDecorativeLights proL = (ProDecorativeLights) p;
+					%>
 					<!-- Tiêu đề cột -->
 
 					<!-- Dữ liệu -->
@@ -272,47 +275,125 @@
 				// decoration
 				case "decoration":
 					ProDecoration proD = (ProDecoration) p;
-
-					System.out.println(proD);
 				%>
-				<table class="bang table table-striped">
-					<!-- Tiêu đề cột -->
+				<!-- Tiêu đề cột -->
 
-					<!-- Dữ liệu -->
+				<!-- Dữ liệu -->
 
-					<tr>
-						<th>Màu sắc</th>
-						<td><%=proD.getColor()%></td>
+				<tr>
+					<th>Màu sắc</th>
+					<td><%=proD.getColor()%></td>
 
-					</tr>
+				</tr>
 
-					<tr>
-						<th>Kích thước</th>
-						<td><%=proD.getSize()%></td>
-					</tr>
-					<tr>
-						<th>Thiết kế</th>
-						<td><%=proD.getSize()%></td>
-					</tr>
+				<tr>
+					<th>Kích thước</th>
+					<td><%=proD.getSize()%></td>
+				</tr>
+				<tr>
+					<th>Thiết kế</th>
+					<td><%=proD.getSize()%></td>
+				</tr>
 
-					<tr>
-						<th>Độ dài của gỗ</th>
-						<td><%=proD.getThicknessWood()%></td>
-					</tr>
+				<tr>
+					<th>Độ dài của gỗ</th>
+					<td><%=proD.getThicknessWood()%></td>
+				</tr>
 
 
 				</table>
 				<%
 				break;
-				case "ProFurniture":
+				case "furniture":
 					ProFurniture proF = (ProFurniture) p;
-					break;
+				%>
+				<!-- Tiêu đề cột -->
+
+				<!-- Dữ liệu -->
+
+				<tr>
+					<th>nhà sản xuất</th>
+					<td><%=proF.getBrandOrigin()%></td>
+
+				</tr>
+
+				<tr>
+					<th>Chất liệu</th>
+					<td><%=proF.getMeterial()%></td>
+				</tr>
+				<tr>
+					<th>Kích thước</th>
+					<td><%=proF.getSize()%></td>
+				</tr>
+				<tr>
+					<th>Màu sắc</th>
+					<td><%=proF.getColor()%></td>
+				</tr>
+
+				<tr>
+					<th>Độ dài của gỗ</th>
+					<td><%=proF.getThicknessWood()%></td>
+				</tr>
+
+
+				</table>
+				<%
+				break;
 				case "handMade":
 					ProHandmade proH = (ProHandmade) p;
-					break;
+				%>
+				<!-- Tiêu đề cột -->
+
+				<!-- Dữ liệu -->
+
+				<tr>
+					<th>Thiết kế</th>
+					<td><%=proH.getDesign()%></td>
+				</tr>
+				<tr>
+					<th>Kích thước</th>
+					<td><%=proH.getSize()%></td>
+				</tr>
+				<tr>
+					<th>Màu sắc</th>
+					<td><%=proH.getColor()%></td>
+				</tr>
+
+				<tr>
+					<th>Thời gian sử dụng</th>
+					<td><%=proH.getTimeToUse()%></td>
+
+				</tr>
+
+
+
+				</table>
+				<%
+				break;
 				case "sanitaryEquiment":
 					ProSanitaryEquiment proS = (ProSanitaryEquiment) p;
-					break;
+				%>
+
+				<!-- Tiêu đề cột -->
+
+				<!-- Dữ liệu -->
+
+				<tr>
+					<th>Chất liệu</th>
+					<td><%=proS.getMeterial()%></td>
+
+				</tr>
+
+				<tr>
+					<th>Không Gian Sử dụng</th>
+					<td><%=proS.getSpace()%></td>
+				</tr>
+
+
+
+				</table>
+				<%
+				break;
 
 				}
 				%>

@@ -43,11 +43,10 @@ public class ProDecorativeLights extends Product {
 	 * @param size
 	 * @param wattage
 	 */
-	public ProDecorativeLights(String id, String name, String category, String group, String producer, double price,
-			String type, String decription, int qualityStorage, String status, String packaged, String brandOrigin,
-			String meterial, String size, String wattage, String imgPath, String couponID, Date dateAdded) {
-		super(id, name, category, group, producer, price, type, decription, qualityStorage, status, imgPath, couponID,
-				dateAdded);
+	public ProDecorativeLights(String id, String name, String producer, double price, String type, String decription,
+			int qualityStorage, String status, String packaged, String brandOrigin, String meterial, String size,
+			String wattage, String imgPath, String couponID, Date dateAdded) {
+		super(id, name, producer, price, type, decription, qualityStorage, status, imgPath, couponID, dateAdded);
 		this.packaged = packaged;
 		this.brandOrigin = brandOrigin;
 		this.meterial = meterial;
@@ -86,7 +85,7 @@ public class ProDecorativeLights extends Product {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString() ;
+		return super.toString();
 	}
 
 }
