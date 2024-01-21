@@ -1,2 +1,36 @@
 @charset "UTF-8";
 
+.imgIntroduc {
+	position: relative;
+	display: inline-block;
+}
+
+.text-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #F3A270;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.text-overlay2 {
+	color: #F3A270;
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.backgroundSection {
+	background-image: url('img/img_larg/breadcrumb.jpg');
+	/* Đường dẫn đến hình ảnh */
+	background-size: cover;
+	/* Tùy chỉnh kích thước hình ảnh để nó che phủ hoàn toàn phần background */
+	background-position: center; /* Căn giữa hình ảnh */
+	color: #ffffff;
+	/* Màu chữ để đảm bảo đọc được trên background hình ảnh */
+	height: 200px;
+	width: 100%;
+}

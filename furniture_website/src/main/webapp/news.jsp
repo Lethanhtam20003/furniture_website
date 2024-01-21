@@ -63,7 +63,7 @@
 
 	<section class="imgIntroduc backgroundSection">
 		<div class="text-overlay">
-			<p>Giới thiệu</p>
+			<p>Tin Tức</p>
 			<div class=text-overlay2>
 				<p>
 					<a href="index.jsp" style="color: white">Trang chủ ></a> Tin Tức

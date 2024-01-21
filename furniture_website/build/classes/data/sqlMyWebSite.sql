@@ -70,8 +70,10 @@ create table Product(
 go
 create table Cart(
 	cartID nvarchar(100) primary key,
+	accountID nvarchar(100),
 	shppingCost float,
-	totalPriceSelected float
+	totalPriceSelected float,
+	foreign key (accountID) references Account(accountID)
 )
 
 go

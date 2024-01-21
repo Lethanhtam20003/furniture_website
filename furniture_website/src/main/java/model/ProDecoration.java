@@ -65,6 +65,10 @@ public class ProDecoration extends Product {
 		this.thicknessWood = thicknessWood;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "ProDecoration [design=" + design + ", size=" + size + ", color=" + color + ", thicknessWood="
+				+ thicknessWood + "]";
+	}
 
 }
