@@ -278,7 +278,12 @@ insert into product(productID,productName,categoryID,groupID
 	,'Co suc chua 18 doi giay, con co the su dung
 	de trung bay sach doc, cay canh,lo hoa, chong tray va chong am cao' -- decription
 	,20 -- qualityInStorage
-	,'' -- status
+	,'
+	Bàn Trang Trí MOBILIA BH-488 1.2M được làm bằng chất liệu gỗ MDF bền đẹp, chắc chắn. Chất liệu gỗ cao cấp đã trải qua quá trình xử lý tỉ mỉ, cho khả năng chống mối mọt, chống ẩm mốc, đồng thời chịu lực cao, chịu được các va đập tốt nên không bị biến dạng, cong vênh trong quá trình sử dụng.
+	Banner Thiết kế tinh tế, chắc chắn Bàn có thiết kế tinh tế với từng đường nét chế tác tỉ mỉ  tự nhiên đẹp mắt, giúp tạo nên nét trang trọng hơn cho bộ ấm trà hay đĩa hoa quả khi được đặt lên trên. 
+	Thuận tiện bảo quản gọn gàng nhiều vật dụng khác nhau Phần ngăn kéo cùng hộc đựng rộng rãi được tích hợp bên dưới, tiện lợi để bạn có thể sắp xếp gọn gàng sách báo hoặc các đồ vật lưu niệm khác... Chân đế nguyên khối chắc chắn, giúp bàn đứng vững hơn và tránh tình trạng bị xô dịch gây ảnh hưởng đến sàn nhà.
+	Tạo nét sang trọng cho không gian phòng khách Bàn Trang Trí MOBILIA với màu sắc trang nhã, bạn có thể dễ dàng kết hợp với các vật dụng trang trí nội thất khác, giúp cho không gian phòng khách của gia đình thêm phần sang trọng và hiện đại.
+' -- status
 	,'No Brand' -- packeged
 	,'Viet Nam' -- brandOrigin
 	,'Phu kien kem theo: 1 giay huong dan lap rap va 1 bo oc dung de lap dat'-- meterial 
@@ -544,20 +549,20 @@ Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bón
 
 	go
 ----Cart table
-insert into Cart(cartID,shppingCost,totalPriceSelected) values
-('ca001',30000.0,0.0),
-('ca002',50000.0,0.0),
-('ca003',70000.0,0.0),
-('ca004',100000.0,0.0);
+insert into Cart(cartID,accountID,shppingCost,totalPriceSelected) values
+('ca001','ac001',30000.0,0.0),
+('ca002','ac002',50000.0,0.0),
+('ca003','ac003',70000.0,0.0),
+('ca004','ac004',100000.0,0.0);
 
 ----CartDetails table
 insert into CartDetails(cartID,productID,qualityProduct,price,isGift,isAvailable) values
-('ca001','p002',10,500000.0,0,1),
-('ca001','p001',10,500000.0,0,1),
-('ca002','p001',2,1750000.0,1,1),
-('ca003','p003',5,1000000.0,0,1),
-('ca004','p004',7,3500000.0,0,1),
-('ca003','p005',3,750000.0,1,1);
+('ca001','p002',1,530000.0,0,1),
+('ca001','p001',1,2055000.0,0,1),
+('ca002','p001',2,2055000.0 *2,1,1),
+('ca003','p003',5,1000000.0*5,0,1),
+('ca004','p004',7,3500000.0*7,0,1),
+('ca003','p005',3,750000.0*3,1,1);
 
 ----Order table
 insert into Orders(orderID,createAt,shippingCost,status) values
@@ -586,16 +591,16 @@ insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
 	--,'' -- decription
 	--, -- qualityInStoraged
 	--,'' -- status
-	--,'' -- packeged
-	--,'' -- brandOrigin
-	--,'' -- meterial
-	--,'' -- size
-	--,'' -- wattage
-	--,'' -- color
-	--,'' -- thicknessWood
-	--,'' -- space
-	--,'' -- design
-	--,'' -- timeToUse
+	--,'' -- packeged		 -decorativeLights
+	--,'' -- brandOrigin	 -decorativeLights							   -furniture
+	--,'' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
+	--,'' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
+	--,'' -- wattage		 -decorativeLights
+	--,'' -- color								-decoration    -handMade   -furniture
+	--,'' -- thicknessWood						-decoration				   -furniture
+	--,'' -- space																			-SanitaryEquiment
+	--,'' -- design								-decoration    -handMade
+	--,'' -- timeToUse										   -handMade
 	--,'img\img_larg\pro_ghe5.webp' --path img
 	--,'' -- coupon
 	--,'' --ngay nhap hang

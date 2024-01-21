@@ -97,13 +97,14 @@ a {
 							</nav>
 						</li>
 						-->
+						<!-- cart -->
 						<li class="nav-item">
 							<nav class="navbar bg-success-subtle">
 								<div class="container position-relative">
 									<span
 										class="position-absolute pt-2 start-50 translate-middle badge rounded-pill bg-danger">
 										0 <span class="visually-hidden">unread messages</span>
-									</span> <a class="navbar-brand" href="cart.jsp"> <img
+									</span> <a class="navbar-brand" href="CartController?actionCart=showPage"> <img
 										src="img/icon/icons8-bag-32.png" alt="Bootstrap" width="20">
 									</a>
 								</div>

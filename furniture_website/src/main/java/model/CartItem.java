@@ -12,6 +12,17 @@ public class CartItem {
 		// TODO Auto-generated constructor stub
 	}
 
+	public CartItem(Product product, int quality, double price, boolean isSelected, boolean idGift,
+			boolean isAvailable) {
+		super();
+		this.product = product;
+		this.quality = quality;
+		this.price = price;
+		this.isSelected = isSelected;
+		this.idGift = idGift;
+		this.isAvailable = isAvailable;
+	}
+
 	public Product getProduct() {
 		return product;
 	}

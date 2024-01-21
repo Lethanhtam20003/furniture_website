@@ -54,7 +54,7 @@
 <link rel="stylesheet" type="text/css" href="css/menu.css">
 
 <link rel="stylesheet" type="" href="../img/*">
-<title>Introduction page</title>
+<title>Giới Thiệu</title>
 </head>
 <body>
 

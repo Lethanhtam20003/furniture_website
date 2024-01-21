@@ -2,14 +2,25 @@ package model;
 
 import java.util.List;
 
+import dao.DaoCartItem;
+
 public class Cart {
 	private String cartID;
+	private String accountID;
 	private double shippingCost;
 	private double totalPriceSelected;
 	private List<CartItem> listCartItem;
 
 	public Cart() {
-		// TODO Auto-generated constructor stub
+		listCartItem = new DaoCartItem(cartID).selectAll();
+	}
+
+	public String getAccountID() {
+		return accountID;
+	}
+
+	public void setAccountID(String accountID) {
+		this.accountID = accountID;
 	}
 
 	public String getCartID() {

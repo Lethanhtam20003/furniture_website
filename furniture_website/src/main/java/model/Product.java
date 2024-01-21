@@ -194,6 +194,29 @@ public class Product {
 		this.dateAdded = dateAdded;
 	}
 
+	public String getCategory(String type) {
+		String category = "";
+		switch (type) {
+		case "decorativeLights":
+			category = "Đèn Trang Trí";
+			break;
+		case "decoration":
+			category = "Đồ Trang Trí";
+			break;
+		case "furniture":
+			category = "Đồ Nội Thất";
+			break;
+		case "sanitaryEquiment":
+			category = "Thiết Bị Vệ Sinh";
+			break;
+		case "handMade":
+			category = "Đồ Thủ Công";
+			break;
+
+		}
+		return category;
+	}
+
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", category=" + category + ", group=" + group + ", producer="
