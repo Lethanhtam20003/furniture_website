@@ -79,9 +79,7 @@ button {
 	border: none;
 	cursor: pointer;
 }
-</style>
-<title>Liên hệ</title>
-=======
+
 .backgroundSection {
 	background-image: url('img/img_larg/breadcrumb.jpg');
 	/* Đường dẫn đến hình ảnh */
@@ -94,7 +92,7 @@ button {
 	width: 100%;
 }
 </style>
-<title>Tin Tức</title>
+<title>Liên hệ</title>
 
 </head>
 
@@ -103,23 +101,18 @@ button {
 	<jsp:include page="menu.jsp" />
 	<!--end menu-->
 
-	<div class="imgIntroduc">
-		<img alt="" src="img/img_larg/breadcrumb.jpg"
-			style="width: 1297px; height: 250px">
-
-
+	
+	
 	<section class="imgIntroduc backgroundSection">
-
 		<div class="text-overlay">
 			<p>Giới thiệu</p>
 			<div class=text-overlay2>
 				<p>
-
 					<a href="index.jsp" style="color: white">Trang chủ ></a> Liên hệ
 				</p>
 			</div>
 		</div>
-	</div>
+	</section>
 	<main>
 		<div class="column">
 			<h6>
@@ -155,11 +148,6 @@ button {
 	<!-- end footer -->
 
 					<a href="index.jsp" style="color: white">Trang chủ ></a> Liên Hệ
-				</p>
-			</div>
-		</div>
-	</section>
-
 	<!-- footer -->
 	<jsp:include page="footer.jsp" />
 	<!-- end footer -->
