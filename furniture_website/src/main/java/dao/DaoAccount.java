@@ -22,7 +22,7 @@ public class DaoAccount implements IDao<Account> {
 			Connection connection = JDBCUtil.getConnection();
 
 			// Tạo đối tượng prepastatement
-			String sql = "select * from Account where accountName like ? and password like ?";
+			String sql = "select accountName, password from Account\n" + "where [accountName]= ?\n" + "and password =?";
 			PreparedStatement ps;
 			ps = connection.prepareStatement(sql);
 			ps.setString(1, user);
@@ -30,17 +30,12 @@ public class DaoAccount implements IDao<Account> {
 			// Thực thi câu lệnh
 			ResultSet rs = ps.executeQuery();
 			// Xử lý kết quả trả về
-			if (rs.next()) {
-				Account ac = new Account(rs.getString("accountID"), rs.getString("accountName"),
-						rs.getString("password"), rs.getString("firstName"), rs.getString("lastName"),
-						rs.getString("email"), rs.getDate("birthday"), rs.getString("gender"), rs.getString("phoneNum"),
-						rs.getString("addressAccount"), rs.getString("addressOrder"));
+			while (rs.next()) {
+				return new Account(rs.getString(1), rs.getString(2));
 
-				return ac;
-
+				// ngắt kết nối\
+//				JDBCUtil.closeConnection(connection);
 			}
-			// ngắt kết nối\
-			JDBCUtil.closeConnection(connection);
 		} catch (SQLException e) {
 		}
 		return null;
@@ -74,20 +69,18 @@ public class DaoAccount implements IDao<Account> {
 				a.setAddressOrder(rs.getString(11));
 				a.setCreateAt(rs.getDate(12));
 				a.setLastLogin(rs.getDate(13));
-
 				return a;
-
+				// ngắt kết nối\
+//				JDBCUtil.closeConnection(connection);
 			}
-			// ngắt kết nối\
-			JDBCUtil.closeConnection(connection);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 
-	public void register(String user, String pass, String fName, String lName, String email, String birthday,
-			String gender, String phoneNum, String addressAcount, String addressOrder) {
+	public void register(String user, String pass, String fName, String lName, String email,String birthday,String gender,String phoneNum,
+				String addressAcount,String addressOrder) {
 		try {
 			// Tạo kết nối đến JDBC
 			Connection connection = JDBCUtil.getConnection();
@@ -111,11 +104,8 @@ public class DaoAccount implements IDao<Account> {
 			ps.setString(10, addressAcount);
 			ps.setString(11, addressOrder);
 			ps.setTimestamp(12, new Timestamp(new Date().getTime()));
-			ps.setTimestamp(13, null);
+			ps.setTimestamp(13, null );
 			ps.executeUpdate();
-
-			// ngắt kết nối\
-			JDBCUtil.closeConnection(connection);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -124,56 +114,15 @@ public class DaoAccount implements IDao<Account> {
 
 	private String addId(Connection connection) throws SQLException {
 		String sql = "SELECT COUNT(*) FROM Account";
-		try (PreparedStatement ps = connection.prepareStatement(sql)) {
-			try (ResultSet rs = ps.executeQuery()) {
-				if (rs.next()) {
-					int count = rs.getInt(1) + 1;
-					return "acc" + count;
+		try(PreparedStatement ps = connection.prepareStatement(sql)){
+			try(ResultSet rs = ps.executeQuery()){
+				if(rs.next()) {
+					int count = rs.getInt(1)+1;
+					return "acc"+count;
 				}
 			}
 		}
 		return null;
-	}
-
-	public void change(Account a) {
-		String sql = "update Account set password=? where accountName=?";
-		try {
-			Connection conn = JDBCUtil.getConnection();
-			PreparedStatement ps;
-			ps = conn.prepareStatement(sql);
-			ps.setString(1, a.getPassword());
-			ps.setString(2, a.getAccountName());
-			int rs =ps.executeUpdate();
-			// ngắt kết nối\
-			JDBCUtil.closeConnection(conn);
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	public boolean checkExistEmail(String email) {
-		boolean res = false;
-		String sql = "select * from Account where email =?";
-		
-		try {
-			Connection conn = JDBCUtil.getConnection();
-			PreparedStatement ps;
-			ps= conn.prepareStatement(sql);
-			ps.setString(1, email);
-			ResultSet rs = ps.executeQuery();
-			if(rs.next()) {
-				res= true;
-				
-			}
-			JDBCUtil.closeConnection(conn);
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return res;
-		
 	}
 
 	@Override
@@ -218,7 +167,4 @@ public class DaoAccount implements IDao<Account> {
 		return false;
 	}
 
-	public static void main(String[] args) {
-		new DaoAccount().login("user001", "user001");
-	}
 }

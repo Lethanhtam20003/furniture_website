@@ -8,8 +8,8 @@ select * from Product
 insert into Account(accountID,accountName,password,firstName,lastName,
 email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)
 values
-		('ac001' --id
-		,'user001' --
+		('ac001'
+		,'user001'
 		,'user001'
 		,'Le'
 		,'Tam'
@@ -170,7 +170,6 @@ insert into product(productID,productName
 ,producer,price,type,decription,qualityInStorage,status
 ,packeged,brandOrigin,meterial,size,wattage,color,thicknessWood
 ,space,design,timeToUse,imgPath,coupon,dateAdded ) values
-	--p1
 	('p001'	-- id
 	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
 	,'Bean Violight' --  producer
@@ -203,7 +202,7 @@ insert into product(productID,productName
 	,'1/1/2023' --ngay nhap hang
 	),
 
-	--p2
+	
 	('p002'	-- id
 	,'Đôn lục bình đan thủ công trang trí phòng khách'	 -- name
 	,'	Bean Oem' --  producer
@@ -240,7 +239,6 @@ insert into product(productID,productName
 	,'1/12/2023' --ngay nhap hang
 	),
 
-	--p3
 	('p003'	,'Ke giay 6 tang '	
 	,'Go MDF' --  producer
 	,1000000.0 -- price
@@ -269,7 +267,6 @@ insert into product(productID,productName
 	,'3/22/2023' --ngay nhap hang
 	),	
 
-	--p4
 	('p004'	,'Chậu Lavabo Toto tròn đặt bàn '	
 	,'Bean Toto' --  producer
 	,3500000.0 -- price
@@ -302,7 +299,6 @@ insert into product(productID,productName
 	,'6/24/2023' --ngay nhap hang
 	),
 
-	--p5
 	('p005'	,'Ghe an Basil HomeLand'	
 	,'HomeLand' --  producer
 	,750000.0 -- price
@@ -324,7 +320,7 @@ insert into product(productID,productName
 	,'' -- coupon
 	,'6/5/2023' --ngay nhap hang
 	),
-	--p6
+
 	('p006'	-- id
 	,'Bàn trang trí Mobilia BH-488 1.2M White OAK'	 -- name
 	,'' --  producer
@@ -358,7 +354,6 @@ insert into product(productID,productName
 	,'7/4/2023' --ngay nhap hang
 	),
 
-	--p7
 	('p007'	-- id
 	,'Kệ 3 Tầng 290-3 Trắng'	 -- name
 	,'SIMPLEHOME (Thương Hiệu Cao Cấp)' --  producer
@@ -386,8 +381,7 @@ insert into product(productID,productName
 	,'' -- coupon
 	,'5/15/2023' --ngay nhap hang
 	),
-	
-	--p8
+
 	('p008'	-- id
 	,'Vòi rửa chén lạnh 2 đầu inox 304 Hobby'	 -- name
 	,'Hobby Home Decor' --  producer
@@ -419,7 +413,6 @@ Sản phẩm thiết kế phù hợp cho mọi không gian bếp' -- status
 	,'12/20/2023' --ngay nhap hang
 	),
 
-	--p9
 	('p009'	-- id
 	,'Vòi xịt cho chậu rửa chén Inox 304 Hobby'	 -- name
 	,'Hobby Home Decor' --  producer
@@ -452,8 +445,6 @@ Sản phẩm decor dành cho chung cư căn hộ nhà phố' -- status
 	,'' -- coupon
 	,'12/12/2023' --ngay nhap hang
 	),
-
-	--p10
 	('p010'	-- id
 	,'Vòi xả chậu lavabo lạnh Hobby'	 -- name
 	,'Hobby Home Decor' --  producer
@@ -485,21 +476,16 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 	,'5/1/2023' --ngay nhap hang
 	),
 
-	--p11
 	('p011'	-- id
 	,'Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh'	 -- name
 	,'Bean Violight' --  producer
 	,2055000  -- price
 	,'decorativeLights' -- type
-	,'Đèn trang trí phòng khách luôn là một trong những vấn đề quan tâm hàng đầu của mỗi công trình. Mẫu đèn trang trí  chùm hiện đại -  thiết kế thả ngang, ống led nghệ thuật DC-4108 với thiết kế đơn giản, hiện đại, tiện nghi, cùng độ bền cao sẽ là một sự lựa chọn mua sắm, tham khảo rất tốt đối với quý Khách hàng. Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,
-	showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn' -- decription
+	,'Đèn trang trí phòng khách luôn là một trong những vấn đề quan tâm hàng đầu của mỗi công trình. Mẫu đèn trang trí  chùm hiện đại -  thiết kế thả ngang, ống led nghệ thuật DC-4108 với thiết kế đơn giản, hiện đại, tiện nghi, cùng độ bền cao sẽ là một sự lựa chọn mua sắm, tham khảo rất tốt đối với quý Khách hàng. Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,  showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn' -- decription
 	,4 -- qualityInStoraged
-	,'Đèn trang trí phòng khách luôn là một trong những vấn đề quan tâm hàng đầu của mỗi công trình. Mẫu đèn trang trí  chùm hiện đại -  
-	thiết kế thả ngang, ống led nghệ thuật DC-4108 với thiết kế đơn giản, hiện đại, tiện nghi, cùng độ bền cao sẽ là một 
-	sự lựa chọn mua sắm, tham khảo rất tốt đối với quý Khách hàng. Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ,
-	được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,  showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn
-	Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn, 
-	showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn...' -- status
+	,'Đèn trang trí phòng khách luôn là một trong những vấn đề quan tâm hàng đầu của mỗi công trình. Mẫu đèn trang trí  chùm hiện đại -  thiết kế thả ngang, ống led nghệ thuật DC-4108 với thiết kế đơn giản, hiện đại, tiện nghi, cùng độ bền cao sẽ là một sự lựa chọn mua sắm, tham khảo rất tốt đối với quý Khách hàng. Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,  showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn
+
+Sản phẩm với chất liệu kim loại sơn tĩnh điện, sử dụng bóng Led 3 chế độ, được sử dụng rất nhiều trong trang trí phòng khách, bàn ăn,  showroom, shop, sảnh lễ tân, văn phòng... vừa đảm bảo ánh sáng tốt, và làm không gian trở nên mới lạ, thu hút hơn...' -- status
 	,'1 đèn' -- packeged
 	,'	Trung Quốc' -- brandOrigin
 	,'	Kim loại sơn tỉnh điện + Mika' -- meterial
@@ -513,244 +499,7 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 	,'img\img_larg\pro_den8.webp' --path img
 	,'' -- coupon
 	,'5/25/2023' --ngay nhap hang
-	),
-
-	--p12
-	('p012'	-- id
-	,'Đèn Tre Đám Mây'	 -- name
-	,'Làng nghề đan truyền thống Việt Nam' -- producer
-	,290000  -- price
-	,'HandMade' --  type
-	,'Đây là sản phẩm thủ công được làm từ chất liệu tự nhiên tại Việt Nam. 
-	Tinh giản, hiện đại nhưng vẫn giữ được hồn cốt chân quê, thẩm mỹ bền vững và đa ứng dụng trong cuộc sống' -- decription
-	, 5 -- qualityInStoraged
-	,'Sản phẩm thủ công được làm từ tre. Được xử lý và hoàn thiện tỷ mỉ, đa ứng dụng trong cuộc sống đời thường, vệ sinh dễ dàng ' -- status
-	,'' -- packeged		 -decorativeLights
-	,'' -- brandOrigin	 -decorativeLights							   -furniture
-	,'' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'62x43x23cm' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'' -- wattage		 -decorativeLights
-	,'màu nâu tự nhiên' -- color								-decoration    -handMade   -furniture
-	,'' -- thicknessWood						-decoration				   -furniture
-	,'' -- space																			-SanitaryEquiment
-	,'Thiết kế nhiều kích thước, hình dạng khác nhau' -- design								-decoration    -handMade
-	,'10 năm' -- timeToUse										   -handMade
-	,'img\productImg\z3351589896993_71679c46d12911bcd0c4688afcd986fb_3b6dd30d92564b9cba351e1b4b01abc0_1024x1024.jpg' --path img
-	,'' -- coupon
-	,'06/28/2023' --ngay nhap hang
-	),
-
-	--p13
-	('p013'	-- id
-	,'Giường Ngủ Gỗ Tràm MOHO MALAGA'	 -- name
-	,'Mr.Nicolai Lehn' -- producer
-	,3090000  -- price
-	,'Furniture' --  type
-	,'Thành phố MALAGA ngập tràn ánh sáng mặt trời, lắng đọng chút yên bình của khung cảnh chim bồ câu trên những cây ngô đồng tại quảng trường chính 
-	là nguồn cảm hứng tạo thiết kế cho bộ sưu tập nội thất MALAGA. 
-	Kiểu dáng thiết kế tối giản,mang đến sự sang trọng nhưng rất ấm cúng.' -- decription
-	, 2 -- qualityInStoraged
-	,'Sản phẩm làm từ gỗ tràm tự nhiên đảm bảo độ chắc chắn cao,chống công vênh, mối mọt. Với thiết kế nguyên tấm, 
-	phản giường giúp kết cấu của toàn bộ giường ngủ trở nên vững chắc hơn, có thể chịu lực các tấm nệm giày lên đến 30cm.
-	Khung đỡ giường ngủ cố định được làm bằng sắt kết hợp với vạt giường gỗ, nhân đôi sự chắc chắn.Thiết kế không chân hiện đại' -- status
-	,'' -- packeged		 -decorativeLights
-	,'Đan Mạch' -- brandOrigin	 -decorativeLights							   -furniture
-	,'Gỗ tràm và gỗ plywood' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'Dài 200cm x Rộng 120cm/160cm/180cm, Cao đến đầu giường 77cm' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'' -- wattage		 -decorativeLights
-	,'màu nâu trầm' -- color								-decoration    -handMade   -furniture
-	,'' -- thicknessWood						-decoration				   -furniture
-	,'' -- space																			-SanitaryEquiment
-	,'' -- design								-decoration    -handMade
-	,'' -- timeToUse										   -handMade
-	,'img\productImg\pro_nau_noi_that_moho_giuo_ngu_malaga_302_1m2_1_49fc192023254e1591849c7f359b6d06_master.jpg' --path img
-	,'' -- coupon
-	,'12/28/2023' --ngay nhap hang
-	),
-
-	--p14
-		
-	('p014'	-- id
-	,'Tranh Line Art '	 -- name
-	,'' -- producer
-	,460000  -- price
-	,'Decoration' --  type
-	,'Sản phẩm khung kính gỗ bao gồm tranh in KTS chất lượng cao. Nhấn mạnh vẻ đẹp dung dị từ các vật liệu tự nhiên. Phù hợp dành cho nhiều không gian nội thất mộc mạc' -- decription
-	, 4 -- qualityInStoraged
-	,'Với vật liệu tự nhiên, toát lên vẻ đẹp mộc mạc giản dị. Kích thước đa dạng phù hợp cho nhiều sự lựa chọn của khách hàng' -- status
-	,'' -- packeged		 -decorativeLights
-	,'Pháp' -- brandOrigin	 -decorativeLights							   -furniture
-	,'Gỗ thông và nhựa composite' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'40x60x1.5 cm/ 50x70xx1.5 cm' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'' -- wattage		 -decorativeLights
-	,'Màu đa dạng phù hợp không gian của gia đình bạn' -- color								-decoration    -handMade   -furniture
-	,'3cm' -- thicknessWood						-decoration				   -furniture
-	,'' -- space																			-SanitaryEquiment
-	,'Thiết kế tuy đơn giản nhưng dễ vỡ' -- design								-decoration    -handMade
-	,'' -- timeToUse										   -handMade
-	,'\img\productImg\pro_khung_go_thong_022225.webp' --path img
-	,'' -- coupon
-	,'01/14/2024' --ngay nhap hang
-	),
-
-		--p15
-		
-	('p015'	-- id
-	,'Bồn Tắm Độc Lập Kramer'	 -- name
-	,'Các kỹ sư của Kramer' -- producer
-	,26040000  -- price
-	,'SanitaryEquiment' --  type
-	,'Bồn tắm độc lập Kramer C-3012 nhập khẩu chính hãng, kiểu dáng hiện đại với các ưu điểm vượt trội so với các sản phẩm trên thị trường.
-	Với đội ngũ kỹ sư thiết kế giàu kinh nghiệm, nguyên liệu sản xuất an toàn thân thiện môi trường.
-	Là mẫu bồn tắm ngâm độc lập, có tính thẩm mỹ cao với công nghệ men phủ nano chống trầy xước, ố vàng.
-	Tô điểm thêm cho không gian phòng tắm đẹp, sang trọng và bền bỉ với thời gian' -- decription
-	, 2 -- qualityInStoraged
-	,'Kích thước thích hợp với phòng tắm không quá lớn. Nguyên vật liệu sản xuất an toàn thân thiện với môi trường.
-	Tính thẩm mỹ cao với công nghệ men phủ nano chống trầy xước, ố vàng. Dung tích nước lên tới 350 lít. 
-	Lỗ xả được thiết kế ở giữa bồn tắm, dễ dàng xả nước đi sau khi sử dụng xong.
-	Khe chống tràn được thiết kế gần thành bồn, với lỗ thoát to và được cách điệu bằng thanh kim loại càng tăng thêm tính thẩm mỹ cho sản phẩm.' -- status
-	,'' -- packeged		 -decorativeLights
-	,'Đức' -- brandOrigin	 -decorativeLights							   -furniture
-	,'Nhựa Acrylic' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'1500 x 700 x 600 mm' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'' -- wattage		 -decorativeLights
-	,'Trắng' -- color								-decoration    -handMade   -furniture
-	,'' -- thicknessWood						-decoration				   -furniture
-	,'Lựa chọn vị trí phù hợp trong phòng tắm của khách hàng' -- space																			-SanitaryEquiment
-	,'' -- design								-decoration    -handMade
-	,'' -- timeToUse										   -handMade
-	,'\img\productImg\27.jpg' --path img
-	,'' -- coupon
-	,'12/14/2023' --ngay nhap hang
-	),
-
-	--p016
-	('p016'	-- id
-	,'Đèn Chùm Pha Lê Hiện Đại'	 -- name
-	,'Các kỹ sư của Trung Quốc' -- producer
-	,2980000  -- price
-	,'Decorative Light' --  type
-	,'Thiết kế hiện đại, trang trí phù hợp ở mọi không gian, đơn giản nhưng không kém tinh tế và sang trọng' -- decription
-	, 2 -- qualityInStoraged
-	,'Chao đèn và tô đáy thả đính viền thẻ pha lê K9.Thân và tay đèn bằng hợp kim xi màu vàng đồng.Thiết kế sang trọng' -- status
-	,'1 đèn' -- packeged		 -decorativeLights
-	,'Trung Quốc' -- brandOrigin	 -decorativeLights							   -furniture
-	,'Hợp kim kim loại, pha lê' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'750-H500' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'Công suất thấp nhưng hiệu năng cao' -- wattage		 -decorativeLights
-	,'' -- color								-decoration    -handMade   -furniture
-	,'' -- thicknessWood						-decoration				   -furniture
-	,'' -- space																			-SanitaryEquiment
-	,'' -- design								-decoration    -handMade
-	,'' -- timeToUse										   -handMade
-	,'\img\productImg\den-chum-led-kieu-moi.jpg' --path img
-	,'' -- coupon
-	,'01/02/2024' --ngay nhap hang
-	),
-
-	--p17
-	('p017'	-- id
-	,'Cây Kim Ngân Đơn x Chậu Gốm Sứ Kanso'	 -- name
-	,'người dân Mexico' -- producer
-	,200000  -- price
-	,'Decoration' --  type
-	,'Kim Ngân là loại cây có thân chắc chắn, khá dẻo dai.
-	Có màu xanh mướt và hình dáng đặc trưng, xòe rộng như một bàn tay nên người ta thường gọi là lá kép chân vịt hoặc lá chân chim.
-	Kim Ngân được mệnh danh là loài cây mang đến nhiều may mắn, tài lộc cho gia đủ nên còn được gọi bằng cái tên tiếng Anh là Money Tree' -- decription
-	, 5 -- qualityInStoraged
-	,'Phương pháp trồng dễ dàng, trồng không đất, nhỏ gọn phù hợp với mọi không gian trong nhà' -- status
-	,'' -- packeged		 -decorativeLights
-	,'' -- brandOrigin	 -decorativeLights							   -furniture
-	,'' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'6.5 - 10cm' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'' -- wattage		 -decorativeLights
-	,'' -- color								-decoration    -handMade   -furniture
-	,'' -- thicknessWood						-decoration				   -furniture
-	,'' -- space																			-SanitaryEquiment
-	,'Thiết kế nhỏ và gọn nhẹ' -- design								-decoration    -handMade
-	,'' -- timeToUse										   -handMade
-	,'img\productImg\kim-ngan-don-9x-garden-4_caebbf27f29f43abb7485124efa78e4c_1024x1024.webp' --path img
-	,'' -- coupon
-	,'01/10/2024' --ngay nhap hang
-	),
-
-	--p18
-	('p018'	-- id
-	,'Bồn Cầu 1 Khối Geberit Kramer'	 -- name
-	,'Kỹ sư của Kramer' -- producer
-	,5000000  -- price
-	,'SanitaryEquiment' --  type
-	,'Là mẫu bồn cầu 1 khối thiết kế phù hợp, chất lượng cao, giảm tối đa lực cho sàn nhà vệ sinh khi lắp đặt.
-	Bề mặt của các sản phẩm Bồn Cầu 1 Khối Geberit Kramer KB-8075 được phủ men Ceramic giúp bề mặt luôn sạch sẽ, sáng bóng, ngăn ngừa vi khuẩn tối đa, giúp bồn cầu không bị ố vàng.
-	Đường chống tràn giúp nước tràn trực tiếp xuống bồn cầu. Tránh hiện tượng nước tràn ra sàn nhà.' -- decription
-	, 3 -- qualityInStoraged
-	,'Kích thước phù hợp, lượng nước xả tới 3 lít, thiết kế thân kín sang trọng' -- status
-	,'' -- packeged		 -decorativeLights
-	,'' -- brandOrigin	 -decorativeLights							   -furniture
-	,'Ceramic' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'' -- wattage		 -decorativeLights
-	,'' -- color								-decoration    -handMade   -furniture
-	,'' -- thicknessWood						-decoration				   -furniture
-	,'Không gian đặt phụ thuộc vào kích thước nhà vệ sinh của khách hàng' -- space																			-SanitaryEquiment
-	,'' -- design								-decoration    -handMade
-	,'' -- timeToUse										   -handMade
-	,'img\productImg\8-2.jpg' --path img
-	,'' -- coupon
-	,'08/10/2023' --ngay nhap hang
-	),
-
-	--p19
-	('p019'	-- id
-	,'Sọt Cói Se Đan Thưa'	 -- name
-	,'Làng nghề đan cói truyền thống miền Nam' -- producer
-	,630000  -- price
-	,'HandMade' --  type
-	,'Dùng để đựng đồ, kích thước được làm theo ý khách hàng, trang trí phù hợp ở trong nhà, Chất liệu từ thiên nhiên đem tới không khí trong lành' -- decription
-	, 3 -- qualityInStoraged
-	,'Đây là sản phẩm thủ công được làm từ chất liệu tự nhiên tại Việt Nam. 
-	Chúng mình đã đi dọc vùng nguyên liệu từ Bắc vào Nam, khám phá từng điểm làng nghề lớn nhỏ, để chọn lọc, phát triển.
-	Chất liệu tự nhiên, xử lý và hoàn thiện tỉ mỉ.
-	Tinh giản, hiện đại nhưng vẫn giữ được hồn cốt chân quê.
-	Thẩm mỹ, bền vững, đa ứng dụng cho cuộc sống đời thường.' -- status
-	,'' -- packeged		 -decorativeLights
-	,'' -- brandOrigin	 -decorativeLights							   -furniture
-	,'' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'45 x 32 x 57cm' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'' -- wattage		 -decorativeLights
-	,'màu vàng nâu tự nhiên' -- color								-decoration    -handMade   -furniture
-	,'' -- thicknessWood						-decoration				   -furniture
-	,'' -- space																			-SanitaryEquiment
-	,'Thiết kế gọn nhẹ nhưng dễ hư hỏng khi va chạm mạnh' -- design								-decoration    -handMade
-	,'4 năm' -- timeToUse										   -handMade
-	,'img\productImg\h_34_863f448bf42b454096b96f590de17796_1024x1024.jpg' --path img
-	,'' -- coupon
-	,'09/10/2023' --ngay nhap hang
-	),
-
-		--p20
-	('p020'	-- id
-	,'Bộ Bàn Ăn Gỗ 4 Ghế '	 -- name
-	,'' -- producer
-	,6950000  -- price
-	,'Furniture' --  type
-	,'Kích thước phù hợp, màu gỗ tự nhiên thu hút mắt nhìn, có khả năng chịu lực tốt và độ bền cao, thiết kế hiện đại' -- decription
-	, 3 -- qualityInStoraged
-	,'Sử dụng nhiều loại gỗ từ tự nhiên, Chịu được lực và độ bền cao, kích thước phù hợp với vị trí của nhà' -- status
-	,'' -- packeged		 -decorativeLights
-	,'Na Uy' -- brandOrigin	 -decorativeLights							   -furniture
-	,'Mặt bàn: Gỗ công nghiệp PB, Chân bàn: gỗ cao su tự nhiên,Ghế: gỗ cao su tự nhiên/ gỗ tần bì tự nhiên' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
-	,'Bàn:140 x 75 x 73, Ghế 50x 51x 81cm' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
-	,'' -- wattage		 -decorativeLights
-	,'màu vàng nâu tự nhiên' -- color								-decoration    -handMade   -furniture
-	,'' -- thicknessWood						-decoration				   -furniture
-	,'' -- space																			-SanitaryEquiment
-	,'' -- design								-decoration    -handMade
-	,'' -- timeToUse										   -handMade
-	,'img\productImg\pro_mau_tu_nhien_noi_that_moho_bo_ban_an_oslo_4_ghe_malaga_1_88a11f4edfdc4e02b465f0cbd77b4b18_master.jpg' --path img
-	,'' -- coupon
-	,'10/10/2023' --ngay nhap hang
-	);
+	)
 
 
 
@@ -787,4 +536,30 @@ insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
 ('or004','p002',10,5000000.0),
 ('or004','p003',10,5000000.0);
 
+ --//////
+	--(''	-- id
+	--,''	 -- name
+	--,'c003' -- caregory
+	--,'gr001'  -- group
+	--,'' --  producer
+	--,  -- price
+	--,'' -- type
+	--,'' -- decription
+	--, -- qualityInStoraged
+	--,'' -- status
+	--,'' -- packeged		 -decorativeLights
+	--,'' -- brandOrigin	 -decorativeLights							   -furniture
+	--,'' -- meterial		 -decorativeLights    						   -furniture		-SanitaryEquiment
+	--,'' -- size			 -decorativeLights	-decoration	   -handMade   -furniture       
+	--,'' -- wattage		 -decorativeLights
+	--,'' -- color								-decoration    -handMade   -furniture
+	--,'' -- thicknessWood						-decoration				   -furniture
+	--,'' -- space																			-SanitaryEquiment
+	--,'' -- design								-decoration    -handMade
+	--,'' -- timeToUse										   -handMade
+	--,'img\img_larg\pro_ghe5.webp' --path img
+	--,'' -- coupon
+	--,'' --ngay nhap hang
+	--),
 
+	select * from Product
