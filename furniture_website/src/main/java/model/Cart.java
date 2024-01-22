@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.jasper.tagplugins.jstl.core.ForEach;
@@ -15,6 +16,15 @@ public class Cart {
 
 	public Cart() {
 		listCartItem = new DaoCartItem(cartID).selectAll();
+	}
+
+	public Cart(String cartID, String accountID, double shippingCost, double totalPriceSelected) {
+		super();
+		this.cartID = cartID;
+		this.accountID = accountID;
+		this.shippingCost = shippingCost;
+		this.totalPriceSelected = totalPriceSelected;
+		listCartItem = new ArrayList();
 	}
 
 	public String getAccountID() {

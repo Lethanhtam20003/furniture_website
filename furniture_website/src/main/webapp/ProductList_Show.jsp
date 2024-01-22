@@ -279,7 +279,7 @@ a:hover {
 							<!-- ảnh san pham -->
 							<div class="image-container ">
 								<a href="detailsProduct?idProduct=<%=p.getId()%>"> <img
-									src="<%=p.getImgPath()%>" class="card-img-top " alt="...">
+									src="<%=p.getImgPath()%>" class="card-img-top " alt="..." >
 								</a>
 								<div class="overlay-text"></div>
 								<!-- button them gio hang -->

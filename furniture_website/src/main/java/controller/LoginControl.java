@@ -16,28 +16,31 @@ import model.Account;
  */
 @WebServlet(name = "/LoginControl", urlPatterns = { "/login" })
 public class LoginControl extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		DaoAccount daoAc = new DaoAccount();
-		Account a =  daoAc.login(username, password);
-		if(a==null) {
-			//Nếu người dùng login sai thì đẩy về trang login
+		Account a = daoAc.login(username, password);
+		if (a == null) {
+			// Nếu người dùng login sai thì đẩy về trang login
 			request.setAttribute("mess", "Wrong user or pass");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
-			
-		}else {
-			//Login thành công đẩy về index
+
+		} else {
+			// Login thành công đẩy về index
 			HttpSession session = request.getSession();
 			session.setAttribute("acc", a);
+			session.setAttribute("loadCart", true);
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
-			
-		}
+
+	}
 }

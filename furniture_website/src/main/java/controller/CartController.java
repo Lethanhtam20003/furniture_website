@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.DaoCart;
 import data.Storage;
 import model.Account;
 import model.Cart;
@@ -39,16 +40,30 @@ public class CartController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		Account account = (Account) session.getAttribute("account");
+		Account account = (Account) session.getAttribute("acc");
 		Cart carts = (Cart) session.getAttribute("Cart");
-		if (carts == null) {
-			if (account != null)
-				// carts = new DaoCart().selectByID(account.getAccountID());
-				System.out.println();
-			else
+		if (account != null) {
+			if (carts == null) {
+				carts = new DaoCart().selectByID(account.getAccountID());
+				session.setAttribute("cart", carts);
+			} else {
+				if (session.getAttribute("loadedCart") == null) {
+					carts = (Cart) session.getAttribute("Cart");
+					Cart a = new DaoCart().selectByID(account.getAccountID());
+					for (CartItem i : carts.getListCartItem()) {
+						a.getListCartItem().add(i);
+					}
+					session.setAttribute("cart", a);
+					session.setAttribute("loadedCart", "a");
+				}
+			}
+		} else {
+			if (carts == null) {
 				carts = new Cart();
-			session.setAttribute("Cart", carts);
+				session.setAttribute("cart", carts);
+			}
 		}
+
 		String action = request.getParameter("actionCart");
 
 		String idProduct;
@@ -94,6 +109,11 @@ public class CartController extends HttpServlet {
 			break;
 
 		}
+	}
+
+	private void loadCart(String accountID) {
+		// TODO Auto-generated method stub
+
 	}
 
 	private void addCartNoForward(HttpSession session, HttpServletRequest request, HttpServletResponse response,

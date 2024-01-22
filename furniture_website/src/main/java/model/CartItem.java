@@ -1,5 +1,7 @@
 package model;
 
+import dao.DaoProduct;
+
 public class CartItem {
 	private Product product;
 	private int quality;
@@ -19,6 +21,15 @@ public class CartItem {
 		this.quality = quality;
 		this.price = price;
 		this.isSelected = isSelected;
+		this.idGift = idGift;
+		this.isAvailable = isAvailable;
+	}
+
+	public CartItem(String product, int quality, double price, boolean idGift, boolean isAvailable) {
+		super();
+		this.product = new DaoProduct().selectByID(product);
+		this.quality = quality;
+		this.price = price;
 		this.idGift = idGift;
 		this.isAvailable = isAvailable;
 	}

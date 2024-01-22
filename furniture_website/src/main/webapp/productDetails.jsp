@@ -165,7 +165,7 @@
 		<div class="row">
 			<div class="col">
 				<img class="float-end " src="<%=p.getImgPath()%>"
-					alt="<%=p.getName()%>">
+					alt="<%=p.getName()%>" style="height: 600px">
 			</div>
 			<div class="col">
 				<h3><%=p.getName()%></h3>

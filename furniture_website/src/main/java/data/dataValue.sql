@@ -588,7 +588,7 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 	,'' -- space																			-SanitaryEquiment
 	,'Thiết kế tuy đơn giản nhưng dễ vỡ' -- design								-decoration    -handMade
 	,'' -- timeToUse										   -handMade
-	,'\img\productImg\pro_khung_go_thong_022225.webp' --path img
+	,'img\productImg\pro_khung_go_thong_022225.webp' --path img
 	,'' -- coupon
 	,'01/14/2024' --ngay nhap hang
 	),
@@ -619,7 +619,7 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 	,'Lựa chọn vị trí phù hợp trong phòng tắm của khách hàng' -- space																			-SanitaryEquiment
 	,'' -- design								-decoration    -handMade
 	,'' -- timeToUse										   -handMade
-	,'\img\productImg\27.jpg' --path img
+	,'img\productImg\27.jpg' --path img
 	,'' -- coupon
 	,'12/14/2023' --ngay nhap hang
 	),
@@ -643,7 +643,7 @@ Sản phẩm được làm bằng inox 304 cao cấp đúc nguyên khối độ 
 	,'' -- space																			-SanitaryEquiment
 	,'' -- design								-decoration    -handMade
 	,'' -- timeToUse										   -handMade
-	,'\img\productImg\den-chum-led-kieu-moi.jpg' --path img
+	,'img\productImg\den-chum-led-kieu-moi.jpg' --path img
 	,'' -- coupon
 	,'01/02/2024' --ngay nhap hang
 	),
