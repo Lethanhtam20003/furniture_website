@@ -210,4 +210,9 @@ public class Product {
 		return res;
 	}
 
+	public boolean checkAvailable(String idProduct, int count) {
+		// TODO Auto-generated method stub
+		return (qualityStorage - qualityRemaining - count) > 0;
+	}
+
 }
