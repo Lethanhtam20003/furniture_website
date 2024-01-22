@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@ page import="model.Account" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,23 +87,27 @@ a {
 											width="20">
 										</a>
 										<ul class="dropdown-menu">
-											<%
-											if (session.getAttribute("acc") != null) {
-											%>
-											<li><a class="dropdown-item"
-												href="/accuontControl?action=logout">Đăng xuất</a></li>
-											<li><a class="dropdown-item"
-												href="CustomerInformation.jsp">Thông tin khách hàng</a></li>
-											<%
-											} else {
-											%>
-											<li><a class="dropdown-item" href="login.jsp">Đăng
-													nhập</a></li>
+
+												<% Account acc =(Account) session.getAttribute("acc");
+												%>
+											<% if (session.getAttribute("acc") != null ){%>
+											
+												<li><a class="dropdown-item" href="#">Hello <%= acc.getLastName()%></a></li>
+												<li><a class="dropdown-item" href="changePassword.jsp">Đổi mật khẩu</a></li>
+												<li><a class="dropdown-item" href="customerInfor.jsp">Thông tin khách hàng</a></li>
+												<li><a class="dropdown-item" href="logout" >Đăng xuất</a></li>
+											<%} %>
+											<%if (session.getAttribute("acc") == null) {%>
+												<li><a class="dropdown-item" href="login.jsp">Đăng
+														nhập</a></li>
+											
 											<li><a class="dropdown-item" href="register.jsp">Đăng
 													ký</a></li>
-											<%
-											}
-											%>
+													
+													
+													
+											<%} %>
+
 										</ul>
 
 									</div>
