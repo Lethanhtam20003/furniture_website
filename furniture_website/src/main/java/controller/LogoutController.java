@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class LogoutController
  */
+
 @WebServlet(name="/LogoutController", urlPatterns = {"/logout"})
 public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -23,5 +24,7 @@ public class LogoutController extends HttpServlet {
 		response.sendRedirect("index.jsp");
 	}
 	
+
+
 
 }

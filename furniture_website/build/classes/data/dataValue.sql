@@ -240,7 +240,10 @@ insert into product(productID,productName
 	,'1/12/2023' --ngay nhap hang
 	),
 
+
 	--p3
+
+
 	('p003'	,'Ke giay 6 tang '	
 	,'Go MDF' --  producer
 	,1000000.0 -- price
@@ -269,7 +272,9 @@ insert into product(productID,productName
 	,'3/22/2023' --ngay nhap hang
 	),	
 
+
 	--p4
+
 	('p004'	,'Chậu Lavabo Toto tròn đặt bàn '	
 	,'Bean Toto' --  producer
 	,3500000.0 -- price
@@ -302,7 +307,9 @@ insert into product(productID,productName
 	,'6/24/2023' --ngay nhap hang
 	),
 
+
 	--p5
+
 	('p005'	,'Ghe an Basil HomeLand'	
 	,'HomeLand' --  producer
 	,750000.0 -- price

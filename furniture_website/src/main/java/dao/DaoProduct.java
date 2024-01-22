@@ -23,8 +23,6 @@ public class DaoProduct implements IDao<Product> {
 	List<Product> list = new ArrayList<Product>();
 	private String id;
 	private String productName;
-	private String categoryID;
-	private String groupID;
 	private String producer;
 	private String price;
 	private String type;
@@ -65,9 +63,8 @@ public class DaoProduct implements IDao<Product> {
 			// 4: xu ly ket qua tra ve
 			while (rs.next()) {
 				String id = rs.getString("productID");
+				System.out.println(id);
 				String productName = rs.getString("productName");
-				String categoryID = rs.getString("categoryID");
-				String groupID = rs.getString("groupID");
 				String producer = rs.getString("producer");
 				double price = rs.getDouble("price");
 				String type = rs.getString("type");
@@ -94,10 +91,11 @@ public class DaoProduct implements IDao<Product> {
 
 				Date dateAddedThen = Date.valueOf(dateAdded);
 
-				Product p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type,
-						decription, QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage,
-						color, thickness, space, design, timeToUse, imgPath, couponID, dateAddedThen);
+				Product p = Factory.createProduct(id, productName, producer, priceThen, type, decription,
+						QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage, color, thickness,
+						space, design, timeToUse, imgPath, couponID, dateAddedThen);
 				if (p != null) {
+					System.out.println("them" + p.getId());
 					res.add(p);
 				}
 
@@ -128,8 +126,6 @@ public class DaoProduct implements IDao<Product> {
 			while (rs.next() == false) {
 				id = rs.getString("productID");
 				productName = rs.getString("productName");
-				categoryID = rs.getString("categoryID");
-				groupID = rs.getString("groupID");
 				producer = rs.getString("producer");
 				price = rs.getString("price");
 				type = rs.getString("type");
@@ -154,9 +150,9 @@ public class DaoProduct implements IDao<Product> {
 			}
 			double priceThen = Double.parseDouble(price);
 			int QuallityInStorageThen = Integer.parseInt(QuallityInStorage);
-			p = Factory.createProduct(id, productName, categoryID, groupID, producer, priceThen, type, decription,
-					QuallityInStorageThen, status, packeged, brandOrigin, meterial, size, wattage, color, thickness,
-					space, design, timeToUse, imgPath, couponID, dateAdded);
+			p = Factory.createProduct(id, productName, producer, priceThen, type, decription, QuallityInStorageThen,
+					status, packeged, brandOrigin, meterial, size, wattage, color, thickness, space, design, timeToUse,
+					imgPath, couponID, dateAdded);
 
 			// : ngat ket noi
 			JDBCUtil.closeConnection(con);
@@ -178,7 +174,7 @@ public class DaoProduct implements IDao<Product> {
 			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
-			String sql = "insert into Product(productID,productName,categoryID,groupID,producer,price,"
+			String sql = "insert into Product(productID,productName,,producer,price,"
 					+ "type,decription,qualityInStorage,status,packeged,brandOrigin,meterial,size,wattage,"
 					+ "color,thicknessWood,space,design,timeToUse)"
 					+ "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -186,14 +182,6 @@ public class DaoProduct implements IDao<Product> {
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, t.getId());
 			st.setString(2, t.getName());
-			if (!(t.getCategory() == null)) {
-				st.setString(3, t.getCategory().getCategoryID());
-			} else
-				st.setString(3, "");
-			if (!(t.getGroup() == null)) {
-				st.setString(4, t.getGroup().getGroupID());
-			} else
-				st.setString(4, "");
 			st.setString(5, t.getProducer());
 			st.setString(6, t.getPrice() + "");
 			st.setString(7, t.getType() + "");
@@ -338,7 +326,7 @@ public class DaoProduct implements IDao<Product> {
 			Connection con = JDBCUtil.getConnection();
 
 			// 2: tao doi tuong stament
-//			"insert into Product(productID,productName,categoryID,groupID,producer,price,"
+//			"insert into Product(productID,productName,,producer,price,"
 //			+ "type,decription,qualityInStorage,status,packeged,brandOrigin,meterial,size,wattage,"
 //			+ "color,thicknessWood,space,design,timeToUse)"
 //			+ "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
@@ -351,14 +339,6 @@ public class DaoProduct implements IDao<Product> {
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, t.getId());
 			st.setString(2, t.getName());
-			if (!(t.getCategory() == null)) {
-				st.setString(3, t.getCategory().getCategoryID());
-			} else
-				st.setString(3, "");
-			if (!(t.getGroup() == null)) {
-				st.setString(4, t.getGroup().getGroupID());
-			} else
-				st.setString(4, "");
 			st.setString(5, t.getProducer());
 			st.setString(6, t.getPrice() + "");
 			st.setString(7, t.getType() + "");

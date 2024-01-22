@@ -787,3 +787,4 @@ insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
 ('or004','p002',10,5000000.0),
 ('or004','p003',10,5000000.0);
 
+
