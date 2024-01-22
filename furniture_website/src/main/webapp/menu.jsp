@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,19 +77,34 @@ a {
 							<nav class="navbar bg-success-subtle">
 								<div class="container">
 									<div class="dropdown">
-										<a  class="navbar-brand  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <img
+										<a class="navbar-brand  dropdown-toggle" role="button"
+											data-bs-toggle="dropdown" aria-expanded="false"> <img
 											src="img/icon/icons8-person-32.png" alt="Bootstrap"
 											width="20">
 										</a>
 										<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="index.jsp">Thoát</a></li>
-												<li><a class="dropdown-item" href="login.jsp">Đăng nhập</a></li>
-												<li><a class="dropdown-item" href="register.jsp">Đăng ký</a></li>
+											<%
+											if (session.getAttribute("acc") != null) {
+											%>
+											<li><a class="dropdown-item"
+												href="/accuontControl?action=logout">Đăng xuất</a></li>
+											<li><a class="dropdown-item"
+												href="CustomerInformation.jsp">Thông tin khách hàng</a></li>
+											<%
+											} else {
+											%>
+											<li><a class="dropdown-item" href="login.jsp">Đăng
+													nhập</a></li>
+											<li><a class="dropdown-item" href="register.jsp">Đăng
+													ký</a></li>
+											<%
+											}
+											%>
 										</ul>
 
 									</div>
 								</div>
-							</nav> 
+							</nav>
 						</li>
 						<!--  		
 						<li class="nav-item">
@@ -113,7 +128,8 @@ a {
 									<span
 										class="position-absolute pt-2 start-50 translate-middle badge rounded-pill bg-danger">
 										0 <span class="visually-hidden">unread messages</span>
-									</span> <a class="navbar-brand" href="CartController?actionCart=showPage"> <img
+									</span> <a class="navbar-brand"
+										href="CartController?actionCart=showPage"> <img
 										src="img/icon/icons8-bag-32.png" alt="Bootstrap" width="20">
 									</a>
 								</div>
