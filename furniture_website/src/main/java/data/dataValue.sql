@@ -8,8 +8,8 @@ select * from Product
 insert into Account(accountID,accountName,password,firstName,lastName,
 email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)
 values
-		('ac001'
-		,'user001'
+		('ac001' --id
+		,'user001' --
 		,'user001'
 		,'Le'
 		,'Tam'

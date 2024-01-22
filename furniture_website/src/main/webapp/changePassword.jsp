@@ -1,10 +1,10 @@
+<%@page import="model.Account"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--bootstrap css -->
 <link
@@ -20,13 +20,13 @@
 </script>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/menu.css">
-<title>Login Page</title>
+<title>Changed Password Page</title>
 <style>
 .body-window {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 80vh;
 	margin: 0;
 	background-color: white;
 }
@@ -35,7 +35,7 @@
 	text-align: center;
 	border: 1px solid #ccc;
 	padding: 20px;
-	width: 300px;
+	width: 500px;
 	background-color: #fff; /* Màu nền cho phần nội dung */
 }
 
@@ -48,18 +48,17 @@
 
 
 button {
-	width: 80%;
+	width: 60%;
 	padding: 10px;
 	background-color: #FFCC33;
 	color: #fff;
 	border: none;
 	cursor: pointer;
-	margin-right: 40px;
+
 }
 
 /* Add your other CSS styles here */
-<
-title>Trang Đăng Nhập </title> <style>body {
+<title>Trang Đăng Nhập </title> <style>body {
 	display: flex;
 	justify-content: center;
 	height: 100vh;
@@ -67,16 +66,16 @@ title>Trang Đăng Nhập </title> <style>body {
 }
 
 form {
-	width: 300px;
+	width: 450px;
 }
 
 input {
-	width: 80%;
+	width: 75%;
 	margin-bottom: 10px;
-		box-sizing: border-box;
+	box-sizing: border-box;
 	padding: 10px;
 	margin-top: 5px;
-	margin-left: 10px;
+	margin-left: 60px;
 }
 </style>
 </head>
@@ -85,33 +84,26 @@ input {
 	<jsp:include page="menu.jsp" />
 	<!--end menu-->
 
-
 	<div class="body-window">
 		<div class="login-container">
-				<form action="login" method="post">
-					<h2 style="margin-right: 40px">Login</h2>
-					<p class="text-danger" style="color: red; text-align: left">${mess}</p>
-	
-					<div class="form-row">
-						<input type="text" id="username" name="username"
-							placeholder="Username" required>
-					</div>
-	
-					<div class="form-row">
-						<input type="password" id="password" name="password"
-							placeholder="Password" required>
-					</div>
-	
-					<button type="submit">Sign-in</button>
-				</form>
-	
-				<p>
-					Don't have an account? <a href="register.jsp">Register</a>
-				</p>
-				<p> <a href="forgotPassword.jsp">Forgot password?</a> </p>
+			<form action="change" method="post">
+				<h1 style="text-align: center;">Changed Password</h1>
+			<%String errorMessage = (String) request.getAttribute("errorMessage");%>
+			<%if ((errorMessage) != null) {%>
+			<div style="color: red;">
+				<%=errorMessage%>
+			</div>
+			<%}%>
+			<%Account account = (Account) session.getAttribute("acc");%>
+				<div class="form-row"><input type="password" name="currentpass" placeholder="Current Password" required></div>
+				<input type="hidden"  name="user"  value="<%=account.getAccountName()%>">
+				<div class="form-row"><input type="password" name="newpass" placeholder="New Password" required></div>
+				<div class="form-row"><input type="password" name="confpass" placeholder="Confirm password " required></div>
+				<button type="submit">Change</button>
+			</form>
 		</div>
 	</div>
-
+	
 	<!-- footer -->
 	<jsp:include page="footer.jsp" />
 	<!-- end footer -->
