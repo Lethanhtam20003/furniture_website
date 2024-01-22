@@ -83,23 +83,25 @@ a {
 											width="20">
 										</a>
 										<ul class="dropdown-menu">
-												<% Object ob = session.getAttribute("acc");
-													Account acc = null;
-													if(ob != null)
-														acc =(Account) ob;
-													
+												<% Account acc =(Account) session.getAttribute("acc");
 												%>
-											<% if (acc != null ){%>
-												<li><a class="dropdown-item" href="#">Hello <%= acc.getLastName() %></a></li>
+											<% if (session.getAttribute("acc") != null ){%>
+											
+												<li><a class="dropdown-item" href="#">Hello <%= acc.getLastName()%></a></li>
+												<li><a class="dropdown-item" href="changePassword.jsp">Đổi mật khẩu</a></li>
 												<li><a class="dropdown-item" href="customerInfor.jsp">Thông tin khách hàng</a></li>
-												<li><a class="dropdown-item" href="/logout" >Đăng xuất</a></li>
+												<li><a class="dropdown-item" href="logout" >Đăng xuất</a></li>
 											<%} %>
-											<%if (acc == null) {%>
+											<%if (session.getAttribute("acc") == null) {%>
 												<li><a class="dropdown-item" href="login.jsp">Đăng
 														nhập</a></li>
-											<%} %>
+											
 											<li><a class="dropdown-item" href="register.jsp">Đăng
 													ký</a></li>
+													
+													
+													
+											<%} %>
 										</ul>
 
 									</div>

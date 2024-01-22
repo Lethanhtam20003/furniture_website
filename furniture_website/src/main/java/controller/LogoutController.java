@@ -13,15 +13,15 @@ import javax.servlet.http.HttpSession;
  * Servlet implementation class LogoutController
  */
 
-@WebServlet(name="/LogoutController", urlPatterns = {"/logout"})
+@WebServlet(name="/logout", urlPatterns = {"/logout"})
 public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		HttpSession session = request.getSession();
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		HttpSession session = req.getSession();
 		session.removeAttribute("acc");
-		response.sendRedirect("index.jsp");
+		getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
 	}
 	
 

@@ -8,8 +8,8 @@ select * from Product
 insert into Account(accountID,accountName,password,firstName,lastName,
 email,birthday,gender,phoneNum,addressAccount,addressOrder,createAt,lastLogin)
 values
-		('ac001'
-		,'user001'
+		('ac001' --id
+		,'user001' --
 		,'user001'
 		,'Le'
 		,'Tam'
@@ -240,10 +240,7 @@ insert into product(productID,productName
 	,'1/12/2023' --ngay nhap hang
 	),
 
-
 	--p3
-
-
 	('p003'	,'Ke giay 6 tang '	
 	,'Go MDF' --  producer
 	,1000000.0 -- price
@@ -272,9 +269,7 @@ insert into product(productID,productName
 	,'3/22/2023' --ngay nhap hang
 	),	
 
-
 	--p4
-
 	('p004'	,'Chậu Lavabo Toto tròn đặt bàn '	
 	,'Bean Toto' --  producer
 	,3500000.0 -- price
@@ -307,9 +302,7 @@ insert into product(productID,productName
 	,'6/24/2023' --ngay nhap hang
 	),
 
-
 	--p5
-
 	('p005'	,'Ghe an Basil HomeLand'	
 	,'HomeLand' --  producer
 	,750000.0 -- price
@@ -793,4 +786,5 @@ insert into OrderDetails(OrderID,productID,quanlity,totalAmount) values
 ('or003','p002',10,5000000.0),
 ('or004','p002',10,5000000.0),
 ('or004','p003',10,5000000.0);
+
 

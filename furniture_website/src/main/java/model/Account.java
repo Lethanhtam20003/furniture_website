@@ -34,8 +34,7 @@ public class Account extends Person {
 	
 
 	public Account(String accountID, String accountName, String password, String firstName, String lastName,
-			String emaill, Date birthday, String gender, String phoneNum, String addressAccount, String addressOrder,
-			Date createAt, Date lastLogin) {
+			String emaill, Date birthday, String gender, String phoneNum, String addressAccount, String addressOrder) {
 		super();
 		this.accountID = accountID;
 		this.accountName = accountName;
@@ -48,8 +47,6 @@ public class Account extends Person {
 		this.phoneNum = phoneNum;
 		this.addressAccount = addressAccount;
 		this.addressOrder = addressOrder;
-		this.createAt = createAt;
-		this.lastLogin = lastLogin;
 	}
 
 	public String getAccountID() {
