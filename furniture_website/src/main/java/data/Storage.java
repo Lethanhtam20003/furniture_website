@@ -16,7 +16,7 @@ import model.Product;
 
 public class Storage {
 	private static Map<String, Product> listProduct;
-	private static List<Coupon> listCoupon;
+	private static Map<String, Coupon> listCoupon;
 
 	private DaoProduct daoProduct;
 	private DaoCoupon daoCoupon;
@@ -27,9 +27,6 @@ public class Storage {
 		//
 		daoProduct = new DaoProduct();
 		setDataListProduct(daoProduct.selectAll());
-
-		daoCoupon = new DaoCoupon();
-		listCoupon = daoCoupon.selectAll();
 
 	}
 
@@ -83,13 +80,5 @@ public class Storage {
 		DaoProduct p = s.getDaoProduct();
 		System.out.println(s.getListProduct());
 
-	}
-
-	public static List<Coupon> getListCoupon() {
-		return listCoupon;
-	}
-
-	public static void setListCoupon(List<Coupon> listCoupon) {
-		Storage.listCoupon = listCoupon;
 	}
 }

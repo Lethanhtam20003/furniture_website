@@ -79,8 +79,7 @@
 									thiết kế hiện đại cho căn nhà của bạn</p>
 								<button type="button"
 									class="btn btn-outline-warning text-bg-warning ">
-									<a href="PhanTrang?curentPage=0&acction=" class="text_link ">xem
-										ngay</a>
+									<a href="#" class="text_link ">xem ngay</a>
 								</button>
 
 							</div>
@@ -106,8 +105,7 @@
 									thiết kế hiện đại cho căn nhà của bạn</p>
 								<button type="button"
 									class="btn btn-outline-warning text-bg-warning ">
-									<a href="PhanTrang?curentPage=0&acction=" class="text_link ">xem
-										ngay</a>
+									<a href="#" class="text_link ">xem ngay</a>
 								</button>
 
 							</div>

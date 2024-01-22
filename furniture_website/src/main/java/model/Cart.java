@@ -2,8 +2,6 @@ package model;
 
 import java.util.List;
 
-import org.apache.jasper.tagplugins.jstl.core.ForEach;
-
 import dao.DaoCartItem;
 
 public class Cart {
@@ -42,15 +40,11 @@ public class Cart {
 	}
 
 	public double getTotalPriceSelected() {
+		return totalPriceSelected;
+	}
 
-		double res = 0;
-		for (CartItem c : listCartItem) {
-			System.out.println(c);
-			if (c.isSelected()) {
-				res += c.getPrice() * c.getQuality();
-			}
-		}
-		return res;
+	public void setTotalPriceSelected(double totalPriceSelected) {
+		this.totalPriceSelected = totalPriceSelected;
 	}
 
 	public List<CartItem> getListCartItem() {
@@ -61,21 +55,4 @@ public class Cart {
 		this.listCartItem = listCartItem;
 	}
 
-	public boolean checkProductExit(String idProduct) {
-		// TODO Auto-generated method stub
-		for (CartItem cartItem : listCartItem) {
-			if (cartItem.getProduct().getId().equals(idProduct)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public double getTotalPrice(double a) {
-		return getTotalPriceSelected() - a;
-	}
-
-	public double getTotalPrice2() {
-		return getTotalPriceSelected();
-	}
 }

@@ -71,10 +71,4 @@ public class CartItem {
 		this.isAvailable = isAvailable;
 	}
 
-	@Override
-	public String toString() {
-		return "CartItem [product=" + product + ", quality=" + quality + ", price=" + price + ", isSelected="
-				+ isSelected + ", idGift=" + idGift + ", isAvailable=" + isAvailable + "]";
-	}
-
 }

@@ -64,15 +64,13 @@
 	color: black;
 }
 
-.bt2, .bt2 a {
-	font-size: 18px;
+.bt2 {
 	background-color: white;
 	color: black;
 	border: 1;
-	background-color: white;
 }
 
-.bt2:hover, .bt2:hover a {
+.bt2:hover {
 	background-color: #F7B990;
 	color: white;
 	border: 0;
@@ -134,8 +132,8 @@
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/menu.css">
 
 <link rel="stylesheet" type="" href="../img/*">
 <title>Sản Phẩm</title>
@@ -182,42 +180,30 @@
 					<%=p.getDecription()%>
 
 				</div>
-				<form action="CartController" method="get">
-					<p class="">
-						Số Lượng
-						<button class=" bt3" onclick="decrement()"
-							style="width: 35px; height: 35px" type="button">
-							<span>-</span>
-						</button>
-						<input class="text-center border border-dark-subtle"
-							id="SoLuongMua" min="1" max="99" type="number" value="1"
-							style="width: 35px; height: 35px; padding: -1;" name="count">
-						<button class="bt3" onclick="increment()"
-							style="width: 35px; height: 35px" type="button">
-							<span>+</span>
-						</button>
-					</p>
-					<input type="hidden" name="actionCart" id="actionCart"
-						value="addCart"> <input type="hidden" name="idProduct"
-						id="idProduct" value="<%=p.getId()%>">
-					<div class="text-center row  mt-2 mb-2 ">
-						<button class="text-center col  rounded  bt" style="height: 3rem"
-							type="submit">mua</button>
 
-					</div>
+				<p class="">
+					Số Lượng
+					<button class=" bt3" onclick="decrement()"
+						style="width: 35px; height: 35px">
+						<span>-</span>
+					</button>
+					<input class="text-center border border-dark-subtle"
+						id="SoLuongMua" maxlength="3" type="text" pattern="[0-9]{3}"
+						value="1" style="width: 35px; height: 35px; padding: -1;">
+					<button class="bt3" onclick="increment()"
+						style="width: 35px; height: 35px">
+						<span>+</span>
+					</button>
+				</p>
+				<div class="text-center row  mt-2 mb-2 ">
+					<button class="text-center col  rounded  bt" style="height: 3rem">mua</button>
 
-				</form>
+				</div>
 				<div class="text-center row ">
-
 					<button class="text-center col boder-2 rounded  me-3  bt2"
-						style="height: 3rem,">
-						<a
-							href="CartController?count=1&actionCart=addCartNoForward&idProduct=<%=p.getId()%>">Thêm
-							Vào Giỏ Hàng</a>
-					</button>
-					<button class="text-center col boder-2 rounded bt2">
-						<a href="">Nhận Thông Tin Tư Vấn</a>
-					</button>
+						style="height: 3rem">Thêm Vào Giỏ Hàng</button>
+					<button class="text-center col boder-2 rounded bt2">Nhận
+						Thông Tin Tư Vấn</button>
 
 				</div>
 				<div class="text-center row textColor mt-3">
