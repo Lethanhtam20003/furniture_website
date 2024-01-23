@@ -1,9 +1,10 @@
+<%@page import="model.Cart"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<%@ page import="model.Account" %>
+<%@ page import="model.Account"%>
 
 <!DOCTYPE html>
 <html>
@@ -88,25 +89,36 @@ a {
 										</a>
 										<ul class="dropdown-menu">
 
-												<% Account acc =(Account) session.getAttribute("acc");
-												%>
-											<% if (session.getAttribute("acc") != null ){%>
-											
-												<li><a class="dropdown-item" href="#">Hello <%= acc.getLastName()%></a></li>
-												<li><a class="dropdown-item" href="changePassword.jsp">Đổi mật khẩu</a></li>
-												<li><a class="dropdown-item" href="customerInfor.jsp">Thông tin khách hàng</a></li>
-												<li><a class="dropdown-item" href="logout" >Đăng xuất</a></li>
-											<%} %>
-											<%if (session.getAttribute("acc") == null) {%>
-												<li><a class="dropdown-item" href="login.jsp">Đăng
-														nhập</a></li>
-											
+											<%
+											Account acc = (Account) session.getAttribute("acc");
+											%>
+											<%
+											if (session.getAttribute("acc") != null) {
+											%>
+
+											<li><a class="dropdown-item" href="#">Hello <%=acc.getLastName()%></a></li>
+											<li><a class="dropdown-item" href="changePassword.jsp">Đổi
+													mật khẩu</a></li>
+											<li><a class="dropdown-item" href="customerInfor.jsp">Thông
+													tin khách hàng</a></li>
+											<li><a class="dropdown-item" href="logout">Đăng xuất</a></li>
+											<%
+											}
+											%>
+											<%
+											if (session.getAttribute("acc") == null) {
+											%>
+											<li><a class="dropdown-item" href="login.jsp">Đăng
+													nhập</a></li>
+
 											<li><a class="dropdown-item" href="register.jsp">Đăng
 													ký</a></li>
-													
-													
-													
-											<%} %>
+
+
+
+											<%
+											}
+											%>
 
 										</ul>
 
@@ -135,7 +147,20 @@ a {
 								<div class="container position-relative">
 									<span
 										class="position-absolute pt-2 start-50 translate-middle badge rounded-pill bg-danger">
-										0 <span class="visually-hidden">unread messages</span>
+										<%
+										Cart c = (Cart) session.getAttribute("cart");
+										if (session.getAttribute("cart") == null) {
+										%> 
+										0 
+										<%
+										} else {
+										%> 
+										<%=c.getListCartItem().size()%> 
+										<%
+										 }
+										 %> 
+										 <span
+										class="visually-hidden">unread messages</span> 
 									</span> <a class="navbar-brand"
 										href="CartController?actionCart=showPage"> <img
 										src="img/icon/icons8-bag-32.png" alt="Bootstrap" width="20">
