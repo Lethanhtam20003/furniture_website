@@ -182,7 +182,7 @@
 					<%=p.getDecription()%>
 
 				</div>
-				<form action="CartController" method="post">
+				<form action="CartController" method="get">
 					<p class="">
 						Số Lượng
 						<button class=" bt3" onclick="decrement()"
