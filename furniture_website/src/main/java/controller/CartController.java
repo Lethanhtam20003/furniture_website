@@ -45,7 +45,7 @@ public class CartController extends HttpServlet {
 //		if (account != null) {
 //			if (carts == null) {
 //				carts = new DaoCart().selectByID(account.getAccountID());
-//				session.setAttribute("cart", carts);
+//				session.setAttribute("Cart", carts);
 //			} else {
 //				if (session.getAttribute("loadedCart") == null) {
 //					carts = (Cart) session.getAttribute("Cart");
@@ -53,20 +53,20 @@ public class CartController extends HttpServlet {
 //					for (CartItem i : carts.getListCartItem()) {
 //						a.getListCartItem().add(i);
 //					}
-//					session.setAttribute("cart", a);
+//					session.setAttribute("Cart", a);
 //					session.setAttribute("loadedCart", "a");
 //				}
 //			}
 //		} else {
 //			if (carts == null) {
 //				carts = new Cart();
-//				session.setAttribute("cart", carts);
+//				session.setAttribute("Cart", carts);
 //			}
 //		}
 
 		if (carts == null) {
 			carts = new Cart();
-			session.setAttribute("cart", carts);
+			session.setAttribute("Cart", carts);
 		}
 
 		String action = request.getParameter("actionCart");

@@ -86,7 +86,7 @@ hr {
 	<div class="container">
 		<%
 		Account acc = (Account) session.getAttribute("acc");
-		Cart cart = (Cart) session.getAttribute("cart");
+		Cart cart = (Cart) session.getAttribute("Cart");
 		if (cart.getListCartItem().size() == 0) {
 		%>
 		<div class=" col container text-center " style="height: 400px">

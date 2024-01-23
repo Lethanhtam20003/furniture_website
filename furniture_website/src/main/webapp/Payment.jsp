@@ -229,7 +229,7 @@
 						<hr>
 					</div>
 					<%
-					Cart cart = (Cart) session.getAttribute("cart");
+					Cart cart = (Cart) session.getAttribute("Cart");
 					for (CartItem cartItem : cart.getListCartItem()) {
 					%>
 					<div class="row">

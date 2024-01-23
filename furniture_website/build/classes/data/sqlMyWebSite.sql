@@ -166,4 +166,4 @@ create table Report(
 go
 
 -- insert data
-
+select * from OrderDetails
