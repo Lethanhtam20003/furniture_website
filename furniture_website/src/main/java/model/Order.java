@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
@@ -10,6 +11,16 @@ public class Order {
 	private List<OrderItem> listOrderItem;
 	private Payment payment;
 	private String status;
+
+	public Order(String id, String createAt, String shippingCost, String totalPrice, String status) {
+		super();
+		this.id = id;
+		this.createAt = createAt;
+		ShippingCost = shippingCost;
+		this.totalPrice = totalPrice;
+		this.status = status;
+		listOrderItem = new ArrayList<OrderItem>();
+	}
 
 	public Order() {
 		// TODO Auto-generated constructor stub

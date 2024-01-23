@@ -42,26 +42,31 @@ public class CartController extends HttpServlet {
 		HttpSession session = request.getSession();
 		Account account = (Account) session.getAttribute("acc");
 		Cart carts = (Cart) session.getAttribute("Cart");
-		if (account != null) {
-			if (carts == null) {
-				carts = new DaoCart().selectByID(account.getAccountID());
-				session.setAttribute("cart", carts);
-			} else {
-				if (session.getAttribute("loadedCart") == null) {
-					carts = (Cart) session.getAttribute("Cart");
-					Cart a = new DaoCart().selectByID(account.getAccountID());
-					for (CartItem i : carts.getListCartItem()) {
-						a.getListCartItem().add(i);
-					}
-					session.setAttribute("cart", a);
-					session.setAttribute("loadedCart", "a");
-				}
-			}
-		} else {
-			if (carts == null) {
-				carts = new Cart();
-				session.setAttribute("cart", carts);
-			}
+//		if (account != null) {
+//			if (carts == null) {
+//				carts = new DaoCart().selectByID(account.getAccountID());
+//				session.setAttribute("cart", carts);
+//			} else {
+//				if (session.getAttribute("loadedCart") == null) {
+//					carts = (Cart) session.getAttribute("Cart");
+//					Cart a = new DaoCart().selectByID(account.getAccountID());
+//					for (CartItem i : carts.getListCartItem()) {
+//						a.getListCartItem().add(i);
+//					}
+//					session.setAttribute("cart", a);
+//					session.setAttribute("loadedCart", "a");
+//				}
+//			}
+//		} else {
+//			if (carts == null) {
+//				carts = new Cart();
+//				session.setAttribute("cart", carts);
+//			}
+//		}
+
+		if (carts == null) {
+			carts = new Cart();
+			session.setAttribute("cart", carts);
 		}
 
 		String action = request.getParameter("actionCart");

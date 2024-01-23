@@ -283,9 +283,9 @@ hr {
 				</button>
 			</div>
 			<div class="col-2">
-				<form action="BuyController">
-					<button type="submit">thanh toan</button>
-				</form>
+				<button>
+					<a href="Payment.jsp">thanh toan</a>
+				</button>
 			</div>
 		</div>
 	</div>

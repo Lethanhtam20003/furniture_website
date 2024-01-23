@@ -10,6 +10,14 @@ public class OrderItem {
 		// TODO Auto-generated constructor stub
 	}
 
+	public OrderItem(Product product, int quality, Coupon coupon, double price) {
+		super();
+		this.product = product;
+		this.quality = quality;
+		this.coupon = coupon;
+		this.price = price;
+	}
+
 	public Product getProduct() {
 		return product;
 	}
