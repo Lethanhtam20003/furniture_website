@@ -145,11 +145,15 @@ height: 400px;
 				<button type="submit">Send</button>
 		</div>
 		<div class="column">
-			<script src="https://www.google.com/maps/place/
-				C%C3%B4ng+Ty+TNHH+TMDV+V%C3%A2n+Ph%C6%B0%C6%A1ng/
-				@9.6034229,105.9635586,17z/data=!3m1!4b1!4m6!3m5!1s0x31a052063936eb4b
-				:0x55bdcdd48e59b21!8m2!3d9.6034176!4d105.9661389!16s%2Fg%2F1pzwzqvf3?hl=vi-VN&entry=ttu">		
-			</script>
+			 <iframe
+                width="100%"
+                height="400"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://www.google.com/maps/place/Ph%E1%BA%A7n+m%E1%BB%81m+qu%E1%BA%A3n+l%C3%BD+b%C3%A1n+h%C3%A0ng+Sapo+-+H%E1%BB%93+Ch%C3%AD+Minh/@10.7715264,106.6525131,18z/data=!4m6!3m5!1s0x31752f4964c382dd:0xb61978d7651a271f!8m2!3d10.7715686!4d106.6532635!16s%2Fg%2F11j7nkj2lr?hl=vi-VN&entry=ttu">
+            </iframe>
 			
 		
 		</div>
